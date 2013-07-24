@@ -1,0 +1,70 @@
+﻿#tag-content
+{
+	font-family:"lucida grande", "Segoe UI", arial, sans-serif;
+}
+
+#tag-list
+{
+	padding: 5px;
+	margin:0px;
+}
+
+#tag-list li
+{
+	display: block;
+	float: left;
+	height: 26px;
+	width: 310px;
+	vertical-align: middle;
+	margin:2px;
+}
+#tag-list li input.checkBox
+{
+	float: left;
+}
+#tag-list li span input
+{
+	font-size: 11px;
+}
+#tag-list li span
+{
+	display: block;
+	float: left;
+	width: 150px;
+	font-size: 11px;
+}
+#tag-content a
+{
+	font-size: 11px;
+	color: Gray;
+	padding: 1px 0px 2px 20px;
+	margin: 0px;
+}
+#tag-content a.addNew
+{
+	background: #fff url('../images/icons/add.png') no-repeat left center;
+}
+#tag-content a.saveAll
+{
+	background: #fff url('../images/icons/disk.png') no-repeat left center;
+}
+#tag-content a.cancelAll, #tag-content a.cancel
+{
+	background: #fff url('../images/icons/cancel.png') no-repeat left center;
+}
+#tag-content a.edit
+{
+	background: #fff url('../images/icons/pencil.png') no-repeat left center;
+}
+#tag-content a.save
+{
+	background: #fff url('../images/icons/accept.png') no-repeat left center;
+}
+#tag-content a.remove
+{
+	background: #fff url('../images/icons/delete.png') no-repeat left center;
+}
+#edit-box input
+{
+	width: 140px;
+}

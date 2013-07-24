@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Front.master.cs" Inherits="Ecigsbrand.Store2.Controls.Front" %>
+<%@ Register TagPrefix="uc" TagName="Menu" Src="~/Controls/Menu.ascx" %>
+<%@ Register TagPrefix="uc" TagName="LoginToken" Src="~/Controls/LoginToken.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder></title>
+<link rel="stylesheet" type="text/css" href="~/css/style.css" runat="server" />
+<link rel="stylesheet" type="text/css" href="~/css/validationEngine.jquery.css" runat="server" />
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/rollover.js") %>"></script>
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/jquery.cookie.js") %>"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/shoppingcart.js") %>"></script>
+<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="header">
+  <div class="logo"><a href="~/default.aspx" runat="server"><img src="~/images/logo.png" border="0" runat="server"></a></div>
+  <div class="links"><a href="~/e-cigarette-referral-program.aspx" runat="server">Earn Money - Referral Program!</a><a href="~/cart.aspx" runat="server">View My Cart <span style="color:#93d3ee;">(<span id="shopping-cart-count"><%# TotalProductCount %></span> Items)</span></a><br>
+    <uc:LoginToken runat="server" id="LoginToken1" />
+  </div>
+  <div style="clear:both;"></div>
+</div>
+<uc:Menu ID="ucMenu" runat="server" />
+<asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+<div id="footer">
+  <div class="boxes">
+    <div class="box">
+      <h1>Products</h1>
+      <ul>
+        <li><a href="~/e-cigarette-starter-kits.aspx" runat="server">Starter Kits</a></li>
+        <li><a href="~/e-cigarette-refill-cartridges.aspx" runat="server">Refill Cartridges</a></li>
+        <li class="bottom"><a href="~/e-cigarette-accessories.aspx" runat="server">Accessories</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h1>Help</h1>
+      <ul>
+        <li><a href="~/e-cigarette-customer-service.aspx" runat="server">Customer Service</a></li>
+        <li><a href="~/e-cigarette-how-it-works.aspx" runat="server">How It Works</a></li>
+        <li class="bottom"><a href="http://www.ecigsbrand.com/getting-started-faq.pdf">Quick Start Guide [PDF}</a></li>
+      </ul>
+    </div>
+    <div class="box last">
+      <h1>More</h1>
+      <ul>
+        <li class="bottom"><a href="~/e-cigarette-testimonials.aspx" runat="server">Testimonials</a></li>
+        <li class="bottom"><a href="~/e-cigarette-referral-program.aspx" runat="server">Referral Program</a></li>
+      </ul>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  2010 &copy; E-Cigs Electronic Cigarette. All Rights Reserved.</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------
+2011-04-04 22:12:13,218 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - Bill Imported accounts-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,203 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - Bill Imported accounts-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,609 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - Process Billing Sale: 64522 -------------------------------------------------------------------------
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,765 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - Billing result: Success
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,765 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - deleting old BillingSale...
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,781 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - deleting old Sale...
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,796 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - deleting old Paygea...
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,796 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - deleting old ChargeHistoryEx...
+-------------------------------------------------------------------------
+2011-04-04 22:12:53,812 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - updating LastBillDate and NextBillDate...
+-------------------------------------------------------------------------
+2011-04-04 22:13:46,484 [1] INFO  Metabolab_BillImportedOrders.Program [(null)] - Bill Imported accounts-------------------------------------------------------------------------

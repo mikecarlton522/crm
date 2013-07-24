@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://trianglecrm.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://trianglecrm.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://trianglecrm.com/">
+      <s:element name="Void">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chargeHistoryID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidResult" type="tns:BusinessErrorOfChargeHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfChargeHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ChargeHistory" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChargeHistory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChargeHistoryID" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BusinessErrorState">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Error" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Refund">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chargeHistoryID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="refundAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefundResult" type="tns:BusinessErrorOfChargeHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productTypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="affiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subAffiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="internalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateProspectResult" type="tns:BusinessErrorOfProspect" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfProspect">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:Prospect" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Prospect">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProspectID" nillable="true" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Charge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipping" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="productTypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="affiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subAffiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="internalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prospectID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creditCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cvv" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customField5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChargeResult" type="tns:BusinessErrorOfChargeHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSubscription">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="planID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="chargeForTrial" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="affiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subAffiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="internalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prospectID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creditCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cvv" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSubscriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateSubscriptionResult" type="tns:BusinessErrorOfPlanResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfPlanResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:PlanResult" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Plan" type="tns:Plan" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialCharge" type="tns:ChargeHistory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Plan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PlanID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NextBillDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelSubscription">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billingID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelSubscriptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelSubscriptionResult" type="tns:BusinessErrorOfInt32" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfInt32">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Rebill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="internalID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RebillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RebillResult" type="tns:BusinessErrorOfChargeHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeLookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="chargeHistoryID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeLookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChargeLookupResult" type="tns:BusinessErrorOfChargeHistory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="internalID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserLookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLookupResult" type="tns:BusinessErrorOfChargeHistoryList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfChargeHistoryList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ArrayOfChargeHistory" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfChargeHistory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChargeHistory" nillable="true" type="tns:ChargeHistory" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActivePlanLookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivePlanLookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivePlanLookupResult" type="tns:BusinessErrorOfBillingSubscriptionList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BusinessErrorOfBillingSubscriptionList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ArrayOfBillingSubscription" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:BusinessErrorState" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBillingSubscription">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BillingSubscription" nillable="true" type="tns:BillingSubscription" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BillingSubscription">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="BillingSubscriptionID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="BillingID" nillable="true" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubscriptionID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreateDT" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="StatusTID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastBillDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="NextBillDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CustomerReferenceNumber" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Entity" abstract="true" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VoidSoapIn">
+    <wsdl:part name="parameters" element="tns:Void" />
+  </wsdl:message>
+  <wsdl:message name="VoidSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefundSoapIn">
+    <wsdl:part name="parameters" element="tns:Refund" />
+  </wsdl:message>
+  <wsdl:message name="RefundSoapOut">
+    <wsdl:part name="parameters" element="tns:RefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateProspect" />
+  </wsdl:message>
+  <wsdl:message name="CreateProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeSoapIn">
+    <wsdl:part name="parameters" element="tns:Charge" />
+  </wsdl:message>
+  <wsdl:message name="ChargeSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSubscriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSubscription" />
+  </wsdl:message>
+  <wsdl:message name="CreateSubscriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubscriptionSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelSubscription" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubscriptionSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RebillSoapIn">
+    <wsdl:part name="parameters" element="tns:Rebill" />
+  </wsdl:message>
+  <wsdl:message name="RebillSoapOut">
+    <wsdl:part name="parameters" element="tns:RebillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeLookupSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeLookup" />
+  </wsdl:message>
+  <wsdl:message name="ChargeLookupSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserLookupSoapIn">
+    <wsdl:part name="parameters" element="tns:UserLookup" />
+  </wsdl:message>
+  <wsdl:message name="UserLookupSoapOut">
+    <wsdl:part name="parameters" element="tns:UserLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivePlanLookupSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivePlanLookup" />
+  </wsdl:message>
+  <wsdl:message name="ActivePlanLookupSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivePlanLookupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="billing_wsSoap">
+    <wsdl:operation name="Void">
+      <wsdl:input message="tns:VoidSoapIn" />
+      <wsdl:output message="tns:VoidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <wsdl:input message="tns:RefundSoapIn" />
+      <wsdl:output message="tns:RefundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProspect">
+      <wsdl:input message="tns:CreateProspectSoapIn" />
+      <wsdl:output message="tns:CreateProspectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Charge">
+      <wsdl:input message="tns:ChargeSoapIn" />
+      <wsdl:output message="tns:ChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubscription">
+      <wsdl:input message="tns:CreateSubscriptionSoapIn" />
+      <wsdl:output message="tns:CreateSubscriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscription">
+      <wsdl:input message="tns:CancelSubscriptionSoapIn" />
+      <wsdl:output message="tns:CancelSubscriptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rebill">
+      <wsdl:input message="tns:RebillSoapIn" />
+      <wsdl:output message="tns:RebillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeLookup">
+      <wsdl:input message="tns:ChargeLookupSoapIn" />
+      <wsdl:output message="tns:ChargeLookupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserLookup">
+      <wsdl:input message="tns:UserLookupSoapIn" />
+      <wsdl:output message="tns:UserLookupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivePlanLookup">
+      <wsdl:input message="tns:ActivePlanLookupSoapIn" />
+      <wsdl:output message="tns:ActivePlanLookupSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="billing_wsSoap" type="tns:billing_wsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Void">
+      <soap:operation soapAction="http://trianglecrm.com/Void" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <soap:operation soapAction="http://trianglecrm.com/Refund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProspect">
+      <soap:operation soapAction="http://trianglecrm.com/CreateProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Charge">
+      <soap:operation soapAction="http://trianglecrm.com/Charge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubscription">
+      <soap:operation soapAction="http://trianglecrm.com/CreateSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscription">
+      <soap:operation soapAction="http://trianglecrm.com/CancelSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rebill">
+      <soap:operation soapAction="http://trianglecrm.com/Rebill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeLookup">
+      <soap:operation soapAction="http://trianglecrm.com/ChargeLookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLookup">
+      <soap:operation soapAction="http://trianglecrm.com/UserLookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivePlanLookup">
+      <soap:operation soapAction="http://trianglecrm.com/ActivePlanLookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="billing_wsSoap12" type="tns:billing_wsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Void">
+      <soap12:operation soapAction="http://trianglecrm.com/Void" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refund">
+      <soap12:operation soapAction="http://trianglecrm.com/Refund" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProspect">
+      <soap12:operation soapAction="http://trianglecrm.com/CreateProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Charge">
+      <soap12:operation soapAction="http://trianglecrm.com/Charge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubscription">
+      <soap12:operation soapAction="http://trianglecrm.com/CreateSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscription">
+      <soap12:operation soapAction="http://trianglecrm.com/CancelSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rebill">
+      <soap12:operation soapAction="http://trianglecrm.com/Rebill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeLookup">
+      <soap12:operation soapAction="http://trianglecrm.com/ChargeLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserLookup">
+      <soap12:operation soapAction="http://trianglecrm.com/UserLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivePlanLookup">
+      <soap12:operation soapAction="http://trianglecrm.com/ActivePlanLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="billing_ws">
+    <wsdl:port name="billing_wsSoap" binding="tns:billing_wsSoap">
+      <soap:address location="https://apex.trianglecrm.com/api/billing_ws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="billing_wsSoap12" binding="tns:billing_wsSoap12">
+      <soap12:address location="https://apex.trianglecrm.com/api/billing_ws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

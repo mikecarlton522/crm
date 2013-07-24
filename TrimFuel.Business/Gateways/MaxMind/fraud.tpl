@@ -1,0 +1,1 @@
+﻿license_key=k5R3iFc7IYp2&i=##IP##&city=##B_CITY##&region=##B_STATE##&postal=##B_ZIP##&country=##B_COUNTRY##&bin=##CC_NUM_LEFT6##&custPhone=##B_PHONE##&emailMD5=##B_EMAIL_MD5##&shipAddr=##S_ADDRESS##&shipCity=##S_CITY##&shipRegion=##S_STATE##&shipPostal=##S_ZIP##&shipCountry=##S_COUNTRY##&txnID=##SALE_ID##

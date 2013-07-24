@@ -1,0 +1,1 @@
+﻿"SaleID","OrderDate","FirstName","LastName","AddressLine1","AddressLine2","City","State","CEP (Zip)","Country","Phone","Email","SKUList","Numero","Complemento","Barrio","BillAmount","PartNumber","Quantity","UnitWeight"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx?wsdl" docRef="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" xmlns:q1="https://www.pagador.com.br/webservice/pagador" binding="q1:PagadorSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" xmlns:q2="https://www.pagador.com.br/webservice/pagador" binding="q2:PagadorSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

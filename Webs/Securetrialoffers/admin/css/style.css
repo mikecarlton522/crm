@@ -1,0 +1,21 @@
+﻿.briefInfo 
+{
+	display: none;
+}
+
+table.value-set .section-caption
+{
+	background-color: 	#cdcdee;
+	padding-left: 0px;
+}
+
+table.value-set .section-caption td
+{
+	font-weight: bold;
+}
+
+table.value-set td
+{
+	padding-left: 8px;
+	padding-right: 8px;
+}

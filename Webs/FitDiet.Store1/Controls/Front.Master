@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Front.master.cs" Inherits="Fitdiet.Store1.Controls.Front" %>
+<%@ Register TagPrefix="uc" TagName="Menu" Src="~/Controls/Menu.ascx" %>
+<%@ Register TagPrefix="uc" TagName="LoginToken" Src="~/Controls/LoginToken.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder></title>
+<link rel="stylesheet" type="text/css" href="~/css/style.css" runat="server" />
+<link rel="stylesheet" type="text/css" href="~/css/validationEngine.jquery.css" runat="server" />
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/rollover.js") %>"></script>
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/jquery.cookie.js") %>"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/shoppingcart.js") %>"></script>
+<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="HeaderBG">
+  <tr>
+    <td align="center" valign="top" style="padding-top:25px"><table width="956" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="left" valign="top"><a id="A1" href="~/default.aspx" runat="server"><img src="~/images/fitdiet_logo.png" alt="" width="83" height="108" border="0" runat="server" /></a></td>
+        <td align="right" valign="top"><table width="200" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="37" align="right" valign="middle"><a id="A2" href="~/cart.aspx" runat="server"><img src="~/images/shopping_cart_icon.png" alt="" width="30" height="31" border="0" runat="server"/></a></td>
+            <td align="right" valign="middle" class="Shoppin_Cart">
+                SHOPPING CART&nbsp;
+            </td>
+            <td width="9" align="right" valign="middle"><img src="~/images/shoppping_arrow.png" width="8" height="11" alt="" runat="server"/></td>
+            <td width="19" align="right" valign="middle" class="Shoppin_Cart"><span>[<span id="shopping-cart-count"><%#TotalProductCount %></span>]</span></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<uc:Menu ID="ucMenu" runat="server" />
+<asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td valign="top" style="padding-top:15px;">
+    <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+        <td>
+        <div class="ads_img"></div>
+        <table width="860" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="middle" class="visitfit_bg"><table width="540" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="210" class="main_heading">&nbsp;&nbsp;VISIT FIT™ DIET</td>
+                  <td width="165"><table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center"><a href="http://www.facebook.com/pages/FIT-Diet/259583530733042"><img src="images/facebok_icon.png" alt="" width="60" height="58" border="0" /></a></td>
+                        <td align="center"><a href="http://twitter.com/FIT_diet"><img src="images/twitter_icon.png" alt="" width="60" height="58" border="0" /></a></td>
+                        <%--<td align="center"><a href="#"><img src="images/utube_icon.png" alt="" width="60" height="58" border="0" /></a></td>
+                        <td align="center"><a href="#"><img src="images/chat_icon.png" alt="" width="60" height="58" border="0" /></a></td>--%>
+                      </tr>
+                  </table></td>
+                </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding-top:15px; padding-bottom:40px;"><table width="720" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" valign="top"><table width="147" border="0" cellspacing="1" cellpadding="1">
+              <tr>
+                <td align="left" class="footer_heading">ABOUT FIT™ DIET</td>
+              </tr>
+              <tr>
+                <td align="left"><a href="#" class="footer_nav">Free Trial*</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="<%# RealativePathPrefix %>fitdiet-how-it-works.aspx" class="footer_nav">How It Works</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="<%# RealativePathPrefix %>fitdiet-success-stories.aspx" class="footer_nav">Success Stories</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="<%# RealativePathPrefix %>fitdiet-press.aspx" class="footer_nav">Press</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="<%# RealativePathPrefix %>fitdiet-faq.aspx" class="footer_nav">FAQ</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="<%# RealativePathPrefix %>fitdiet-shop.aspx" class="footer_nav">Shop</a></td>
+              </tr>
+            </table></td>
+            <td align="center" valign="top"><table width="147" border="0" cellspacing="1" cellpadding="1">
+              <tr>
+                <td align="left" class="footer_heading">SOCIAL MEDIA</td>
+              </tr>
+              <tr>
+                <td align="left"><a href="http://www.facebook.com/pages/FIT-Diet/259583530733042" class="footer_nav">Facebook</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="http://twitter.com/FIT_diet" class="footer_nav">Twitter</a></td>
+              </tr>
+<%--              <tr>
+                <td align="left"><a href="#" class="footer_nav">YouTube</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="#" class="footer_nav">Blog</a></td>
+              </tr>--%>
+              
+              
+            </table></td>
+            <td align="center" valign="top" style="border-right:1px #d7d6d4 solid;"><table width="147" border="0" cellspacing="1" cellpadding="1">
+              <tr>
+                <td align="left" class="footer_heading">COMPANY</td>
+              </tr>
+              <tr>
+                <td align="left"><a href="fitdiet-contact_us.aspx" class="footer_nav">Contact Us</a></td>
+              </tr>
+              <tr>
+                <td align="left"><a href="fitdiet-terms.aspx" class="footer_nav">Terms of use</a></td>
+              </tr>
+              
+              
+              
+              
+            </table></td>
+            <td align="center" valign="top"><table width="182" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="images/try_it.jpg" alt="" width="174" height="23" /></td>
+              </tr>
+              <tr>
+                <td><a href="<%# RealativePathPrefix %>fitdiet-shop.aspx"><img src="images/click_here.png" alt="" width="182" height="47" vspace="6" border="0" /></a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="footer_bg">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrimFuel.Model</RootNamespace>
+    <AssemblyName>TrimFuel.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABFRecord.cs" />
+    <Compile Include="Admin.cs" />
+    <Compile Include="Affiliate.cs" />
+    <Compile Include="AggShipperSale.cs" />
+    <Compile Include="AggUnsentShipments.cs" />
+    <Compile Include="AgrMIDProjectedRevenue.cs" />
+    <Compile Include="ALFRecord.cs" />
+    <Compile Include="AragonLead.cs" />
+    <Compile Include="AssertigyMID.cs" />
+    <Compile Include="AssertigyMIDDailyCap.cs" />
+    <Compile Include="AssertigyMIDGroup.cs" />
+    <Compile Include="AssertigyMIDPaymentType.cs" />
+    <Compile Include="AssertigyMIDSettings.cs" />
+    <Compile Include="AuthOnlyChargeDetails.cs" />
+    <Compile Include="AuthOnlyFailedChargeDetails.cs" />
+    <Compile Include="Billing.cs" />
+    <Compile Include="BillingAPIRequest.cs" />
+    <Compile Include="BillingBadCustomer.cs" />
+    <Compile Include="BillingBatchEmail.cs" />
+    <Compile Include="BillingBatchEmailType.cs" />
+    <Compile Include="BillingCancelCode.cs" />
+    <Compile Include="BillingExternalInfo.cs" />
+    <Compile Include="BillingLinked.cs" />
+    <Compile Include="BillingReferralCoupon.cs" />
+    <Compile Include="BillingReferred.cs" />
+    <Compile Include="BillingSale.cs" />
+    <Compile Include="BillingStopCharge.cs" />
+    <Compile Include="BillingSubscription.cs" />
+    <Compile Include="BillingSubscriptionDiscount.cs" />
+    <Compile Include="BillingSubscriptionPlan.cs" />
+    <Compile Include="BillingSubscriptionRebillDiscount.cs" />
+    <Compile Include="BillingSubscriptionStatusHistory.cs" />
+    <Compile Include="BlockedEmailDomain.cs" />
+    <Compile Include="Call.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="CampaignAffiliate.cs" />
+    <Compile Include="CampaignControl.cs" />
+    <Compile Include="CampaignPage.cs" />
+    <Compile Include="CampaignRecurringPlan.cs" />
+    <Compile Include="CampaignReferralDiscount.cs" />
+    <Compile Include="CampaignTrialProduct.cs" />
+    <Compile Include="CampaignUpsell.cs" />
+    <Compile Include="ChargebackReasonCode.cs" />
+    <Compile Include="ChargebackStatusType.cs" />
+    <Compile Include="ChargeDetails.cs" />
+    <Compile Include="ChargeHistoryCard.cs" />
+    <Compile Include="ChargeHistoryEx.cs" />
+    <Compile Include="ChargeHistoryExCurrency.cs" />
+    <Compile Include="ChargeHistoryExSale.cs" />
+    <Compile Include="ChargeHistoryInvoice.cs" />
+    <Compile Include="ClosedMIDQueue.cs" />
+    <Compile Include="CLosedMIDRouting.cs" />
+    <Compile Include="Containers\Address.cs" />
+    <Compile Include="Containers\CreditCard.cs" />
+    <Compile Include="Containers\Person.cs" />
+    <Compile Include="Containers\Phone.cs" />
+    <Compile Include="Containers\Zip.cs" />
+    <Compile Include="Conversion.cs" />
+    <Compile Include="CustomShipperRecord.cs" />
+    <Compile Include="CustomShipperRecordToSend.cs" />
+    <Compile Include="IgnoreUnbilledTransaction.cs" />
+    <Compile Include="OrderQueueNote.cs" />
+    <Compile Include="OrderRecurringPlanStatusHistory.cs" />
+    <Compile Include="ProductDomain.cs" />
+    <Compile Include="ProductDomainRouting.cs" />
+    <Compile Include="ProductRouting.cs" />
+    <Compile Include="RebillDiscountType.cs" />
+    <Compile Include="ProductProductCode.cs" />
+    <Compile Include="DailyBillingResults.cs" />
+    <Compile Include="EmailQueue.cs" />
+    <Compile Include="ErrorsLog.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="DeclineUpsell.cs" />
+    <Compile Include="DynamicEmail.cs" />
+    <Compile Include="DynamicEmailType.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="EmergencyQueue.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="ExtraTrialShip.cs" />
+    <Compile Include="ExtraTrialShipSale.cs" />
+    <Compile Include="ExtraTrialShipType.cs" />
+    <Compile Include="FailedChargeHistory.cs" />
+    <Compile Include="FailedChargeHistoryCurrency.cs" />
+    <Compile Include="FailedChargeHistoryDetails.cs" />
+    <Compile Include="FraudScore.cs" />
+    <Compile Include="Geo.cs" />
+    <Compile Include="GFRecord.cs" />
+    <Compile Include="GiftCertificateDynamicEmail.cs" />
+    <Compile Include="ICoupon.cs" />
+    <Compile Include="ICreditCardContainer.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="InventorySKU.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="IPRestrict.cs" />
+    <Compile Include="KeymailRecord.cs" />
+    <Compile Include="KeymailRecordToSend.cs" />
+    <Compile Include="CampaignLeadRouting.cs" />
+    <Compile Include="LeadPartner.cs" />
+    <Compile Include="LeadPartnerConfigValue.cs" />
+    <Compile Include="LeadPartnerSettings.cs" />
+    <Compile Include="LeadPost.cs" />
+    <Compile Include="LeadRouting.cs" />
+    <Compile Include="LeadType.cs" />
+    <Compile Include="MagentoConfig.cs" />
+    <Compile Include="MagentoProductCategory.cs" />
+    <Compile Include="MBRecord.cs" />
+    <Compile Include="MerchantAccount.cs" />
+    <Compile Include="MerchantAccountProduct.cs" />
+    <Compile Include="MIDCategory.cs" />
+    <Compile Include="NMICompany.cs" />
+    <Compile Include="NMICompanyMID.cs" />
+    <Compile Include="NMIMerchantAccountProduct.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="NPFRecord.cs" />
+    <Compile Include="NPFRecordToSend.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderAutoProcessing.cs" />
+    <Compile Include="OrderDiscount.cs" />
+    <Compile Include="OrderRecurringPlan.cs" />
+    <Compile Include="OrderRecurringPlanQueueNote.cs" />
+    <Compile Include="OrderSale.cs" />
+    <Compile Include="OrderProduct.cs" />
+    <Compile Include="PageType.cs" />
+    <Compile Include="PartnerClick.cs" />
+    <Compile Include="Paygea.cs" />
+    <Compile Include="PaymentType.cs" />
+    <Compile Include="Pixel.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductCategory.cs" />
+    <Compile Include="ProductCode.cs" />
+    <Compile Include="ProductCoupon.cs" />
+    <Compile Include="ProductCodeInventory.cs" />
+    <Compile Include="ProductCurrency.cs" />
+    <Compile Include="ProductEvent.cs" />
+    <Compile Include="ProductCodeInfo.cs" />
+    <Compile Include="ProductInventory.cs" />
+    <Compile Include="ProductSKU.cs" />
+    <Compile Include="ProductWiki.cs" />
+    <Compile Include="PromoGift.cs" />
+    <Compile Include="PromoGiftSale.cs" />
+    <Compile Include="QueueRebill.cs" />
+    <Compile Include="RecurringPlan.cs" />
+    <Compile Include="RecurringPlanConstraint.cs" />
+    <Compile Include="RecurringPlanCycle.cs" />
+    <Compile Include="RecurringPlanShipment.cs" />
+    <Compile Include="RecurringSale.cs" />
+    <Compile Include="Referer.cs" />
+    <Compile Include="RefererBilling.cs" />
+    <Compile Include="RefererCommissionSale.cs" />
+    <Compile Include="RefererCredit.cs" />
+    <Compile Include="RestrictLevel.cs" />
+    <Compile Include="ReturnedSale.cs" />
+    <Compile Include="SaleReturnProcessing.cs" />
+    <Compile Include="SaleShippingOption.cs" />
+    <Compile Include="Shipment.cs" />
+    <Compile Include="ShipmentShippingNote.cs" />
+    <Compile Include="ShipmentShipperRequest.cs" />
+    <Compile Include="Shipper.cs" />
+    <Compile Include="ShipperConfig.cs" />
+    <Compile Include="ShipperProduct.cs" />
+    <Compile Include="ShipperRequest.cs" />
+    <Compile Include="ShippingNote.cs" />
+    <Compile Include="SMTPSetting.cs" />
+    <Compile Include="SubscriptionPlan.cs" />
+    <Compile Include="SubscriptionPlanItem.cs" />
+    <Compile Include="SubscriptionPlanItemAction.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="TFRecord.cs" />
+    <Compile Include="TPClientEmail.cs" />
+    <Compile Include="TPClientNews.cs" />
+    <Compile Include="TPClientNewsRead.cs" />
+    <Compile Include="TPClientNote.cs" />
+    <Compile Include="TPClientSetting.cs" />
+    <Compile Include="TPClientShipperSettings.cs" />
+    <Compile Include="Views\AssertigyMIDAmountView.cs" />
+    <Compile Include="Views\AssertigyMIDCapView2.cs" />
+    <Compile Include="Views\AssertigyMIDBriefView.cs" />
+    <Compile Include="Views\AssertigyMIDCapView.cs" />
+    <Compile Include="Views\BillingCallView.cs" />
+    <Compile Include="Views\CampaignEmailTypeView.cs" />
+    <Compile Include="Views\CampaignRecurringPlanView.cs" />
+    <Compile Include="Views\CampaignSubscriptionView.cs" />
+    <Compile Include="Views\CampaignView.cs" />
+    <Compile Include="Views\ChargeHistoryView.cs" />
+    <Compile Include="Views\ChargeHistoryWithSalesView.cs" />
+    <Compile Include="Views\CampaignLeadRoutingView.cs" />
+    <Compile Include="Views\CustomShipperToSendView.cs" />
+    <Compile Include="Views\GroupProductSKU.cs" />
+    <Compile Include="Views\InventorySKUMappingView.cs" />
+    <Compile Include="Views\InvoiceView.cs" />
+    <Compile Include="Views\InvoiceView2.cs" />
+    <Compile Include="Views\LeadPartnerAffiliateView.cs" />
+    <Compile Include="Views\OrderChargeHistoryView.cs" />
+    <Compile Include="Views\OrderRecurringPlanView.cs" />
+    <Compile Include="Views\OrderSaleBillingView.cs" />
+    <Compile Include="Views\OrderSaleShipmentView.cs" />
+    <Compile Include="Views\OrderSaleView.cs" />
+    <Compile Include="Views\OrderProductView.cs" />
+    <Compile Include="Views\OrderSaleView2.cs" />
+    <Compile Include="Views\OrderView.cs" />
+    <Compile Include="Views\OutboundSalesView.cs" />
+    <Compile Include="Views\ProspectView.cs" />
+    <Compile Include="Views\ShipmentPackageView.cs" />
+    <Compile Include="Views\ShipmentShipperView.cs" />
+    <Compile Include="Views\ShipperRequestView.cs" />
+    <Compile Include="Views\ShippingEventView.cs" />
+    <Compile Include="Views\ShippmentNotSendedToSendView.cs" />
+    <Compile Include="Views\SubscriptionRecurringPlanView.cs" />
+    <Compile Include="Views\UnpayedRebillsView.cs" />
+    <Compile Include="Views\UnsentUnpayedExView.cs" />
+    <Compile Include="Views\UnsentUnpayedView.cs" />
+    <Compile Include="Views\CampaignDetailsView.cs" />
+    <Compile Include="Views\FailedChargeHistoryView.cs" />
+    <Compile Include="Views\LeadRoutingView.cs" />
+    <Compile Include="Views\MagentoProductCategoryView.cs" />
+    <Compile Include="Views\ProductCategoryView.cs" />
+    <Compile Include="Views\SalesAgrByReasonReportView.cs" />
+    <Compile Include="Views\RecurringPlanCycleView.cs" />
+    <Compile Include="Views\RecurringPlanView.cs" />
+    <Compile Include="Views\SaleRecordView.cs" />
+    <Compile Include="Views\ShipperProductView.cs" />
+    <Compile Include="Views\ShippmentsToSendView.cs" />
+    <Compile Include="Views\ShortShipmentView.cs" />
+    <Compile Include="RegistrationInfo.cs" />
+    <Compile Include="Views\ReturnedSaleView.cs" />
+    <Compile Include="Sale.cs" />
+    <Compile Include="SaleChargeback.cs" />
+    <Compile Include="SaleCoupon.cs" />
+    <Compile Include="SaleChargeDetails.cs" />
+    <Compile Include="SaleDetails.cs" />
+    <Compile Include="SaleReferer.cs" />
+    <Compile Include="SaleRefund.cs" />
+    <Compile Include="SalesAgent.cs" />
+    <Compile Include="SalesAgentTPClient.cs" />
+    <Compile Include="SaleType.cs" />
+    <Compile Include="ShipperRecord.cs" />
+    <Compile Include="SHWProduct.cs" />
+    <Compile Include="SHWRegistration.cs" />
+    <Compile Include="FakeCoupon.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="TagBillingLink.cs" />
+    <Compile Include="TagGroup.cs" />
+    <Compile Include="TagGroupTagLink.cs" />
+    <Compile Include="TempConversion.cs" />
+    <Compile Include="TPClient.cs" />
+    <Compile Include="Upsell.cs" />
+    <Compile Include="UpsellSale.cs" />
+    <Compile Include="UpsellType.cs" />
+    <Compile Include="USState.cs" />
+    <Compile Include="Utility\KeyEqualityComparer.cs" />
+    <Compile Include="ValidateHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="VeriSectPost.cs" />
+    <Compile Include="Views\AdminRestrictLevelView.cs" />
+    <Compile Include="Views\CampaignRoutingView.cs" />
+    <Compile Include="Views\ProductEmailTypeView.cs" />
+    <Compile Include="Views\OneTimeSaleView.cs" />
+    <Compile Include="Views\ComplexSaleView.cs" />
+    <Compile Include="Views\EntityView.cs" />
+    <Compile Include="Views\InventoryView.cs" />
+    <Compile Include="Views\PagePixelView.cs" />
+    <Compile Include="Views\RefererView.cs" />
+    <Compile Include="Views\ReturnsReportView.cs" />
+    <Compile Include="Views\SaleBillingView.cs" />
+    <Compile Include="Views\SaleFullInfo.cs" />
+    <Compile Include="Views\SalesAgrBaseReportView.cs" />
+    <Compile Include="Views\SalesAgrByAffReportView.cs" />
+    <Compile Include="Views\SalesAgrByTypeReportView.cs" />
+    <Compile Include="Views\SalesAgrReportFullView.cs" />
+    <Compile Include="Views\SalesAgrReportView.cs" />
+    <Compile Include="Views\InventorySaleView.cs" />
+    <Compile Include="Views\SaleShipperView.cs" />
+    <Compile Include="Views\SaleView.cs" />
+    <Compile Include="Views\Set.cs" />
+    <Compile Include="Views\ShipmentView.cs" />
+    <Compile Include="Views\StringView.cs" />
+    <Compile Include="Views\SubscriptionPlanItemActionView.cs" />
+    <Compile Include="Views\TermView.cs" />
+    <Compile Include="Views\TPClientEmailView.cs" />
+    <Compile Include="Views\TPClientNoteView.cs" />
+    <Compile Include="Views\UserView.cs" />
+    <Compile Include="Views\View.cs" />
+    <Compile Include="VoidQueue.cs" />
+    <Compile Include="WebStore.cs" />
+    <Compile Include="WebStoreEmails.cs" />
+    <Compile Include="WebStoreProduct.cs" />
+    <Compile Include="WebStoreProductReview.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrimFuel.Encrypting\TrimFuel.Encrypting.csproj">
+      <Project>{A0CF6920-E0BE-4576-A580-E333C1095DEB}</Project>
+      <Name>TrimFuel.Encrypting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

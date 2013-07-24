@@ -1,0 +1,12 @@
+<ccPostAuthRequestV1 xmlns="http://www.optimalpayments.com/creditcard/xmlschema/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.optimalpayments.com/creditcard/xmlschema/v1">
+	<merchantAccount>
+		<accountNum>##ACCOUNT_NUMBER##</accountNum>
+		<storeID>##STORE_ID##</storeID>
+		<storePwd>##STORE_PWD##</storePwd>
+	</merchantAccount>		
+	<confirmationNumber>##TXN_NUMBER##</confirmationNumber>	
+	<merchantRefNum>##BILLING_ID##</merchantRefNum>
+	<amount>##AMOUNT##</amount>
+</ccPostAuthRequestV1>

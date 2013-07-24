@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<soap:Body>
+<Process xmlns="http://trianglecrm.org/support/">
+<triangle>
+<csi version="1.0" partner="focusservices">
+<call>
+<time>
+<start>7/12/2011 1:11:00 PM</start>
+<end>7/12/2011 1:11:00 PM</end>
+<ani>1496462203</ani>
+<dnis>8772115107</dnis>
+</time>
+<agent>
+<id>0</id>
+<name>N/A</name>
+<location>Bacolod</location>
+</agent>
+<disposition>
+<id />
+<name />
+<agent_notes />
+</disposition>
+<customer>
+<id />
+<product>Triangle Media xfer</product>
+</customer>
+<contactID>55555</contactID>
+</call>
+</csi>
+</triangle>
+</Process>
+</soap:Body>
+</soap:Envelope>

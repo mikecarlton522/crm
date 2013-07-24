@@ -1,0 +1,1 @@
+﻿Username=##USERNAME##&Password=##PASSWORD##&orderid=##REGID##

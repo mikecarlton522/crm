@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexRawImport", "ApexRawImport.csproj", "{D5A5AFC7-2284-42D1-BDB0-D9F4BE562F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexProcessImport", "..\..\ApexProcessImport\ApexProcessImport\ApexProcessImport.csproj", "{5F030A6F-7A64-451D-A737-6997040C65CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5A5AFC7-2284-42D1-BDB0-D9F4BE562F8A}.Debug|x86.ActiveCfg = Debug|x86
+		{D5A5AFC7-2284-42D1-BDB0-D9F4BE562F8A}.Debug|x86.Build.0 = Debug|x86
+		{D5A5AFC7-2284-42D1-BDB0-D9F4BE562F8A}.Release|x86.ActiveCfg = Release|x86
+		{D5A5AFC7-2284-42D1-BDB0-D9F4BE562F8A}.Release|x86.Build.0 = Release|x86
+		{5F030A6F-7A64-451D-A737-6997040C65CB}.Debug|x86.ActiveCfg = Debug|x86
+		{5F030A6F-7A64-451D-A737-6997040C65CB}.Debug|x86.Build.0 = Debug|x86
+		{5F030A6F-7A64-451D-A737-6997040C65CB}.Release|x86.ActiveCfg = Release|x86
+		{5F030A6F-7A64-451D-A737-6997040C65CB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

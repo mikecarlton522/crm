@@ -1,0 +1,11 @@
+﻿<p>Dear ##FNAME##,</p>
+<p>In an effort to improve our customer service and order processing, Ecigs Brand is in the process of moving our shipping operations to a new facility.  During this time of transition some of you may experience delays in the shipment of your orders.  We are aware of this and are working very hard to make sure that your orders are processed as quickly as possible.  We apologize for any inconvenience caused.</p>
+<p>Any customers who signed up for our special trial offer will have their trial dates extended accordingly.  Our number one priority is to provide our customers with the finest possible electronic smoking experience, and with our new shipping center we will be able to continue and improve in that effort.  Please note that any product returns should now be sent to the following address:</p>
+<p>EcigsBrand.com Returns Dept.<br/>
+20828 Lassen St<br/>
+Chatsworth CA.<br/>
+91311</p>
+<p>All of us here at Ecigs Brand want to thank you for your continued loyalty.  As always, if you have any concerns, questions, or comments, our friendly customer service department can help - just call 1-800-830-2464</p>
+<p>All the best,</p>
+<p>Jennifer<br/>
+Ecigs Brand Customer Care</p>

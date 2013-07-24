@@ -1,0 +1,5 @@
+E:\Task\Senior C#\CRM\TrimFuel.Encrypting\bin\Debug\TrimFuel.Encrypting.dll
+E:\Task\Senior C#\CRM\TrimFuel.Encrypting\bin\Debug\TrimFuel.Encrypting.pdb
+E:\Task\Senior C#\CRM\TrimFuel.Encrypting\obj\Debug\ResolveAssemblyReference.cache
+E:\Task\Senior C#\CRM\TrimFuel.Encrypting\obj\Debug\TrimFuel.Encrypting.dll
+E:\Task\Senior C#\CRM\TrimFuel.Encrypting\obj\Debug\TrimFuel.Encrypting.pdb

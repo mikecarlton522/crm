@@ -1,0 +1,56 @@
+<publishData>
+  <publishTarget publishUrl="D:\Projects\TrimFuel\Production\Admin\dotNet\">
+    <file relUrl="MidImages/order_form_12.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="bin/DocumentFormat.OpenXml.xml" publishTime="02/22/2010 14:21:14" />
+    <file relUrl="campaigns_referer.aspx" publishTime="10/04/2010 15:56:38" />
+    <file relUrl="bin/log4net.dll" publishTime="06/21/2009 11:10:06" />
+    <file relUrl="MidImages/terms_18.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_22.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_24.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_13.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_17.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_11.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/order_form_15.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="AjaxService/AjaxFraudService.asmx" publishTime="10/04/2010 15:11:11" />
+    <file relUrl="bin/TrimFuel.Web.UI.pdb" publishTime="10/04/2010 20:50:52" />
+    <file relUrl="bin/log4net.xml" publishTime="06/21/2009 11:10:06" />
+    <file relUrl="bin/TrimFuel.Model.pdb" publishTime="10/01/2010 14:24:45" />
+    <file relUrl="bin/TrimFuel.Web.UI.dll" publishTime="10/04/2010 20:50:52" />
+    <file relUrl="MidImages/order_form_10.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="bin/WindowsBase.dll" publishTime="07/29/2008 20:59:58" />
+    <file relUrl="MidImages/order_form_18.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="Controls/FraudDescription.ascx" publishTime="10/04/2010 15:05:38" />
+    <file relUrl="MidImages/terms_23.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="bin/TrimFuel.Web.Admin.dll" publishTime="10/04/2010 20:51:00" />
+    <file relUrl="MidImages/terms_21.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/terms_24.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="management_label.aspx" publishTime="10/04/2010 15:02:52" />
+    <file relUrl="MidImages/terms_22.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="AjaxService/AjaxTagService.asmx" publishTime="10/04/2010 15:11:20" />
+    <file relUrl="Web.config" publishTime="10/04/2010 13:37:00" />
+    <file relUrl="MidImages/terms_13.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/terms_17.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/terms_11.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/terms_15.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="reports_chargeback_performance.aspx" publishTime="10/04/2010 20:45:26" />
+    <file relUrl="MidImages/order_form_23.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="EditForms/Referer.aspx" publishTime="10/04/2010 15:54:40" />
+    <file relUrl="MidImages/order_form_16.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="Controls/DateFilter.ascx" publishTime="10/04/2010 18:16:00" />
+    <file relUrl="Controls/Admin.Master" publishTime="10/04/2010 15:37:57" />
+    <file relUrl="Controls/EditForms/Subscription.ascx" publishTime="10/04/2010 15:07:08" />
+    <file relUrl="bin/DocumentFormat.OpenXml.dll" publishTime="02/22/2010 14:33:08" />
+    <file relUrl="bin/TrimFuel.Web.Admin.pdb" publishTime="10/04/2010 20:51:00" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="04/09/2010 20:04:32" />
+    <file relUrl="bin/TrimFuel.Model.dll" publishTime="10/01/2010 14:24:45" />
+    <file relUrl="MidImages/order_form_21.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="Controls/TagList.ascx" publishTime="10/04/2010 15:31:08" />
+    <file relUrl="reports_chargeback.aspx" publishTime="10/04/2010 18:57:42" />
+    <file relUrl="Controls/BillingTagList.ascx" publishTime="10/04/2010 15:01:06" />
+    <file relUrl="bin/TrimFuel.Business.pdb" publishTime="10/04/2010 20:50:51" />
+    <file relUrl="MidImages/terms_12.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="MidImages/terms_16.png" publishTime="10/04/2010 19:00:24" />
+    <file relUrl="bin/TrimFuel.Business.dll" publishTime="10/04/2010 20:50:51" />
+    <file relUrl="MidImages/terms_10.png" publishTime="10/04/2010 19:00:24" />
+  </publishTarget>
+</publishData>

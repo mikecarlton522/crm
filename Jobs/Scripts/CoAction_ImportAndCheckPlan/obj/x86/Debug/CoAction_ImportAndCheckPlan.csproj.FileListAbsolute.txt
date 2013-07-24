@@ -1,0 +1,16 @@
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\CoAction_ImportAndCheckPlan.exe.config
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\CoAction_ImportAndCheckPlan.exe
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\CoAction_ImportAndCheckPlan.pdb
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\log4net.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\MySql.Data.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Business.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Encrypting.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Model.dll
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\log4net.xml
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Business.pdb
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Encrypting.pdb
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\bin\Debug\TrimFuel.Model.pdb
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\obj\x86\Debug\CoAction_ImportAndCheckPlan.exe
+C:\Users\Robin\Documents\TrimFuel\trunk\Jobs\Scripts\CoAction_ImportAndCheckPlan\obj\x86\Debug\CoAction_ImportAndCheckPlan.pdb

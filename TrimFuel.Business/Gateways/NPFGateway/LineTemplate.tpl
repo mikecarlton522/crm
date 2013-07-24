@@ -1,0 +1,1 @@
+﻿"##SALE_ID##","##DATE##","##FirstName##","##LastName##","##Address1##","##Address2##","##Town##","##State##","##PostCode##","##Country##","##PHONE##","##EMAIL##","##QTY##","##SKU##","##DESC##","##BAR_CODE##","##SHIPPING_TYPE##"

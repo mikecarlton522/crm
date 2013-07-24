@@ -1,0 +1,228 @@
+#topmenu {
+	width: 570px;
+}
+
+.block {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.smallText {
+	font-size: 10px;
+}
+
+label {
+	text-align: left;
+}
+
+.middleWidth {
+	width: 150px;
+}
+
+.longWidth {
+	width: 200px;
+}
+
+.shortWidth {
+	width: 100px;
+}
+
+label span {
+	display: inline-block;
+}
+
+tr.header td, th {
+	background-color:#cdcdcd;
+	font-weight:bold;
+}
+
+A:active {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #444444; TEXT-DECORATION: none; 
+}
+
+body,td,p{
+
+	color: black;
+	font-family: arial;
+	font-size: 12px;
+}
+
+.crumb{
+text-align: left;
+font-family: arial; 
+font-size: 9; 
+color: #000000;
+}
+
+
+.datasmblk{
+font-family: verdana; 
+font-size: 10; 
+color: #000000;
+}
+.datasm{
+font-family: verdana; 
+font-size: 10; 
+color: #000000;
+}
+a.datasm:link{font-family: verdana; font-size: 10; color: #cccccc; text-decoration: underline}
+a.datasm:active{font-family: verdana; font-size: 10; color: #cccccc; text-decoration: underline}
+a.datasm:visited{font-family: verdana; font-size: 10; color: #cccccc; text-decoration: underline}
+a.datasm:hover{font-family: verdana; font-size: 10; color: #444444; text-decoration: underline}
+
+a.datab:link{font-family: verdana; font-size: 10; color: #666666}
+a.datab:active{font-family: verdana; font-size: 10; color: #666666; text-decoration: underline}
+a.datab:visited{font-family: verdana; font-size: 10; color: #666666}
+a.datab:hover{
+font-family: verdana; font-size: 10; color: #666666
+}
+
+.data{font-family: verdana; font-size: 10; color: #666666}
+
+.datab{font-family: verdana; font-weight: bold; font-size: 12; color: #444444}
+
+.wdata{font-family: verdana; font-size: 12; color: #000000}
+.wdatab{font-family: verdana; font-weight: bold; font-size: 12; color: #000000}
+.wwdatab{font-family: verdana; font-weight: bold; font-size: 12; color: #ffffff}
+a.wdata:link{font-family: verdana; font-size: 12; color: #000000}
+a.wdata:active{font-family: verdana; font-size: 12; color: #000000; text-decoration: underline}
+a.wdata:visited{font-family: verdana; font-size: 12; color: #000000}
+a.wdata:hover{
+font-family: verdana; font-size: 12; color: #000000
+}
+
+
+.databold{font-weight: bold; font-family: verdana; font-size: 12; color: #dddddd}
+.datalg{font-family: verdana; font-size: 12; color: #666666}
+a.datalg:active{font-family: verdana; font-size: 12; color: #000000; text-decoration: underline}
+a.datalg:link{font-family: verdana; font-size: 12; color: #000000; text-decoration: underline}
+a.datalg:visited{font-family: verdana; font-size: 12; color: #000000; text-decoration: underline}
+
+.datalg2{font-family: verdana; font-size: 18; color: #dddddd}
+
+.FormSubmit
+{
+BACKGROUND-COLOR: #dddddd;
+BORDER-BOTTOM: #333333 1px solid;
+BORDER-LEFT: #333333 1px solid;
+BORDER-RIGHT: #333333 1px solid;
+BORDER-TOP: #333333 1px solid;
+COLOR: #000000;
+CURSOR: hand;
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold
+}
+
+.EditSubmit
+{
+BACKGROUND-COLOR: #eeeeee;
+BORDER-BOTTOM: #333333 1px solid;
+BORDER-LEFT: #333333 1px solid;
+BORDER-RIGHT: #333333 1px solid;
+BORDER-TOP: #333333 1px solid;
+COLOR: #000000;
+
+FONT-SIZE: 9px;
+}
+
+.btn{
+   color:#2e5194;
+   font-family:'trebuchet ms',helvetica,sans-serif;
+   font-size:13;
+   width:150px;
+   height: 25px;
+   font-weight:bold;
+   background-color:#fed;
+   border:1px solid;
+   border-top-color:#2e5194;
+   border-left-color:#2e5194;
+   border-right-color:#363;
+   border-bottom-color:#363;
+   filter:progid:DXImageTransform.Microsoft.Gradient
+      (GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ddddddcc');}
+
+.fnt{
+	font-family: Arial;
+	font-size: 10px;
+	color:#636466;
+}
+
+.fnthead{
+	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+
+.formbutton
+{
+BACKGROUND-COLOR: #dddddd;
+BORDER-BOTTOM: #333333 1px solid;
+BORDER-LEFT: #333333 1px solid;
+BORDER-RIGHT: #333333 1px solid;
+BORDER-TOP: #333333 1px solid;
+COLOR: #000000;
+CURSOR: hand;
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold
+}
+
+.subTable {
+	width: 100%;
+	text-align: left;
+}
+.jqmWindow {
+    display: none;
+    
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    
+    margin-left: -150px;
+    width: 350px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 2px solid black;
+    padding: 12px;
+}
+.jqmWindow1 {
+    display: none;
+    
+    position: fixed;
+    left: 40%;
+    width:500px;
+    height:500px;
+    margin-left: -150px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 2px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}

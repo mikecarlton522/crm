@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------
+2011-08-11 15:15:15,456 [11] ERROR CoAction_InventoryEmail.Program [(null)] - Fatal Error
+System.Net.Mail.SmtpFailedRecipientException: Postbus niet beschikbaar. Het serverantwoord is: 5.7.1 <robin_tomei@hotmail.com>... we do not relay <donotreply@trianglecrm.com>
+   bij System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, SmtpFailedRecipientException& exception)
+   bij System.Net.Mail.SmtpClient.Send(MailMessage message)
+   bij CoAction_InventoryEmail.Program.Main(String[] args) in C:\Users\Robin\Documents\TrimFuel\trunk\CoAction_InventoryEmail\Program.cs:regel 59

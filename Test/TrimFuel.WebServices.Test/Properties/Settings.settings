@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TrimFuel.WebServices.Test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TrimFuel_WebServices_Test_SaleWebService_SaleService_" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/trimfuel/SaleService.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_3plcentral_ServiceExternal" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://app02.3plcentral.com/WebServiceExternal/Contracts.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_dashboard_customer_service_feed" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dashboard.trianglecrm.com/support/customer_service_feed.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_localhost_trimfuel_customer_service_feed" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://trimfuel.localhost/support/customer_service_feed.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_localhost_trimfuel1_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://trimfuel.localhost/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_jmb_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://jmb.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_localhost_client1_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://client1.localhost/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_directaction_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://directaction.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_learn2befree_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://learn2befree.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_dashboard1_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://dashboard.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_coaction_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://coaction.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_WebServices_Test_com_trianglecrm_apex_billing_ws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://apex.trianglecrm.com/api/billing_ws.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

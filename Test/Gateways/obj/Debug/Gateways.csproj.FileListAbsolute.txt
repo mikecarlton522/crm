@@ -1,0 +1,8 @@
+E:\Task\Senior C#\CRM\Test\Gateways\bin\Gateways.dll
+E:\Task\Senior C#\CRM\Test\Gateways\bin\Gateways.pdb
+E:\Task\Senior C#\CRM\Test\Gateways\bin\log4net.dll
+E:\Task\Senior C#\CRM\Test\Gateways\bin\MySql.Data.dll
+E:\Task\Senior C#\CRM\Test\Gateways\bin\log4net.xml
+E:\Task\Senior C#\CRM\Test\Gateways\obj\Debug\ResolveAssemblyReference.cache
+E:\Task\Senior C#\CRM\Test\Gateways\obj\Debug\Gateways.dll
+E:\Task\Senior C#\CRM\Test\Gateways\obj\Debug\Gateways.pdb

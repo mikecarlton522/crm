@@ -1,0 +1,29 @@
+﻿<center>
+  <table width="670" cellpadding="0" cellspacing="0">
+    <tr height="75">
+      <td valign="middle" width="50%"><img src="http://d3oimv5qppjae2.cloudfront.net/email/ec-logo.gif" width="101" height="57" /></td>
+      <td valign="middle" align="right" width="50%"><img src="http://d3oimv5qppjae2.cloudfront.net/email/ec-domain.gif" width="163" height="14" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="http://d3oimv5qppjae2.cloudfront.net/email/spacer-cccccc.gif" width="100%" height="1" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><p><font color="#000000" size="2" face="geneva, verdana, arial"><br/>
+          Dear ##FNAME##,<br>
+          <br>
+          ECigs Brand would like to notify you that due to an error with our credit card processing partner, incorrect contact information may have appeared on your credit card statement.  Customers should note that for charges listed as:<br>
+          <br>
+          ECIGARETTESSHOPCOM 661-2514300 PA<br>
+          <br>
+          the customer service number should in fact read 1-877-527-7565.  Please direct any inquiries to that toll-free 877 number, as the 661 number is not in service.  We apologize for any inconvenience caused.
+          </font><br>
+        </p></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="padding-top:10px;"><font face="geneva, verdana, arial" size="2" color="#000000">
+        <p align="justify">Yours,<br>
+          ECigs Brand Customer Care</p>
+        </font></td>
+    </tr>
+  </table>
+</center>

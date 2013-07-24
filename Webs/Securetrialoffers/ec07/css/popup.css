@@ -1,0 +1,28 @@
+.popup-overlay {
+	position:fixed;
+	z-index:100;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	filter:alpha(opacity=20);
+	-moz-opacity:0.80;
+	opacity:0.80;
+	height:100%;
+	width:100%;
+  display:none;     	
+}
+* html .popup-overlay {  /* IE6 Hack */
+  position:absolute;
+  height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+.popup-load{
+	position:fixed;
+	z-index:102;
+	color:#000000;
+	display:none;
+	text-align:center;
+	top:50%;
+	left:50%;   
+	filter:alpha(opacity=20);    
+  font-size:18px;
+}

@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------
+2011-03-01 14:36:57,890 [1] ERROR MFCDailySaleReport.Program [(null)] - System.Net.WebException: The remote server returned an error: (550) File unavailable (e.g., file not found, no access).
+   at System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   at System.Net.FtpWebRequest.RequestCallback(Object obj)
+   at System.Net.CommandStream.InvokeRequestCallback(Object obj)
+   at System.Net.CommandStream.Abort(Exception e)
+   at System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   at System.Net.FtpWebRequest.GetRequestStream()
+   at MFCDailySaleReport.Program.UploadToFTPSite(String filePath, String fileName) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 235
+   at MFCDailySaleReport.Program.SendFilesToFTP() in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 208
+   at MFCDailySaleReport.Program.Main(String[] args) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 63
+-------------------------------------------------------------------------
+2011-03-01 14:38:11,828 [1] ERROR MFCDailySaleReport.Program [(null)] - System.Net.WebException: The remote server returned an error: (550) File unavailable (e.g., file not found, no access).
+   at System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   at System.Net.FtpWebRequest.RequestCallback(Object obj)
+   at System.Net.CommandStream.InvokeRequestCallback(Object obj)
+   at System.Net.CommandStream.Abort(Exception e)
+   at System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   at System.Net.FtpWebRequest.GetRequestStream()
+   at MFCDailySaleReport.Program.UploadToFTPSite(String filePath, String fileName) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 235
+   at MFCDailySaleReport.Program.SendFilesToFTP() in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 208
+   at MFCDailySaleReport.Program.Main(String[] args) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 63
+-------------------------------------------------------------------------
+2011-03-01 14:39:22,171 [1] ERROR MFCDailySaleReport.Program [(null)] - System.IO.DirectoryNotFoundException: Could not find a part of the path.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.IO.File.Move(String sourceFileName, String destFileName)
+   at MFCDailySaleReport.Program.MoveToSentDirectory(String fileName) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 221
+   at MFCDailySaleReport.Program.SendFilesToFTP() in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 210
+   at MFCDailySaleReport.Program.Main(String[] args) in D:\Projects\TrimFuel\TrimFuel\Jobs\MFCDailySaleReport\Program.cs:line 63

@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Front.master.cs" Inherits="BeautyTruth.Store1.Controls.Front" %>
+
+<%@ Register TagPrefix="uc" TagName="Menu" Src="~/Controls/Menu.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="cphTitle" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="~/css/960.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/css/text.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/css/reset.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="~/css/blitzer/jquery-ui-1.8.15.custom.css" rel="stylesheet" type="text/css"
+        runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/css/validationEngine.jquery.css" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/fancybox/jquery.fancybox-1.3.4.css"
+        runat="server" />
+
+    <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+    <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/rollover.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/jquery.cookie.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/shoppingcart.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/tabs.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphScript" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="header">
+        <div class="container_12">
+            <div class="grid_12">
+                <a href="default.aspx">
+                    <div id="logo">
+                    </div>
+                </a>
+                <ul>
+                    <li>1-800-333-3333</a></li>
+                    <li>
+                        <img src="images/cart-white.png" width="14" height="12" style="padding-bottom: 2px;" />
+                        <a href="<%#RealativePathPrefix %>Cart.aspx?step=1">View Cart (<%#TotalProductCount %>
+                            Items)</a></li>
+                    <li><a href="<%#RealativePathPrefix %>Cart.aspx?step=2">Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form id="Form1" runat="server">
+    <uc:Menu ID="ucMenu" runat="server" />
+    <asp:ContentPlaceHolder ID="cphContent" runat="server" />
+    <asp:ContentPlaceHolder ID="cphFooter" runat="server" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="TrimFuel" type="TrimFuel.Business.Configuration.TrimFuelSection, TrimFuel.Business"/>
+    </configSections>
+    <TrimFuel AppAuthMode="Static">
+        <StaticAppAuth ApplicationId="LocalWebStore" />
+        <Applications>
+            <add ApplicationId="LocalWebStore">
+                <ConnectionStrings>
+                    <add name="TrimFuel" connectionString="Datasource=localhost;Database=TrimFuelLocal;uid=root;pwd=1;"/>
+                </ConnectionStrings>
+                <EmailServer URL="http://localhost/gateways/email.aspx"/>
+                <NMI URL="http://localhost/gateways/networkmerchants.aspx"/>
+                <SHW URL="http://localhost/gateways/shw.aspx"/>
+                <BadCustomer URL="http://localhost/gateways/BadCustomer.aspx"/>
+                <MaxMind URL="http://localhost/gateways/MaxMind.aspx"/>
+                <ABF TestMode="true"/>
+                <Keymail Emails="mrsenya@tut.by,mrsenya@tut.by"/>
+                <NPF TestMode="false" URL="ftp://localhost/Gateways/npf" Username="npf@coaction" Password="598#(25$%254coa?"/>
+                <GoFulfillment TestMode="false" URL="http://109.69.48.40/wlgtesting" OriginId="2237" UserId="rob" Password="password1"/>
+            </add>
+        </Applications>
+    </TrimFuel>
+</configuration>

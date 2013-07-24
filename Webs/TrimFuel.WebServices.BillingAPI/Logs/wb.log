@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------
+2011-08-15 14:48:06,609 [6] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.BillingService
+System.Exception: Invalid Property(Response): String is out of range(4000)
+
+   at TrimFuel.Model.ValidateHelper.Dispose() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\ValidateHelper.cs:line 72
+   at TrimFuel.Model.Entity.ValidateEntity() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\Entity.cs:line 15
+   at TrimFuel.Business.Dao.MySqlDao.Save[TEntity](TEntity entity) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\MySqlDao.cs:line 27
+   at TrimFuel.Business.BillingService.LogBillingAPIRequest(HttpRequest request, String response) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\BillingService.cs:line 1214
+-------------------------------------------------------------------------
+2011-08-15 14:48:38,687 [6] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.BillingService
+System.Exception: Invalid Property(Response): String is out of range(4000)
+
+   at TrimFuel.Model.ValidateHelper.Dispose() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\ValidateHelper.cs:line 72
+   at TrimFuel.Model.Entity.ValidateEntity() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\Entity.cs:line 15
+   at TrimFuel.Business.Dao.MySqlDao.Save[TEntity](TEntity entity) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\MySqlDao.cs:line 27
+   at TrimFuel.Business.BillingService.LogBillingAPIRequest(HttpRequest request, String response) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\BillingService.cs:line 1214
+-------------------------------------------------------------------------
+2011-08-15 14:50:46,078 [6] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.BillingService
+System.Exception: Invalid Property(Response): String is out of range(4000)
+
+   at TrimFuel.Model.ValidateHelper.Dispose() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\ValidateHelper.cs:line 72
+   at TrimFuel.Model.Entity.ValidateEntity() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Model\Entity.cs:line 15
+   at TrimFuel.Business.Dao.MySqlDao.Save[TEntity](TEntity entity) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\MySqlDao.cs:line 27
+   at TrimFuel.Business.BillingService.LogBillingAPIRequest(HttpRequest request, String response) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\BillingService.cs:line 1214
+-------------------------------------------------------------------------
+2011-08-16 19:07:24,031 [1] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.MerchantService
+System.Exception: Can't choose AssertigyMID for Product(1006)
+   at TrimFuel.Business.MerchantService.ChooseRandomNMIMerchantAccount(Int32 productID, Billing b) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\MerchantService.cs:line 104
+-------------------------------------------------------------------------
+2011-08-16 19:50:58,578 [5] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.MerchantService
+System.Exception: Can't choose AssertigyMID for Product(1006)
+   at TrimFuel.Business.MerchantService.ChooseRandomNMIMerchantAccount(Int32 productID, Billing b) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\MerchantService.cs:line 104
+-------------------------------------------------------------------------
+2011-08-26 16:09:31,687 [1] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.BillingService
+System.NotImplementedException: The method or operation is not implemented.
+   at TrimFuel.Business.Gateways.MSC.MSCGateway.AuthOnly(String merchantID, String merchantLogin, String merchantPassword, Decimal amount, Currency currency, Billing billing, Product product) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\MSC\MSCGateway.cs:line 59
+   at TrimFuel.Business.BillingService.AuthorizeTransaction(Billing billing, Int32 productID, Decimal amount) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\BillingService.cs:line 724

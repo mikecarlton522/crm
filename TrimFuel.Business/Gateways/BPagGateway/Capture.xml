@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Capture>
+  <merch_ref>##MERCHANT_REF##</merch_ref>
+  <id>##ORDER_ID##</id>
+</Capture>

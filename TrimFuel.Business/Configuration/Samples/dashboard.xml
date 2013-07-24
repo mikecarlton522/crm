@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="TrimFuel" type="TrimFuel.Business.Configuration.TrimFuelSection, TrimFuel.Business"/>
+    </configSections>
+    <TrimFuel AppAuthMode="WebHostName">
+        <Applications>
+            <add ApplicationId="dashboard.trianglemediacorp.com">
+                <ConnectionStrings>
+                    <add name="TrimFuel" connectionString="..."/>
+                </ConnectionStrings>
+                <EmailServer URL="http://174.129.197.160/IHS.Email/IHS.Email.asmx/SendEmail"/>
+                <NMI URL="https://secure.networkmerchants.com/api/transact.php"/>
+                <SHW URL="https://www.selfhelpworks.com/reg/_services/SHWIntegration.asmx/SHWIntegrationMethod"/>
+                <BadCustomer URL="https://www.badcustomer.com/api/index"/>
+                <MaxMind URL="https://minfraud1.maxmind.com/app/ccv2r"/>
+                <ABF TestMode="false" ThreePLKey="{a9ec2447-4ad8-4c25-8cca-58837b459b69}" Login="robertw" Password="tmcit2" FacilityID="1" ThreePLID="241" />
+                <Keymail Emails="taryn@keymailuk.com,Donna.Deacon@keymailuk.com,rob@trianglemediacorp.com"/>                
+            </add>
+            <add ApplicationId="blueoctopus.trianglecrm.com">
+                <ConnectionStrings>
+                    <add name="TrimFuel" connectionString="..."/>
+                </ConnectionStrings>
+                <NMI URL="https://secure.networkmerchants.com/api/transact.php"/>
+                <ABF TestMode="true"/>
+            </add>
+            <add ApplicationId="metabolab.trianglecrm.com">
+                <ConnectionStrings>
+                    <add name="TrimFuel" connectionString="..."/>
+                </ConnectionStrings>
+                <NMI URL="https://secure.networkmerchants.com/api/transact.php"/>
+                <ABF TestMode="false" ThreePLKey="{a9ec2447-4ad8-4c25-8cca-58837b459b69}" Login="Met4API" Password="Fit2Diet" FacilityID="1" ThreePLID="20" />
+            </add>
+            <add ApplicationId="coaction.trianglecrm.com">
+              <ConnectionStrings>
+                <add name="TrimFuel" connectionString="..."/>
+              </ConnectionStrings>
+              <AtLastFulfillment TestMode="false" ApiKey="56fb2514fe14484c8eb2ca42aac00253"/>
+              <MoldingBox TestMode="True" ApiKey="MB4C8S2N5J6M3F2$X8G2#C3S2K85GE" />              
+              <NPF TestMode="false" URL="ftp://114.141.197.192/Live_Orders_from_COM" Username="npf@coaction" Password="598#(25$%254coa?"/>
+              <GoFulfillment TestMode="false" URL="http://stockist.wlgfulfilment.co.uk/webclient" OriginId="2453" UserId="triangle" Password="blueberryjazzboat"/>
+            </add>
+        </Applications>        
+    </TrimFuel>  
+</configuration>

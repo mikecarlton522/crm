@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------
+2011-04-14 20:16:27,093 [5] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.SupportService
+System.Exception: Can not find EntityDataProvider for Call
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.CreateProvider() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 34
+   at TrimFuel.Business.Dao.MySqlDao.Save[TEntity](TEntity entity) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\MySqlDao.cs:line 30
+   at TrimFuel.Business.SupportService.CreateCall(Nullable`1 startDT, Nullable`1 endDT, String ani, String dnis, Nullable`1 agentID, String agentName, String agentLocation, Nullable`1 dispositionID, String dispositionName, String agentNotes, Nullable`1 customerID, String customerProduct) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\SupportService.cs:line 43
+-------------------------------------------------------------------------
+2011-04-14 20:18:01,984 [5] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.SupportService
+MySql.Data.MySqlClient.MySqlException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Call(StartDT, EndDT, ANI, DNIS, AgentID, AgentName, AgentLocation, DispositionID' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int32& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int32& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at TrimFuel.Business.Dao.EntityDataProviders.CallDataProvider.Save(Call entity, IMySqlCommandCreater cmdCreater) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\EntityDataProviders\CallDataProvider.cs:line 46
+   at TrimFuel.Business.Dao.MySqlDao.Save[TEntity](TEntity entity) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Dao\MySqlDao.cs:line 30
+   at TrimFuel.Business.SupportService.CreateCall(Nullable`1 startDT, Nullable`1 endDT, String ani, String dnis, Nullable`1 agentID, String agentName, String agentLocation, Nullable`1 dispositionID, String dispositionName, String agentNotes, Nullable`1 customerID, String customerProduct) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\SupportService.cs:line 43

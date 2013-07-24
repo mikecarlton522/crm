@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------
+2010-11-05 21:48:01,750 [3] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.ABFService
+System.InvalidOperationException: There is an error in XML document (1, 190). ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Xml.XmlConvert.ToInt32(String s)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderFindOrderResult.Read2_FoundOrder(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderFindOrderResult.Read3_FindOrderResult(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderFindOrderResult.Read4_orders()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at TrimFuel.Business.ABFService.ConvertResult(String findOrderResult) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\ABFService.cs:line 259
+   at TrimFuel.Business.ABFService.CheckShipmentsState() in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\ABFService.cs:line 212

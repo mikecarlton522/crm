@@ -1,0 +1,1 @@
+﻿type=return&storeid=##GATEWAY_USERNAME##&token=##GATEWAY_PASSWORD##&referenceid=##TXN_NUMBER##&returnamount=##AMOUNT##

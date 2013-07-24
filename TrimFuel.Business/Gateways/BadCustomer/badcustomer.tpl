@@ -1,0 +1,1 @@
+﻿mode=xml&api_key=b0676ea7-a75f-3ce4-0a3c-4c77fe30a241&card_number_hash=##CARD_NUMBER_HASH##&card_holder_name=##CARD_HOLDER_NAME##

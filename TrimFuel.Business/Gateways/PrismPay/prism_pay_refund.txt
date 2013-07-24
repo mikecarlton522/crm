@@ -1,0 +1,1 @@
+﻿action=ns_credit&acctid=##GATEWAY_USERNAME##&orderkeyid=##TXN_NUMBER_ORDER_PART##&historykeyid=##TXN_NUMBER_HISTORY_PART##&amount=##AMOUNT##&subid=##MID##

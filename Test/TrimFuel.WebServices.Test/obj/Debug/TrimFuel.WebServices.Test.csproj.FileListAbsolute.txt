@@ -1,0 +1,1 @@
+E:\Task\Senior C#\CRM\Test\TrimFuel.WebServices.Test\obj\Debug\ResolveAssemblyReference.cache

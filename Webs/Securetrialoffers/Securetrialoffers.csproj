@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A88E526C-A47A-4B57-8E5D-DFB026C523CC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Securetrialoffers</RootNamespace>
+    <AssemblyName>Securetrialoffers</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ec07\billing-information.aspx" />
+    <Content Include="ec07\css\popup.css" />
+    <Content Include="ec07\form.txt" />
+    <Content Include="ec07\images\arrow.png" />
+    <Content Include="ec07\images\box.png" />
+    <Content Include="ec07\images\button-add-products.png" />
+    <Content Include="ec07\images\button-confirm.png" />
+    <Content Include="ec07\images\cvv.png" />
+    <Content Include="ec07\images\default-billing-bg.png" />
+    <Content Include="ec07\images\default-billing.png" />
+    <Content Include="ec07\images\default-confirmation-table.png" />
+    <Content Include="ec07\images\default-confirmation.png" />
+    <Content Include="ec07\images\default-upgrade-table.png" />
+    <Content Include="ec07\images\pixel-white.png" />
+    <Content Include="ec07\images\product-car-charger.png" />
+    <Content Include="ec07\images\product-celebrity-smile.png" />
+    <Content Include="ec07\images\product-member.png" />
+    <Content Include="ec07\images\product-menthol-cartridges.png" />
+    <Content Include="ec07\images\product-nature-renew.png" />
+    <Content Include="ec07\images\product-tflf-box.png" />
+    <Content Include="ec07\images\product-tobacco-cartridges.png" />
+    <Content Include="ec07\images\product-wall-charger.png" />
+    <Content Include="ec07\images\seals.png" />
+    <Content Include="ec07\images\tflf.png" />
+    <Content Include="ec07\images\topfade-red.gif" />
+    <Content Include="ec07\images\topfade.gif" />
+    <Content Include="ec07\images\visa-mc.png" />
+    <Content Include="ec07\js\billing.js" />
+    <Content Include="ec07\js\exitpop.js" />
+    <Content Include="ec07\js\exitpop_l.js" />
+    <Content Include="ec07\js\IHS.validate.js" />
+    <Content Include="ec07\js\jquery.js" />
+    <Content Include="ec07\js\landing.js" />
+    <Content Include="ec07\js\mod10.js" />
+    <Content Include="ec07\js\popup.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\AjaxService\AjaxFraudService.asmx.cs">
+      <DependentUpon>AjaxFraudService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="admin\AjaxService\AjaxTagService.asmx.cs">
+      <DependentUpon>AjaxTagService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Controls\BillingTagList.ascx.cs">
+      <DependentUpon>BillingTagList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\BillingTagList.ascx.designer.cs">
+      <DependentUpon>BillingTagList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Controls\EditForms\Subscription.ascx.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\EditForms\Subscription.ascx.designer.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Controls\FraudDescription.ascx.cs">
+      <DependentUpon>FraudDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\FraudDescription.ascx.designer.cs">
+      <DependentUpon>FraudDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Controls\TagList.ascx.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Controls\TagList.ascx.designer.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\EditForms\Referer.aspx.cs">
+      <DependentUpon>Referer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\EditForms\Referer.aspx.designer.cs">
+      <DependentUpon>Referer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\label_management.aspx.cs">
+      <DependentUpon>label_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\label_management.aspx.designer.cs">
+      <DependentUpon>label_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Logic\UI\ReportBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\referer_management.aspx.cs">
+      <DependentUpon>referer_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\referer_management.aspx.designer.cs">
+      <DependentUpon>referer_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\report_conversions.aspx.cs">
+      <DependentUpon>report_conversions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\report_conversions.aspx.designer.cs">
+      <DependentUpon>report_conversions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\report_refund_auth.aspx.cs">
+      <DependentUpon>report_refund_auth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\report_refund_auth.aspx.designer.cs">
+      <DependentUpon>report_refund_auth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\sales_agr_report.aspx.cs">
+      <DependentUpon>sales_agr_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\sales_agr_report.aspx.designer.cs">
+      <DependentUpon>sales_agr_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Subscription.aspx.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Subscription.aspx.designer.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ec07\billing-information.aspx.cs">
+      <DependentUpon>billing-information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ec07\billing-information.aspx.designer.cs">
+      <DependentUpon>billing-information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ec07\recommended.aspx.cs">
+      <DependentUpon>recommended.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ec07\recommended.aspx.designer.cs">
+      <DependentUpon>recommended.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TrimFuel.Business\TrimFuel.Business.csproj">
+      <Project>{C5815D73-3CA3-4888-9E55-331A527B3DD6}</Project>
+      <Name>TrimFuel.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Model\TrimFuel.Model.csproj">
+      <Project>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</Project>
+      <Name>TrimFuel.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Web.UI\TrimFuel.Web.UI.csproj">
+      <Project>{326A9544-9CFB-4A4E-966B-7D122DDC0738}</Project>
+      <Name>TrimFuel.Web.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\AjaxService\AjaxFraudService.asmx" />
+    <Content Include="admin\AjaxService\AjaxTagService.asmx" />
+    <Content Include="admin\Controls\Admin.Master" />
+    <None Include="ec07\js\exitpop.js.bak" />
+    <Content Include="admin\Controls\BillingTagList.ascx" />
+    <Content Include="admin\Controls\EditForms\Subscription.ascx" />
+    <Content Include="admin\Controls\FraudDescription.ascx" />
+    <Content Include="admin\Controls\Menu.ascx" />
+    <Content Include="admin\Controls\TagList.ascx" />
+    <Content Include="admin\css\billing-tag.css" />
+    <Content Include="admin\css\droppy.css" />
+    <Content Include="admin\css\smoothness\images\ui-anim_basic_16x16.gif" />
+    <Content Include="admin\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="admin\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="admin\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="admin\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="admin\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="admin\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="admin\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="admin\css\smoothness\jquery-ui-1.8.2.custom.css" />
+    <Content Include="admin\css\style.css" />
+    <Content Include="admin\css\tabber.css" />
+    <Content Include="admin\css\validationEngine.jquery.css" />
+    <Content Include="admin\down.gif" />
+    <Content Include="admin\EditForms\Referer.aspx" />
+    <Content Include="admin\images\1.gif" />
+    <Content Include="admin\images\bg.png" />
+    <Content Include="admin\images\billing-button.png" />
+    <Content Include="admin\images\billing-header.jpg" />
+    <Content Include="admin\images\cards.gif" />
+    <Content Include="admin\images\controls.png" />
+    <Content Include="admin\images\cvv.gif" />
+    <Content Include="admin\images\default-filler.jpg" />
+    <Content Include="admin\images\error.png" />
+    <Content Include="admin\images\fit-factory.png" />
+    <Content Include="admin\images\icons\accept.png" />
+    <Content Include="admin\images\icons\add.png" />
+    <Content Include="admin\images\icons\cancel.png" />
+    <Content Include="admin\images\icons\delete.png" />
+    <Content Include="admin\images\icons\disk.png" />
+    <Content Include="admin\images\icons\pencil.png" />
+    <Content Include="admin\images\img_calendaricon.gif" />
+    <Content Include="admin\images\loading.gif" />
+    <Content Include="admin\images\login.png" />
+    <Content Include="admin\images\logo.jpg" />
+    <Content Include="admin\images\order-button.png" />
+    <Content Include="admin\images\pb.gif" />
+    <Content Include="admin\images\rvd-bottle.jpg" />
+    <Content Include="admin\images\secure-connection.png" />
+    <Content Include="admin\images\topfade.gif" />
+    <Content Include="admin\images\visa-mc-cvv.png" />
+    <Content Include="admin\images\visa-mc.gif" />
+    <Content Include="admin\include\style.css" />
+    <Content Include="admin\js\billing-tag.js" />
+    <Content Include="admin\js\ddsmoothmenu.js" />
+    <Content Include="admin\js\general.js" />
+    <Content Include="admin\js\jquery-1.4.2.min.js" />
+    <Content Include="admin\js\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="admin\js\jquery.validationEngine.js" />
+    <Content Include="admin\js\jquery.validationEngine.validationRules.js" />
+    <Content Include="admin\js\scripts.js" />
+    <Content Include="admin\js\sorttable.js" />
+    <Content Include="admin\js\tabber-minimized.js" />
+    <Content Include="admin\label_management.aspx" />
+    <Content Include="admin\referer_management.aspx" />
+    <Content Include="admin\report.aspx" />
+    <Content Include="admin\report_conversions.aspx" />
+    <Content Include="admin\report_refund_auth.aspx" />
+    <Content Include="admin\right.gif" />
+    <Content Include="admin\sales_agr_report.aspx" />
+    <Content Include="admin\Subscription.aspx" />
+    <Content Include="ec07\recommended.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="RemoteWebConfig\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41347</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Securetrialoffers</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

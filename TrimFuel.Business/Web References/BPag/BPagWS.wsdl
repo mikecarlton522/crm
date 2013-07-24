@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://services.webservice.bpag2.boldcron.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://services.webservice.bpag2.boldcron.com" targetNamespace="http://services.webservice.bpag2.boldcron.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://services.webservice.bpag2.boldcron.com">
+      <xsd:element name="doService">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="version" type="xsd:string" />
+            <xsd:element name="action" type="xsd:string" />
+            <xsd:element name="merchant" type="xsd:string" />
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="data" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doServiceResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doServiceReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="doServiceRequest">
+    <wsdl:part name="parameters" element="impl:doService" />
+  </wsdl:message>
+  <wsdl:message name="doServiceResponse">
+    <wsdl:part name="parameters" element="impl:doServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BPagWS">
+    <wsdl:operation name="doService">
+      <wsdl:input name="doServiceRequest" message="impl:doServiceRequest" />
+      <wsdl:output name="doServiceResponse" message="impl:doServiceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BPagWSSoapBinding" type="impl:BPagWS">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doService">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="doServiceRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="doServiceResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BPagWSService">
+    <wsdl:port name="BPagWS" binding="impl:BPagWSSoapBinding">
+      <wsdlsoap:address location="https://bpag.uol.com.br/bpag2/services/BPagWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

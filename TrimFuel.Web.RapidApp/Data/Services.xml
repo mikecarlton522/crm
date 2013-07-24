@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Services>
+  <Fulfillment ID="1" DisplayName="Fulfillment">
+    <Service ID="2" Name="TSN/Novaship" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="0" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="0" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="100">
+      <item key="Username" />
+      <item key="Password" />
+    </Service>
+    <Service ID="4" Name="ABF/USellWeShip" ShipmentSKUFee="1.5" ShipmentFee="2.71" KittingAndAsemblyFee="2.71" SetupFee="0" ReturnsFee="8.5" CustomDevelopmentFee="130" SpecialLaborFee="240" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="1001">
+      <item key="ThreePLKey" />
+      <item key="Login" />
+      <item key="Password" />
+      <item key="FacilityID" />
+      <item key="ThreePLID" />
+    </Service>
+    <Service ID="10" Name="Triangle Fulfillment" ShipmentSKUFee="1.5" ShipmentFee="2.71" KittingAndAsemblyFee="2.71" SetupFee="1200" ReturnsFee="8.5" CustomDevelopmentFee="130" SpecialLaborFee="240" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="1001">
+      <item key="ThreePLKey" />
+      <item key="Login" />
+      <item key="Password" />
+      <item key="FacilityID" />
+      <item key="ThreePLID" />
+    </Service>
+    <Service ID="5" Name="Keymail" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="1500" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="150"></Service>
+    <Service ID="6" Name="AtLast Fulfillment" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="0" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="150">
+      <item key="ApiKey" />
+    </Service>
+    <Service ID="9" Name="MoldingBox Fulfillment" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="0" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="150">
+      <item key="ApiKey" />
+    </Service>
+    <Service ID="7" Name="Go Fulfillment" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="0" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="150">
+      <item key="UserId" />
+      <item key="Password" />
+      <item key="OriginId" />
+    </Service>
+    <Service ID="8" Name="NPF" ShipmentSKUFee="1.5" ShipmentFee="1.5" KittingAndAsemblyFee="1.5" SetupFee="0" ReturnsFee="6.5" CustomDevelopmentFee="150" SpecialLaborFee="150" ShipmentSKUFeeRetail="1.5" ShipmentFeeRetail="1.5" KittingAndAsemblyFeeRetail="1.5" SetupFeeRetail="1500" ReturnsFeeRetail="6.5" CustomDevelopmentFeeRetail="150" SpecialLaborFeeRetail="150">
+      <item key="Username" />
+      <item key="Password" />
+    </Service>
+  </Fulfillment>
+  <Gateway ID="5" DisplayName="Gateway">
+    <Service Name="NMI" ChargebackFee="11" ChargebackRepresentationFee="22" TransactionFee="3" ChargebackFeeRetail="43" ChargebackRepresentationFeeRetail="5" TransactionFeeRetail="6" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="MSC" ChargebackFee="1231" ChargebackRepresentationFee="2" TransactionFee="3" ChargebackFeeRetail="4" ChargebackRepresentationFeeRetail="5" TransactionFeeRetail="6" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="MPS" ChargebackFee="1231" ChargebackRepresentationFee="2" TransactionFee="3" ChargebackFeeRetail="4" ChargebackRepresentationFeeRetail="5" TransactionFeeRetail="6" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="IPG" ChargebackFee="0" ChargebackRepresentationFee="0" TransactionFee="0" ChargebackFeeRetail="0" ChargebackRepresentationFeeRetail="0" TransactionFeeRetail="0" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="CBG" ChargebackFee="0" ChargebackRepresentationFee="0" TransactionFee="0" ChargebackFeeRetail="0" ChargebackRepresentationFeeRetail="0" TransactionFeeRetail="0" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="Pagador" ChargebackFee="0" ChargebackRepresentationFee="0" TransactionFee="0" ChargebackFeeRetail="0" ChargebackRepresentationFeeRetail="0" TransactionFeeRetail="0" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="BPag" ChargebackFee="0" ChargebackRepresentationFee="0" TransactionFee="0" ChargebackFeeRetail="0" ChargebackRepresentationFeeRetail="0" TransactionFeeRetail="0" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+    <Service Name="BPAGRedecard" ChargebackFee="0" ChargebackRepresentationFee="0" TransactionFee="0" ChargebackFeeRetail="0" ChargebackRepresentationFeeRetail="0" TransactionFeeRetail="0" DiscountRateRetail="0" DiscountRate="0" GatewayFee="0" GatewayFeeRetail="0" />
+  </Gateway>
+  <Outbound ID="3" DisplayName="Call Center Outbound">
+    <Service Name="Focus" ID="1" SetupFee="1200" MonthlyFee="1000" PerPourFee="1" SetupFeeRetail="1200" MonthlyFeeRetail="1200" PerPourFeeRetail="1" />
+    <Service Name="REC" ID="2" SetupFee="1200" MonthlyFee="1200" PerPourFee="1" SetupFeeRetail="1200" MonthlyFeeRetail="1200" PerPourFeeRetail="8" />
+    <Service Name="PopMarketing" ID="3" SetupFee="1200" MonthlyFee="1200" PerPourFee="1" SetupFeeRetail="1200" MonthlyFeeRetail="1200" PerPourFeeRetail="1" />
+    <Service Name="CPAResponse" ID="4" SetupFee="1200" MonthlyFee="1200" PerPourFee="1" SetupFeeRetail="1200" MonthlyFeeRetail="1200" PerPourFeeRetail="1" />
+    <Service Name="Aragon" ID="5" SetupFee="1" MonthlyFee="2" PerPourFee="3" SetupFeeRetail="4" MonthlyFeeRetail="5" PerPourFeeRetail="6" />
+    <Service Name="ePacificLink" ID="6" SetupFee="1200" MonthlyFee="1200" PerPourFee="1" SetupFeeRetail="1200" MonthlyFeeRetail="1200" PerPourFeeRetail="1" />
+  </Outbound>
+</Services>

@@ -1,0 +1,1 @@
+﻿type=capture&username=##GATEWAY_USERNAME##&password=##GATEWAY_PASSWORD##&transactionid=##TXN_NUMBER##&amount=##AMOUNT##

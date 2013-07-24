@@ -1,0 +1,39 @@
+var areYouReallySure = false;
+self.pixelOverride = true;
+function areYouSure() {
+  if (!areYouReallySure && !internalLink) {
+    areYouReallySure = true;    
+    $('#hdnPromo').val('specialoffer');    
+    $('form').submit();    
+    return "***************************************************************\r\n" +
+		"WAIT! SPECIAL OFFER!\r\n\r\n" +
+		"Before you leave, we want to send you a FREE trial package with a discounted shipping price of only $1.95!\r\n\r\n" +
+		"That's 50% OFF! Don't miss this fantastic opportunity!\r\n\r\n" +
+		"Only 26 trials remaining...\r\n" +
+		"***************************************************************";
+    
+  }
+}
+function getQS() {
+  var URL, qs, a, pos;
+  URL = window.location.href;
+  qs = "";
+  pos = URL.indexOf("?");
+  if (pos < 0) return "?promo=specialoffer";
+  for (a = pos; a < URL.length; a++) {
+    qs += URL.charAt(a);
+  }
+  return qs + "&promo=specialoffer";
+}
+window.onbeforeunload = areYouSure;
+
+
+
+
+
+
+
+
+
+
+/*Exception*/ 

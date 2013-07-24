@@ -1,0 +1,15 @@
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\EmailRestore.exe.config
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\EmailRestore.exe
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\EmailRestore.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\log4net.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\MySql.Data.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Business.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Model.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Encrypting.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Business.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Model.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\log4net.xml
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\bin\Debug\TrimFuel.Encrypting.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\obj\x86\Debug\EmailRestore.exe
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailRestore\obj\x86\Debug\EmailRestore.pdb

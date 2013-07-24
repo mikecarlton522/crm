@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02140B68-9FB1-40C0-87F8-B36A3C7EE668}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FitDiet.Store1</RootNamespace>
+    <AssemblyName>FitDiet.Store1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Intelligencia.UrlRewriter, Version=1.8.0.6, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account\cp-account.aspx.cs">
+      <DependentUpon>cp-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-account.aspx.designer.cs">
+      <DependentUpon>cp-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-commission.aspx.cs">
+      <DependentUpon>cp-commission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-commission.aspx.designer.cs">
+      <DependentUpon>cp-commission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-home.aspx.cs">
+      <DependentUpon>cp-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-home.aspx.designer.cs">
+      <DependentUpon>cp-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-orders.aspx.cs">
+      <DependentUpon>cp-orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-orders.aspx.designer.cs">
+      <DependentUpon>cp-orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-referrals.aspx.cs">
+      <DependentUpon>cp-referrals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-referrals.aspx.designer.cs">
+      <DependentUpon>cp-referrals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accessories.ascx.cs">
+      <DependentUpon>Accessories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Accessories.ascx.designer.cs">
+      <DependentUpon>Accessories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BillingDetails.ascx.cs">
+      <DependentUpon>BillingDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BillingDetails.ascx.designer.cs">
+      <DependentUpon>BillingDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BillingInfo.ascx.cs">
+      <DependentUpon>BillingInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BillingInfo.ascx.designer.cs">
+      <DependentUpon>BillingInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CartMenu.ascx.cs">
+      <DependentUpon>CartMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CartMenu.ascx.designer.cs">
+      <DependentUpon>CartMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EcigBucksEventArgs.cs" />
+    <Compile Include="Controls\Features.ascx.cs">
+      <DependentUpon>Features.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Features.ascx.designer.cs">
+      <DependentUpon>Features.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Front.Master.cs">
+      <DependentUpon>Front.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Front.Master.designer.cs">
+      <DependentUpon>Front.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GiftCertificateEventArgs.cs" />
+    <Compile Include="Controls\IStepControl.cs" />
+    <Compile Include="Controls\LoginToken.ascx.cs">
+      <DependentUpon>LoginToken.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginToken.ascx.designer.cs">
+      <DependentUpon>LoginToken.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuControlPanel.ascx.cs">
+      <DependentUpon>MenuControlPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuControlPanel.ascx.designer.cs">
+      <DependentUpon>MenuControlPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlaceMyOrder.ascx.cs">
+      <DependentUpon>PlaceMyOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlaceMyOrder.ascx.designer.cs">
+      <DependentUpon>PlaceMyOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductDescription.ascx.cs">
+      <DependentUpon>ProductDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductDescription.ascx.designer.cs">
+      <DependentUpon>ProductDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductImg.ascx.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductImg.ascx.designer.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefillCartridges.ascx.cs">
+      <DependentUpon>RefillCartridges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RefillCartridges.ascx.designer.cs">
+      <DependentUpon>RefillCartridges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShippingDetails.ascx.cs">
+      <DependentUpon>ShippingDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShippingDetails.ascx.designer.cs">
+      <DependentUpon>ShippingDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShoppingCart.ascx.cs">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShoppingCart.ascx.designer.cs">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShoppingCartView.ascx.cs">
+      <DependentUpon>ShoppingCartView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShoppingCartView.ascx.designer.cs">
+      <DependentUpon>ShoppingCartView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StepChangeEventArgs.cs" />
+    <Compile Include="fitdiet-press.aspx.cs">
+      <DependentUpon>fitdiet-press.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-press.aspx.designer.cs">
+      <DependentUpon>fitdiet-press.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-terms.aspx.cs">
+      <DependentUpon>fitdiet-terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-terms.aspx.designer.cs">
+      <DependentUpon>fitdiet-terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-contact_us.aspx.cs">
+      <DependentUpon>fitdiet-contact_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-contact_us.aspx.designer.cs">
+      <DependentUpon>fitdiet-contact_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-login.aspx.cs">
+      <DependentUpon>cp-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-login.aspx.designer.cs">
+      <DependentUpon>cp-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-logout.aspx.cs">
+      <DependentUpon>cp-logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-logout.aspx.designer.cs">
+      <DependentUpon>cp-logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-lost-password.aspx.cs">
+      <DependentUpon>cp-lost-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-lost-password.aspx.designer.cs">
+      <DependentUpon>cp-lost-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-faq.aspx.cs">
+      <DependentUpon>fitdiet-faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-faq.aspx.designer.cs">
+      <DependentUpon>fitdiet-faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-shop.aspx.cs">
+      <DependentUpon>fitdiet-shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-shop.aspx.designer.cs">
+      <DependentUpon>fitdiet-shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-success-stories.aspx.cs">
+      <DependentUpon>fitdiet-success-stories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-success-stories.aspx.designer.cs">
+      <DependentUpon>fitdiet-success-stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-how-it-works.aspx.cs">
+      <DependentUpon>fitdiet-how-it-works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-how-it-works.aspx.designer.cs">
+      <DependentUpon>fitdiet-how-it-works.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-how-to-use.aspx.cs">
+      <DependentUpon>fitdiet-how-to-use.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-how-to-use.aspx.designer.cs">
+      <DependentUpon>fitdiet-how-to-use.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-secret.aspx.cs">
+      <DependentUpon>fitdiet-secret.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-secret.aspx.designer.cs">
+      <DependentUpon>fitdiet-secret.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fitdiet-starter-kits.aspx.cs">
+      <DependentUpon>fitdiet-starter-kits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fitdiet-starter-kits.aspx.designer.cs">
+      <DependentUpon>fitdiet-starter-kits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AccountPageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\Membership.cs" />
+    <Compile Include="Logic\OrderResult.cs" />
+    <Compile Include="Logic\PageCartExt.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\PageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\ShoppingCart.cs" />
+    <Compile Include="Logic\ShoppingCartProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="order-confirmation.aspx.cs">
+      <DependentUpon>order-confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order-confirmation.aspx.designer.cs">
+      <DependentUpon>order-confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="referer-code.aspx.cs">
+      <DependentUpon>referer-code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="referer-code.aspx.designer.cs">
+      <DependentUpon>referer-code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="service\login.asmx.cs">
+      <DependentUpon>login.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="account\cp-account.aspx" />
+    <Content Include="account\cp-commission.aspx" />
+    <Content Include="account\cp-home.aspx" />
+    <Content Include="account\cp-orders.aspx" />
+    <Content Include="account\cp-referrals.aspx" />
+    <Content Include="cart.aspx" />
+    <Content Include="Controls\Accessories.ascx" />
+    <Content Include="Controls\BillingDetails.ascx" />
+    <Content Include="Controls\BillingInfo.ascx" />
+    <Content Include="Controls\CartMenu.ascx" />
+    <Content Include="Controls\Features.ascx" />
+    <Content Include="Controls\Front.Master" />
+    <Content Include="Controls\LoginToken.ascx" />
+    <Content Include="Controls\Menu.ascx" />
+    <Content Include="Controls\MenuControlPanel.ascx" />
+    <Content Include="Controls\PlaceMyOrder.ascx" />
+    <Content Include="Controls\ProductDescription.ascx" />
+    <Content Include="Controls\ProductImg.ascx" />
+    <Content Include="Controls\RefillCartridges.ascx" />
+    <Content Include="Controls\ShippingDetails.ascx" />
+    <Content Include="Controls\ShoppingCart.ascx" />
+    <Content Include="Controls\ShoppingCartView.ascx" />
+    <Content Include="fitdiet-press.aspx" />
+    <Content Include="fitdiet-terms.aspx" />
+    <Content Include="fitdiet-contact_us.aspx" />
+    <Content Include="cp-login.aspx" />
+    <Content Include="cp-logout.aspx" />
+    <Content Include="cp-lost-password.aspx" />
+    <Content Include="css\control-panel.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\validationEngine.jquery.css" />
+    <Content Include="default.aspx" />
+    <Content Include="fitdiet-faq.aspx" />
+    <Content Include="fitdiet-shop.aspx" />
+    <Content Include="fitdiet-success-stories.aspx" />
+    <Content Include="fitdiet-how-it-works.aspx" />
+    <Content Include="fitdiet-how-to-use.aspx" />
+    <Content Include="fitdiet-secret.aspx" />
+    <Content Include="fitdiet-starter-kits.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\100sure.jpg" />
+    <Content Include="images\30day.jpg" />
+    <Content Include="images\60day.jpg" />
+    <Content Include="images\ads_img.png" />
+    <Content Include="images\before_img.jpg" />
+    <Content Include="images\chat_icon.png" />
+    <Content Include="images\checkmark.gif" />
+    <Content Include="images\chk_out_btn.gif" />
+    <Content Include="images\clickhere_btn.png" />
+    <Content Include="images\click_here.png" />
+    <Content Include="images\close_btn.gif" />
+    <Content Include="images\contact_icon.jpg" />
+    <Content Include="images\cont_shopping.gif" />
+    <Content Include="images\facebok_icon.png" />
+    <Content Include="images\fir_herbal.jpg" />
+    <Content Include="images\fitdiet_logo.png" />
+    <Content Include="images\fit_dite_gr.gif" />
+    <Content Include="images\followus_bg.jpg" />
+    <Content Include="images\footer_imgg.jpg" />
+    <Content Include="images\four.gif" />
+    <Content Include="images\green_tr.gif" />
+    <Content Include="images\grey_tr.gif" />
+    <Content Include="images\header_bg.png" />
+    <Content Include="images\home_icon.jpg" />
+    <Content Include="images\how_works_1.png" />
+    <Content Include="images\how_works_2.png" />
+    <Content Include="images\how_works_3.png" />
+    <Content Include="images\konjac_root.jpg" />
+    <Content Include="images\nav2_left.jpg" />
+    <Content Include="images\nav2_mid.jpg" />
+    <Content Include="images\nav2_right.jpg" />
+    <Content Include="images\nav_div.jpg" />
+    <Content Include="images\nav_div1.jpg" />
+    <Content Include="images\nav_div2.jpg" />
+    <Content Include="images\nav_div3.jpg" />
+    <Content Include="images\nav_div4.jpg" />
+    <Content Include="images\nav_green_bg.jpg" />
+    <Content Include="images\nav_hover.png" />
+    <Content Include="images\nav_main_bg.jpg" />
+    <Content Include="images\nav_main_bg.png" />
+    <Content Include="images\nav_orange_bg.jpg" />
+    <Content Include="images\nav_pinkbg.png" />
+    <Content Include="images\next_btn.gif" />
+    <Content Include="images\number_bt.gif" />
+    <Content Include="images\one.gif" />
+    <Content Include="images\pre_btn.gif" />
+    <Content Include="images\shopping_cart_icon.png" />
+    <Content Include="images\shoppping_arrow.png" />
+    <Content Include="images\shop_bg.gif" />
+    <Content Include="images\shop_icon.png" />
+    <Content Include="images\success_btn.gif" />
+    <Content Include="images\success_mid.gif" />
+    <Content Include="images\success_upper.gif" />
+    <Content Include="images\three.gif" />
+    <Content Include="images\try_it.jpg" />
+    <Content Include="images\twitter_icon.png" />
+    <Content Include="images\two.gif" />
+    <Content Include="images\update_btn.gif" />
+    <Content Include="images\utube_icon.png" />
+    <Content Include="images\view_detail_btn.jpg" />
+    <Content Include="images\welcome_img.jpg" />
+    <Content Include="js\ajax.login.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.validationEngine.js" />
+    <Content Include="js\jquery.validationEngine.validationRules.js" />
+    <Content Include="js\mod10.js" />
+    <Content Include="js\rollover.js" />
+    <Content Include="js\shoppingcart.js" />
+    <Content Include="order-confirmation.aspx" />
+    <Content Include="referer-code.aspx" />
+    <Content Include="service\login.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TrimFuel.Business\TrimFuel.Business.csproj">
+      <Project>{C5815D73-3CA3-4888-9E55-331A527B3DD6}</Project>
+      <Name>TrimFuel.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Model\TrimFuel.Model.csproj">
+      <Project>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</Project>
+      <Name>TrimFuel.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Web.Module\TrimFuel.Web.Module.csproj">
+      <Project>{A372D709-5DA9-4635-8DD4-14FC8E99AA8C}</Project>
+      <Name>TrimFuel.Web.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9963</DevelopmentServerPort>
+          <DevelopmentServerVPath>/webstore</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Fitdiet/Store1</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

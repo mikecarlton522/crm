@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://trianglecrm.org/support/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://trianglecrm.org/support/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://trianglecrm.org/support/">
+      <s:element name="Process">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="triangle" nillable="true" type="tns:Triangle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Triangle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="csi" type="tns:csi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="XmlElement" />
+      <s:complexType name="customer">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="product" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="disposition">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="agent_notes" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="agent">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="time">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="start" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="end" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="dnis" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="call">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="time" type="tns:time" />
+              <s:element minOccurs="0" maxOccurs="1" name="agent" type="tns:agent" />
+              <s:element minOccurs="0" maxOccurs="1" name="disposition" type="tns:disposition" />
+              <s:element minOccurs="0" maxOccurs="1" name="customer" type="tns:customer" />
+            </s:sequence>
+            <s:attribute name="id" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="csi">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:XmlElement">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="call" type="tns:call" />
+            </s:sequence>
+            <s:attribute name="version" type="s:string" />
+            <s:attribute name="partner" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:Process" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessResponse" />
+  </wsdl:message>
+  <wsdl:portType name="customer_service_feedSoap">
+    <wsdl:operation name="Process">
+      <wsdl:input message="tns:ProcessSoapIn" />
+      <wsdl:output message="tns:ProcessSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="customer_service_feedSoap" type="tns:customer_service_feedSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Process">
+      <soap:operation soapAction="http://trianglecrm.org/support/Process" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="customer_service_feedSoap12" type="tns:customer_service_feedSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Process">
+      <soap12:operation soapAction="http://trianglecrm.org/support/Process" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="customer_service_feed">
+    <wsdl:port name="customer_service_feedSoap" binding="tns:customer_service_feedSoap">
+      <soap:address location="http://dashboard.trianglecrm.com/support/customer_service_feed.asmx" />
+    </wsdl:port>
+    <wsdl:port name="customer_service_feedSoap12" binding="tns:customer_service_feedSoap12">
+      <soap12:address location="http://dashboard.trianglecrm.com/support/customer_service_feed.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+﻿type=void&storeid=##GATEWAY_USERNAME##&token=##GATEWAY_PASSWORD##&referenceid=##TXN_NUMBER##

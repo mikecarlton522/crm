@@ -1,0 +1,15 @@
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\EmailBodyCompress.exe
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\EmailBodyCompress.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\obj\x86\Debug\EmailBodyCompress.exe
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\obj\x86\Debug\EmailBodyCompress.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\EmailBodyCompress.exe.config
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\log4net.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\MySql.Data.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Business.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Model.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Encrypting.dll
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Business.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Model.pdb
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\log4net.xml
+C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\bin\Debug\TrimFuel.Encrypting.pdb

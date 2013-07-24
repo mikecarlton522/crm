@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <section name="TrimFuel" type="TrimFuel.Business.Configuration.TrimFuelSection, TrimFuel.Business"/>
+    </configSections>
+    <TrimFuel AppAuthMode="Static">
+        <StaticAppAuth ApplicationId="STO" />
+        <Applications>
+            <add ApplicationId="STO">
+                <ConnectionStrings>
+                    <add name="TrimFuel" connectionString="Datasource=stodb.cam7ki8pvkcs.us-east-1.rds.amazonaws.com;Database=TrimFuel;uid=sergei;pwd=aXy7bdFGvz;" providerName="MySql.Data.MySqlClient"/>
+                </ConnectionStrings>
+                <EmailServer URL="http://174.129.197.160/IHS.Email/IHS.Email.asmx/SendEmail"/>
+                <NMI URL="https://secure.networkmerchants.com/api/transact.php"/>
+                <MSC URL="https://gateway.sslapplications.net/ynMklop/"/>
+                <SHW URL="https://www.selfhelpworks.com/reg/_services/SHWIntegration.asmx/SHWIntegrationMethod"/>
+                <BadCustomer URL="https://www.badcustomer.com/api/index"/>
+                <MaxMind URL="https://minfraud1.maxmind.com/app/ccv2r"/>
+                <ABF TestMode="false" ThreePLKey="{a9ec2447-4ad8-4c25-8cca-58837b459b69}" Login="robertw" Password="tmcit2" FacilityID="1" ThreePLID="241" />
+                <Keymail Emails="taryn@keymailuk.com,Donna.Deacon@keymailuk.com,rob@trianglemediacorp.com"/>
+            </add>
+        </Applications>
+    </TrimFuel>
+</configuration>

@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.pagador.com.br/webservice/pagador" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.pagador.com.br/webservice/pagador" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This webservice authorizes PAGADOR orders</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.pagador.com.br/webservice/pagador">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="Authorize">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentMethod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorReturn">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="amount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="authorisationNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="status" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="transactionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthorizeWithDateFirstInstallment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authorizeWithDateFirstInstallmentRequest" type="tns:AuthorizeWithDateFirstInstallmentRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthorizeWithDateFirstInstallmentRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentMethod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Holder" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardNumber" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Expiration" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecurityCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberPayments" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypePayment" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateFirstInstallment" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthorizeWithDateFirstInstallmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeWithDateFirstInstallmentResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentMethod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeMobileResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeMobilePartial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeMobilePartialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeMobilePartialResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeWithServiceTax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceTax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentMethod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeWithServiceTaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeWithServiceTaxResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeAvs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentMethod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressComplement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeAvsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeAvsResult" type="tns:PagadorAvsReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorAvsReturn">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:PagadorReturn">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="avsReturnCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="avsMessage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="avsStatus" nillable="true" type="s:unsignedByte" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AuthorizeAvsStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentMethod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressComplement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="avsStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeAvsStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeAvsStatusResult" type="tns:PagadorAvsReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="order" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidTransactionResult" type="tns:PagadorVoidReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorVoidReturn">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="amount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="status" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="transactionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VoidPartial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="order" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidPartialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidPartialResult" type="tns:PagadorVoidReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OneDollarAuth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PagadorOneDollarAuthRequest" nillable="true" type="tns:PagadorOneDollarAuthRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorOneDollarAuthRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentMethod" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardExpirationDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardSecurityCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseAvs" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cpf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressComplement" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OneDollarAuthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PagadorOneDollarAuthResponse" nillable="true" type="tns:PagadorOneDollarAuthResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorOneDollarAuthResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthorizationNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvsMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvsReturnCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvsStatus" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelAmount" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelOrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelReturnCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelStatus" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelTransactionId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthorizeExistingAvsStatusWithService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberPayments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typePayment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addressComplement" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="avsStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="avs" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeExistingAvsStatusWithServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeExistingAvsStatusWithServiceResult" type="tns:PagadorReturnWithService" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagadorReturnWithService">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MainReturn" type="tns:PagadorReturn" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceReturn" type="tns:PagadorReturn" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Capture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CaptureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CaptureResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapturePartial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchantId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="captureAmount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapturePartialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapturePartialResult" type="tns:PagadorReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CreateTransactionRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateTransactionRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentMethodId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InstallmentCount" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantTransactionId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypePayment" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingData" type="tns:ShippingData" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyerData" type="tns:BuyerData" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtraData" type="tns:ArrayOfNameValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="IpAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShippingData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AbstractData" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AbstractData" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StreetType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Complement" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Neighborhood" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BuyerData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AbstractData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdentificationNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BirthDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MobilePhoneNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NameValue" nillable="true" type="tns:NameValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateTransactionResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PagadorReturn" nillable="true" type="tns:PagadorReturn" />
+      <s:element name="PagadorAvsReturn" nillable="true" type="tns:PagadorAvsReturn" />
+      <s:element name="PagadorVoidReturn" nillable="true" type="tns:PagadorVoidReturn" />
+      <s:element name="PagadorReturnWithService" nillable="true" type="tns:PagadorReturnWithService" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthorizeSoapIn">
+    <wsdl:part name="parameters" element="tns:Authorize" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithDateFirstInstallmentSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeWithDateFirstInstallment" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithDateFirstInstallmentSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeWithDateFirstInstallmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeMobile" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeMobilePartial" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeMobilePartialResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeWithServiceTax" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeWithServiceTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeAvs" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeAvsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeAvsStatus" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeAvsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidTransaction" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidPartial" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidPartialResponse" />
+  </wsdl:message>
+  <wsdl:message name="OneDollarAuthSoapIn">
+    <wsdl:part name="parameters" element="tns:OneDollarAuth" />
+  </wsdl:message>
+  <wsdl:message name="OneDollarAuthSoapOut">
+    <wsdl:part name="parameters" element="tns:OneDollarAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeExistingAvsStatusWithService" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeExistingAvsStatusWithServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CaptureSoapIn">
+    <wsdl:part name="parameters" element="tns:Capture" />
+  </wsdl:message>
+  <wsdl:message name="CaptureSoapOut">
+    <wsdl:part name="parameters" element="tns:CaptureResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialSoapIn">
+    <wsdl:part name="parameters" element="tns:CapturePartial" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialSoapOut">
+    <wsdl:part name="parameters" element="tns:CapturePartialResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CreateTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="customerMobile" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialHttpGetIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="serviceTax" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorAvsReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="avsStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorAvsReturn" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="order" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorVoidReturn" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="order" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorVoidReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceHttpGetIn">
+    <wsdl:part name="transId" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="avsStatus" type="s:string" />
+    <wsdl:part name="avs" type="s:string" />
+    <wsdl:part name="serviceAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturnWithService" />
+  </wsdl:message>
+  <wsdl:message name="CaptureHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CaptureHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialHttpGetIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="captureAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialHttpGetOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="customerMobile" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobileHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialHttpPostIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeMobilePartialHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="serviceTax" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeWithServiceTaxHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorAvsReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="customerName" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="paymentMethod" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="avsStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeAvsStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorAvsReturn" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="order" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorVoidReturn" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="order" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPartialHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorVoidReturn" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceHttpPostIn">
+    <wsdl:part name="transId" type="s:string" />
+    <wsdl:part name="holder" type="s:string" />
+    <wsdl:part name="cardNumber" type="s:string" />
+    <wsdl:part name="expiration" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="numberPayments" type="s:string" />
+    <wsdl:part name="typePayment" type="s:string" />
+    <wsdl:part name="cpf" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="addressNumber" type="s:string" />
+    <wsdl:part name="addressComplement" type="s:string" />
+    <wsdl:part name="zipCode1" type="s:string" />
+    <wsdl:part name="zipCode2" type="s:string" />
+    <wsdl:part name="city" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="country" type="s:string" />
+    <wsdl:part name="avsStatus" type="s:string" />
+    <wsdl:part name="avs" type="s:string" />
+    <wsdl:part name="serviceAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeExistingAvsStatusWithServiceHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturnWithService" />
+  </wsdl:message>
+  <wsdl:message name="CaptureHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CaptureHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialHttpPostIn">
+    <wsdl:part name="merchantId" type="s:string" />
+    <wsdl:part name="orderId" type="s:string" />
+    <wsdl:part name="captureAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapturePartialHttpPostOut">
+    <wsdl:part name="Body" element="tns:PagadorReturn" />
+  </wsdl:message>
+  <wsdl:portType name="PagadorSoap">
+    <wsdl:operation name="Authorize">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeSoapIn" />
+      <wsdl:output message="tns:AuthorizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithDateFirstInstallment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order with DateFirstInstallment</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeWithDateFirstInstallmentSoapIn" />
+      <wsdl:output message="tns:AuthorizeWithDateFirstInstallmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobileSoapIn" />
+      <wsdl:output message="tns:AuthorizeMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order (Partial, Internal)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobilePartialSoapIn" />
+      <wsdl:output message="tns:AuthorizeMobilePartialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order with service tax</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeWithServiceTaxSoapIn" />
+      <wsdl:output message="tns:AuthorizeWithServiceTaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsSoapIn" />
+      <wsdl:output message="tns:AuthorizeAvsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsStatusSoapIn" />
+      <wsdl:output message="tns:AuthorizeAvsStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidTransactionSoapIn" />
+      <wsdl:output message="tns:VoidTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidPartialSoapIn" />
+      <wsdl:output message="tns:VoidPartialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OneDollarAuth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a credit card order and cancel the order right after confirmation</wsdl:documentation>
+      <wsdl:input message="tns:OneDollarAuthSoapIn" />
+      <wsdl:output message="tns:OneDollarAuthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an existing order using the transId</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeExistingAvsStatusWithServiceSoapIn" />
+      <wsdl:output message="tns:AuthorizeExistingAvsStatusWithServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture an order</wsdl:documentation>
+      <wsdl:input message="tns:CaptureSoapIn" />
+      <wsdl:output message="tns:CaptureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:CapturePartialSoapIn" />
+      <wsdl:output message="tns:CapturePartialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a transaction on Pagador platform</wsdl:documentation>
+      <wsdl:input message="tns:CreateTransactionSoapIn" />
+      <wsdl:output message="tns:CreateTransactionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PagadorHttpGet">
+    <wsdl:operation name="Authorize">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobileHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeMobileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order (Partial, Internal)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobilePartialHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeMobilePartialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order with service tax</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeWithServiceTaxHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeWithServiceTaxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeAvsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsStatusHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeAvsStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidTransactionHttpGetIn" />
+      <wsdl:output message="tns:VoidTransactionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidPartialHttpGetIn" />
+      <wsdl:output message="tns:VoidPartialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an existing order using the transId</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeExistingAvsStatusWithServiceHttpGetIn" />
+      <wsdl:output message="tns:AuthorizeExistingAvsStatusWithServiceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture an order</wsdl:documentation>
+      <wsdl:input message="tns:CaptureHttpGetIn" />
+      <wsdl:output message="tns:CaptureHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:CapturePartialHttpGetIn" />
+      <wsdl:output message="tns:CapturePartialHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PagadorHttpPost">
+    <wsdl:operation name="Authorize">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobileHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeMobileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize a Mobile order (Partial, Internal)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeMobilePartialHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeMobilePartialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order with service tax</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeWithServiceTaxHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeWithServiceTaxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeAvsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an order using AVS</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeAvsStatusHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeAvsStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidTransactionHttpPostIn" />
+      <wsdl:output message="tns:VoidTransactionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancel Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:VoidPartialHttpPostIn" />
+      <wsdl:output message="tns:VoidPartialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authorize an existing order using the transId</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizeExistingAvsStatusWithServiceHttpPostIn" />
+      <wsdl:output message="tns:AuthorizeExistingAvsStatusWithServiceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture an order</wsdl:documentation>
+      <wsdl:input message="tns:CaptureHttpPostIn" />
+      <wsdl:output message="tns:CaptureHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Capture Part of an order</wsdl:documentation>
+      <wsdl:input message="tns:CapturePartialHttpPostIn" />
+      <wsdl:output message="tns:CapturePartialHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PagadorSoap" type="tns:PagadorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authorize">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/Authorize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithDateFirstInstallment">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeWithDateFirstInstallment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeMobilePartial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeWithServiceTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeAvs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeAvsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/VoidTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/VoidPartial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneDollarAuth">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/OneDollarAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeExistingAvsStatusWithService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/Capture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/CapturePartial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransaction">
+      <soap:operation soapAction="https://www.pagador.com.br/webservice/pagador/CreateTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PagadorSoap12" type="tns:PagadorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authorize">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/Authorize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithDateFirstInstallment">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeWithDateFirstInstallment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeMobilePartial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeWithServiceTax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeAvs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeAvsStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/VoidTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/VoidPartial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneDollarAuth">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/OneDollarAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/AuthorizeExistingAvsStatusWithService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/Capture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/CapturePartial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransaction">
+      <soap12:operation soapAction="https://www.pagador.com.br/webservice/pagador/CreateTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PagadorHttpGet" type="tns:PagadorHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Authorize">
+      <http:operation location="/Authorize" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <http:operation location="/AuthorizeMobile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <http:operation location="/AuthorizeMobilePartial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <http:operation location="/AuthorizeWithServiceTax" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <http:operation location="/AuthorizeAvs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <http:operation location="/AuthorizeAvsStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <http:operation location="/VoidTransaction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <http:operation location="/VoidPartial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <http:operation location="/AuthorizeExistingAvsStatusWithService" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <http:operation location="/Capture" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <http:operation location="/CapturePartial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PagadorHttpPost" type="tns:PagadorHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Authorize">
+      <http:operation location="/Authorize" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobile">
+      <http:operation location="/AuthorizeMobile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeMobilePartial">
+      <http:operation location="/AuthorizeMobilePartial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeWithServiceTax">
+      <http:operation location="/AuthorizeWithServiceTax" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvs">
+      <http:operation location="/AuthorizeAvs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeAvsStatus">
+      <http:operation location="/AuthorizeAvsStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <http:operation location="/VoidTransaction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPartial">
+      <http:operation location="/VoidPartial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeExistingAvsStatusWithService">
+      <http:operation location="/AuthorizeExistingAvsStatusWithService" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capture">
+      <http:operation location="/Capture" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturePartial">
+      <http:operation location="/CapturePartial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pagador">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This webservice authorizes PAGADOR orders</wsdl:documentation>
+    <wsdl:port name="PagadorSoap" binding="tns:PagadorSoap">
+      <soap:address location="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PagadorSoap12" binding="tns:PagadorSoap12">
+      <soap12:address location="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PagadorHttpGet" binding="tns:PagadorHttpGet">
+      <http:address location="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PagadorHttpPost" binding="tns:PagadorHttpPost">
+      <http:address location="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

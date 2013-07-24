@@ -1,0 +1,3 @@
+cnfStyle w:val="000000100000"
+change to
+cnfStyle w:val="000000000000"

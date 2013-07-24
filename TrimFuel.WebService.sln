@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.Model", "TrimFuel.Model\TrimFuel.Model.csproj", "{4ACFDE23-A749-4967-9E9A-AA08AFADE555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.Business", "TrimFuel.Business\TrimFuel.Business.csproj", "{C5815D73-3CA3-4888-9E55-331A527B3DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.WebService.SupportAPI", "Webs\TrimFuel.WebService.SupportAPI\TrimFuel.WebService.SupportAPI.csproj", "{ED1775D7-E648-44C1-A105-388C7BF5B736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.WebServices.BillingAPI", "Webs\TrimFuel.WebServices.BillingAPI\TrimFuel.WebServices.BillingAPI.csproj", "{B25C250F-2FFC-4BD8-B574-C4854A3FB4E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.WebServices.ShipperAPI", "Webs\TrimFuel.WebServices.ShipperAPI\TrimFuel.WebServices.ShipperAPI.csproj", "{FACC13D9-F4C2-476C-AF3E-952BD19AE176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimFuel.WebServices.ShippingAPI", "Webs\TrimFuel.WebServices.ShippingAPI\TrimFuel.WebServices.ShippingAPI.csproj", "{47306658-C6D5-4420-9048-2685A798BFB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ACFDE23-A749-4967-9E9A-AA08AFADE555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ACFDE23-A749-4967-9E9A-AA08AFADE555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ACFDE23-A749-4967-9E9A-AA08AFADE555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ACFDE23-A749-4967-9E9A-AA08AFADE555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5815D73-3CA3-4888-9E55-331A527B3DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5815D73-3CA3-4888-9E55-331A527B3DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5815D73-3CA3-4888-9E55-331A527B3DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5815D73-3CA3-4888-9E55-331A527B3DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1775D7-E648-44C1-A105-388C7BF5B736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1775D7-E648-44C1-A105-388C7BF5B736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1775D7-E648-44C1-A105-388C7BF5B736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1775D7-E648-44C1-A105-388C7BF5B736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B25C250F-2FFC-4BD8-B574-C4854A3FB4E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25C250F-2FFC-4BD8-B574-C4854A3FB4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25C250F-2FFC-4BD8-B574-C4854A3FB4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25C250F-2FFC-4BD8-B574-C4854A3FB4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACC13D9-F4C2-476C-AF3E-952BD19AE176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACC13D9-F4C2-476C-AF3E-952BD19AE176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACC13D9-F4C2-476C-AF3E-952BD19AE176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACC13D9-F4C2-476C-AF3E-952BD19AE176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47306658-C6D5-4420-9048-2685A798BFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47306658-C6D5-4420-9048-2685A798BFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47306658-C6D5-4420-9048-2685A798BFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47306658-C6D5-4420-9048-2685A798BFB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

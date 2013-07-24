@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------
+2011-03-31 14:50:52,343 [1] ERROR AragonLeads.Program [(null)] - AragonLeads.Program
+System.Exception: Manual error
+   at AragonLeads.Program.ProcessOrders(AragonAuth auth) in D:\Projects\TrimFuel\TrimFuel\Jobs\AragonLeads\Program.cs:line 68
+   at AragonLeads.Program.Main(String[] args) in D:\Projects\TrimFuel\TrimFuel\Jobs\AragonLeads\Program.cs:line 55
+-------------------------------------------------------------------------
+2011-03-31 14:54:26,546 [1] ERROR AragonLeads.Program [(null)] - AragonLeads.Program
+System.Exception: asdfasdf
+   at AragonLeads.Program.ProcessOrders(AragonAuth auth) in D:\Projects\TrimFuel\TrimFuel\Jobs\AragonLeads\Program.cs:line 76
+   at AragonLeads.Program.Main(String[] args) in D:\Projects\TrimFuel\TrimFuel\Jobs\AragonLeads\Program.cs:line 55

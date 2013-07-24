@@ -1,0 +1,1 @@
+﻿Username=##USERNAME##&Password=##PASSWORD##&email=##EMAIL##&firstname=##FNAME##&lastname=##LNAME##&address=##ADDRESS##&city=##CITY##&state=##STATE##&postal=##ZIP##&phone=##PHONE##&shipping=##SHIPPING_PRICE##&Confonoff=E&ControlID=##SALEID####SKU_LIST##

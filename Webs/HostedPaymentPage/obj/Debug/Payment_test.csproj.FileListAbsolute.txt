@@ -1,0 +1,13 @@
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\Payment_test.dll
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\Payment_test.pdb
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\obj\Debug\ResolveAssemblyReference.cache
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\obj\Debug\Payment_test.dll
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\obj\Debug\Payment_test.pdb
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\TrimFuel.Model.dll
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\TrimFuel.Business.pdb
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\TrimFuel.Model.pdb
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\log4net.xml
+c:\users\com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\TrimFuel.Encrypting.pdb
+C:\Users\Com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\log4net.dll
+C:\Users\Com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\MySql.Data.dll
+C:\Users\Com\documents\visual studio 2010\Projects\Payment_test\Payment_test\bin\TrimFuel.Encrypting.dll

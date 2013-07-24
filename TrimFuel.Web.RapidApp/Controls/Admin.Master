@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="TrimFuel.Web.RapidApp.Controls.Admin" %>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <%# Header %>
+        | Admin</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../js/simple.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.formatCurrency-1.4.0.min.js"></script>
+
+    <link href="../css/rapidappstyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/menu.css" rel="stylesheet" type="text/css">
+    <link href="../css/validationEngine.jquery.css" rel="stylesheet" type="text/css">
+    <link href="../css/smoothness/jquery-ui-1.8.2.custom.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/jquery-ui.min.js"></script>
+
+    <script src="../js/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="../js/table2CSV.js"></script>
+
+    <script src="../js/menu.js" type="text/javascript"></script>
+
+    <script src="../js/scripts.js" type="text/javascript"></script>
+
+    <script src="../js/accordion.js" type="text/javascript"></script>
+
+    <script src="../js/toggle.js" type="text/javascript"></script>
+
+    <script src="../js/jquery.validationEngine.validationRules.js" type="text/javascript"
+        language="javascript"></script>
+
+    <script src="../js/jquery.validationEngine.js" type="text/javascript" language="javascript"></script>
+
+    <script src="../js/sorttable.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            updateMenu();
+        });
+
+        function updateMenu() {
+            $("#left").html("<img src='../images/loading2.gif' />");
+            inlineControl("ajaxControls/LeftMenu.aspx", "left");
+        }
+
+        function doSelected(el) {
+            //close all before
+            $(el).parent().find("div").hide();
+            $("#left div .selected").removeClass("selected");
+
+            //open and selected
+            $(el).children().addClass("selected");
+            if ($(el).next() != null || $(el).next() != "undefined")
+                $(el).next().show();
+        }
+        function ShowHideMenuRows(el) {
+            if ($(el).next().css('display') == 'none') {
+                $(el).next().show();
+            }
+            else {
+                $(el).next().hide();
+            }
+            return false;
+        }
+        function showClientProfile(clientID, el) {
+            doSelected(el);
+            $("#right").html("<img src='../images/loading2.gif' />");
+            $("#right").show();
+            var url = "ajaxControls/ClientProfileItem.aspx?clientId=" + clientID;
+            inlineControl(url, "right");
+        }
+        function showClientServiceType(clientID, type, el) {
+            doSelected(el);
+            $("#right").html("<img src='../images/loading2.gif' />");
+            $("#right").show();
+            if (type.toLowerCase() == "fulfillment") {
+                showFulfillmentSettings(clientID);
+            }
+            if (type.toLowerCase() == "gateway") {
+                showGatewaySettings(clientID);
+            }
+            if (type.toLowerCase() == "outbound") {
+                showOutboundSettings(clientID);
+            }
+        }
+        function showFulfillmentSettings(clientID) {
+            var url = "ajaxControls/ClientFulfillment.aspx?clientId=" + clientID;
+            inlineControl(url, "right", null, function() {
+                alternateTables('right');
+            });
+        }
+        function showGatewaySettings(clientID) {
+            var url = "ajaxControls/ClientGateway.aspx?clientId=" + clientID;
+            inlineControl(url, "right", null, function() {
+                alternateTables('right');
+            });
+        }
+        function showOutboundSettings(clientID) {
+            var url = "ajaxControls/ClientOutbound.aspx?clientId=" + clientID;
+            inlineControl(url, "right", null, function() {
+                alternateTables('right');
+            });
+        }
+        function showService(serviceID, type, sername, el) {
+            doSelected(el);
+            $("#right").html("<img src='../images/loading2.gif' />");
+            $("#right").show();
+            var url = "ajaxControls/ServiceDefaultSettings.aspx?serviceID=" + serviceID + "&type=" + type + "&sername=" + sername;
+            inlineControl(url, "right");
+        }
+        function showClientService(clientID, type, service, serviceID, baseService, el) {
+            doSelected(el);
+            $("#right").html("<img src='../images/loading2.gif' />");
+            $("#right").show();
+            if (type.toLowerCase() == "fulfillment") {
+                var url = "ajaxControls/ClientFulfillmentService.aspx?ClientId=" + clientID + "&service=" + service + "&serviceID=" + serviceID;
+                inlineControl(url, "right", null, function() {
+                    alternateTables('right');
+                });
+            }
+            if (type.toLowerCase() == "gateway") {
+                var url = "ajaxControls/ClientGatewayService.aspx?ClientId=" + clientID + "&service=" + baseService + "&companyID=" + serviceID;
+                inlineControl(url, "right", null, function() {
+                    alternateTables('right');
+                });
+            }
+            if (type.toLowerCase() == "outbound") {
+                var url = "ajaxControls/ClientOutboundService.aspx?ClientId=" + clientID + "&service=" + service + "&serviceID=" + serviceID;
+                inlineControl(url, "right", null, function() {
+                    alternateTables('right');
+                });
+            }
+        }
+        function addService(clientId, serviceType, el) {
+            doSelected(el);
+            popupControl2("select-service", "Select Service", 300, 200, "ajaxControls/AddClientService.aspx?ClientId=" + clientId + "&serviceType=" + serviceType);
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="cphScript" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="menu">
+        </div>
+        <div id="header">
+            <%# Header %>
+        </div>
+        <div id="main">
+            <div id="left">
+            </div>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="inner">
+            Copyright &copy; 2011 Triangle Payments. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://trimfuel.localhost/support/customer_service_feed.asmx?wsdl" filename="customer_service_feed.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://trimfuel.localhost/support/customer_service_feed.asmx?disco" filename="customer_service_feed.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

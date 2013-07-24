@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------
+2012-02-13 18:44:29,400 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 73
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:44:50,399 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 73
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:44:58,587 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 73
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:47:27,691 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.FormatException: Invalid character in a Base-64 string.
+   at System.Convert.FromBase64String(String s)
+   at TrimFuel.Business.Utils.StringCompressor.DecompressString(String compressedText) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Utils\StringCompressor.cs:line 48
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 74
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:49:22,719 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.FormatException: Invalid character in a Base-64 string.
+   at System.Convert.FromBase64String(String s)
+   at TrimFuel.Business.Utils.StringCompressor.DecompressString(String compressedText) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Utils\StringCompressor.cs:line 48
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 81
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:50:29,779 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.FormatException: Invalid character in a Base-64 string.
+   at System.Convert.FromBase64String(String s)
+   at TrimFuel.Business.Utils.StringCompressor.DecompressString(String compressedText) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Utils\StringCompressor.cs:line 48
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 81
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28
+-------------------------------------------------------------------------
+2012-02-13 18:50:59,434 [10] ERROR EmailBodyCompress.Program [Restore] - EmailBodyCompress.Program
+System.FormatException: Invalid character in a Base-64 string.
+   at System.Convert.FromBase64String(String s)
+   at TrimFuel.Business.Utils.StringCompressor.DecompressString(String compressedText) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Utils\StringCompressor.cs:line 48
+   at TrimFuel.Business.Dao.EntityDataProviders.EmailDataProvider.Load(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EmailDataProvider.cs:line 81
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.<Load>b__0(DataRow row) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 27
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TrimFuel.Business.Dao.EntityDataProviders.EntityDataProvider`1.Load(MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\EntityDataProviders\EntityDataProvider.cs:line 26
+   at TrimFuel.Business.Dao.MySqlDao.Load[TEntity](MySqlCommand selectCommand) in c:\Projects\Triangle\TrimFuel_VS2010\TrimFuel.Business\Dao\MySqlDao.cs:line 54
+   at EmailBodyCompress.Program.Main(String[] args) in C:\Projects\Triangle\TrimFuel_VS2010\Jobs\EmailBodyCompress\Program.cs:line 28

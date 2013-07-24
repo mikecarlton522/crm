@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TrimFuel.Business.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TrimFuel_Business_ABFApi_ServiceExternal" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://app02.3plcentral.com/WebServiceExternal/Contracts.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_Business_MBApi_MBAPI" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://api.moldingbox.com/api.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_Business_FiveNineApi_WsAdminService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://api.five9.com/wsadmin/AdminWebService</Value>
+    </Setting>
+    <Setting Name="TrimFuel_Business_Pagador_Pagador" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://homologacao.pagador.com.br/webservices/pagador/Pagador.asmx</Value>
+    </Setting>
+    <Setting Name="TrimFuel_Business_BPag_BPagWSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://bpag.uol.com.br/bpag2/services/BPagWS</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

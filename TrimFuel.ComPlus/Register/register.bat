@@ -1,0 +1,2 @@
+H:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\regsvcs TrimFuel.ComPlus.dll
+pause

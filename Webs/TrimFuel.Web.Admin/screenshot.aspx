@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="screenshot.aspx.cs" Inherits="TrimFuel.Web.Admin.screenshot" AspCompat="true" %>

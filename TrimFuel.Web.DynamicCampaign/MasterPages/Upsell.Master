@@ -1,0 +1,25 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Upsell.Master.cs" Inherits="TrimFuel.Web.DynamicCampaign.Masterpages.Upsell" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+        <asp:Literal ID="title" runat="server" /></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />    
+    <!--[if IE]> <style type="text/css">@import "css/ie.css";</style> <![endif]-->   
+    <script type="text/javascript" src="js/jquery.js"></script>     
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+               
+    </asp:ContentPlaceHolder>
+    <asp:Literal ID="head" runat="server" />
+    <script type="text/javascript" src="js/IHS.js"></script>    
+    <link href="../css/prompt.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body> 
+    <form id="_form" method="post">
+        <input type="hidden" name="__action" id="__action" />
+        <asp:ContentPlaceHolder ID="cpContent" runat="server">        
+        </asp:ContentPlaceHolder>
+    <asp:Literal ID="pixel" runat="server" />
+    </form>       
+</body>
+</html>

@@ -1,0 +1,1457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{569D5CA3-E894-403B-9406-F96ED5CA5A95}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrimFuel.Web.Admin</RootNamespace>
+    <AssemblyName>TrimFuel.Web.Admin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\SharpSSH\Tamir.SharpSSH.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.6.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="TrimFuel.Business">
+      <HintPath>..\..\TrimFuel.Business\bin\Debug\TrimFuel.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="TrimFuel.Model">
+      <HintPath>..\..\TrimFuel.Model\bin\Debug\TrimFuel.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="TrimFuel.Web.Screenshots">
+      <HintPath>..\..\TrimFuel.Web.Screenshots\bin\Debug\TrimFuel.Web.Screenshots.dll</HintPath>
+    </Reference>
+    <Reference Include="TrimFuel.Web.UI">
+      <HintPath>..\..\TrimFuel.Web.UI\bin\Debug\TrimFuel.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxControls\CalendarData.aspx" />
+    <Content Include="AjaxControls\CallPlayer.aspx" />
+    <Content Include="AjaxControls\CampaignDynamicEmail.aspx" />
+    <Content Include="AjaxControls\CampaignEmailTypeList.aspx" />
+    <Content Include="AjaxControls\CreateNewProductGroup.aspx" />
+    <Content Include="AjaxControls\EmailBody.aspx" />
+    <Content Include="AjaxControls\InventoryEdit.aspx" />
+    <Content Include="AjaxControls\InventoryManager.aspx" />
+    <Content Include="AjaxControls\logout.aspx" />
+    <Content Include="AjaxControls\Order.aspx" />
+    <Content Include="AjaxControls\OrderFreeItem.aspx" />
+    <Content Include="AjaxControls\ProductCodeManager.aspx" />
+    <Content Include="AjaxControls\ProductFlowManagerAdvanced.aspx" />
+    <Content Include="AjaxControls\ProductFlowWizard.aspx" />
+    <Content Include="AjaxControls\OrderRecurringPlan.aspx" />
+    <Content Include="AjaxControls\OrderRecurringPlans.aspx" />
+    <Content Include="AjaxControls\ProductInventoryManager.aspx" />
+    <Content Include="AjaxControls\ProductListManager.aspx" />
+    <Content Include="AjaxControls\QueuedTransactions.aspx" />
+    <Content Include="AjaxControls\RecurringPlanDelete.aspx" />
+    <Content Include="AjaxControls\SaleHistory.aspx" />
+    <Content Include="AjaxControls\ProductMIDManager_test.aspx" />
+    <Content Include="AjaxControls\EmailForm.aspx" />
+    <Content Include="AjaxControls\SaleInfo.aspx" />
+    <Content Include="AjaxControls\SaleRefund.aspx" />
+    <Content Include="AjaxControls\SaleReturn.aspx" />
+    <Content Include="AjaxControls\SaleReturnAction.aspx" />
+    <Content Include="AjaxControls\SaleShipments.aspx" />
+    <Content Include="AjaxControls\SubscriptionData.aspx" />
+    <Content Include="AjaxControls\UMG.aspx" />
+    <Content Include="AjaxControls\UnsentShipments.aspx" />
+    <Content Include="Controls\Address.ascx" />
+    <Content Include="Controls\CreditCard.ascx" />
+    <Content Include="Controls\DropDownFreeItem.ascx" />
+    <Content Include="Controls\DropDownFreeItemOld.ascx" />
+    <Content Include="Controls\DropDownUpsell.ascx" />
+    <Content Include="Controls\Paging.ascx" />
+    <Content Include="Controls\RecurringPlanBriefView.ascx" />
+    <Content Include="Controls\RecurringPlanBriefView2.ascx" />
+    <Content Include="Controls\SaleHistory.ascx" />
+    <Content Include="Controls\SubscriptionControl\CampaignSubscription.ascx" />
+    <Content Include="Controls\SubscriptionControl\CampaignSubscriptionWithoutTrial.ascx" />
+    <Content Include="Controls\SubscriptionControl\NewSubscriptionControl.ascx" />
+    <Content Include="Controls\SubscriptionControl\Subscription.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionControl.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionDropDown.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionFilter.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionList.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionPlanFrequency.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionProduct.ascx" />
+    <Content Include="Controls\SubscriptionControl\SubscriptionProductGroup.ascx" />
+    <Content Include="Controls\SaleShipments.ascx" />
+    <Content Include="AjaxControls\IPRestriction.aspx" />
+    <Content Include="edit_campaigns_advanced.aspx" />
+    <Content Include="management_campaigns_advanced.aspx" />
+    <Content Include="management_virtual_terminal_test.aspx" />
+    <Content Include="outbound_sales_performance.aspx" />
+    <Content Include="product_manager_test.aspx" />
+    <Content Include="reports_chargeback_performance.aspx" />
+    <Content Include="reports_fulfilment_export.aspx" />
+    <Content Include="reports_recording.aspx" />
+    <Content Include="reports_transactions.aspx" />
+    <Content Include="salesagent_management.aspx" />
+    <Content Include="salesagent_management_test.aspx" />
+    <Content Include="services\FailReason.aspx" />
+    <Content Include="services\OrderSearch.aspx" />
+    <Content Include="services\QueuedTransactionsGroup.aspx" />
+    <Content Include="services\StopPlan.aspx" />
+    <Content Include="services\UnsentShipmentsGroup.aspx" />
+    <Content Include="tpclient_fulfillment.aspx" />
+    <Content Include="tpclient_report_test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="management_custom_billing_form.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxControls\AdminNews.aspx.cs">
+      <DependentUpon>AdminNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\AdminNews.aspx.designer.cs">
+      <DependentUpon>AdminNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ApexSound.aspx.cs">
+      <DependentUpon>ApexSound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ApexSound.aspx.designer.cs">
+      <DependentUpon>ApexSound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\BillingSignToPlan.aspx.cs">
+      <DependentUpon>BillingSignToPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\BillingSignToPlan.aspx.designer.cs">
+      <DependentUpon>BillingSignToPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CalendarData.aspx.cs">
+      <DependentUpon>CalendarData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CalendarData.aspx.designer.cs">
+      <DependentUpon>CalendarData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CallListen.aspx.cs">
+      <DependentUpon>CallListen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CallListen.aspx.designer.cs">
+      <DependentUpon>CallListen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CallPlayer.aspx.cs">
+      <DependentUpon>CallPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CallPlayer.aspx.designer.cs">
+      <DependentUpon>CallPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CampaignDynamicEmail.aspx.cs">
+      <DependentUpon>CampaignDynamicEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CampaignDynamicEmail.aspx.designer.cs">
+      <DependentUpon>CampaignDynamicEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CampaignEmailTypeList.aspx.cs">
+      <DependentUpon>CampaignEmailTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CampaignEmailTypeList.aspx.designer.cs">
+      <DependentUpon>CampaignEmailTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\CreateNewProductGroup.aspx.cs">
+      <DependentUpon>CreateNewProductGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\CreateNewProductGroup.aspx.designer.cs">
+      <DependentUpon>CreateNewProductGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\EmailBody.aspx.cs">
+      <DependentUpon>EmailBody.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\EmailBody.aspx.designer.cs">
+      <DependentUpon>EmailBody.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\InventoryEdit.aspx.cs">
+      <DependentUpon>InventoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\InventoryEdit.aspx.designer.cs">
+      <DependentUpon>InventoryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\InventoryManager.aspx.cs">
+      <DependentUpon>InventoryManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\InventoryManager.aspx.designer.cs">
+      <DependentUpon>InventoryManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\OrderFreeItem.aspx.cs">
+      <DependentUpon>OrderFreeItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\OrderFreeItem.aspx.designer.cs">
+      <DependentUpon>OrderFreeItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductCodeManager.aspx.cs">
+      <DependentUpon>ProductCodeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductCodeManager.aspx.designer.cs">
+      <DependentUpon>ProductCodeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowManagerAdvanced.aspx.cs">
+      <DependentUpon>ProductFlowManagerAdvanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowManagerAdvanced.aspx.designer.cs">
+      <DependentUpon>ProductFlowManagerAdvanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductInventoryManager.aspx.cs">
+      <DependentUpon>ProductInventoryManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductInventoryManager.aspx.designer.cs">
+      <DependentUpon>ProductInventoryManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductListManager.aspx.cs">
+      <DependentUpon>ProductListManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductListManager.aspx.designer.cs">
+      <DependentUpon>ProductListManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMIDManager_test.aspx.cs">
+      <DependentUpon>ProductMIDManager_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMIDManager_test.aspx.designer.cs">
+      <DependentUpon>ProductMIDManager_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\DynamicEmail.aspx.cs">
+      <DependentUpon>DynamicEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\DynamicEmail.aspx.designer.cs">
+      <DependentUpon>DynamicEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\EmailForm.aspx.cs">
+      <DependentUpon>EmailForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\EmailForm.aspx.designer.cs">
+      <DependentUpon>EmailForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\OrderRecurringPlan.aspx.cs">
+      <DependentUpon>OrderRecurringPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\OrderRecurringPlan.aspx.designer.cs">
+      <DependentUpon>OrderRecurringPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\OrderRecurringPlans.aspx.cs">
+      <DependentUpon>OrderRecurringPlans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\OrderRecurringPlans.aspx.designer.cs">
+      <DependentUpon>OrderRecurringPlans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductDocumentation.aspx.cs">
+      <DependentUpon>ProductDocumentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductDocumentation.aspx.designer.cs">
+      <DependentUpon>ProductDocumentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEmailManager.aspx.cs">
+      <DependentUpon>ProductEmailManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEmailManager.aspx.designer.cs">
+      <DependentUpon>ProductEmailManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEmailTypeList.aspx.cs">
+      <DependentUpon>ProductEmailTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEmailTypeList.aspx.designer.cs">
+      <DependentUpon>ProductEmailTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEvent.aspx.cs">
+      <DependentUpon>ProductEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEvent.aspx.designer.cs">
+      <DependentUpon>ProductEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEventsManager.aspx.cs">
+      <DependentUpon>ProductEventsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductEventsManager.aspx.designer.cs">
+      <DependentUpon>ProductEventsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowManager.aspx.cs">
+      <DependentUpon>ProductFlowManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowManager.aspx.designer.cs">
+      <DependentUpon>ProductFlowManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowWizard.aspx.cs">
+      <DependentUpon>ProductFlowWizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductFlowWizard.aspx.designer.cs">
+      <DependentUpon>ProductFlowWizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductLeadManager.aspx.cs">
+      <DependentUpon>ProductLeadManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductLeadManager.aspx.designer.cs">
+      <DependentUpon>ProductLeadManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductManager.aspx.cs">
+      <DependentUpon>ProductManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductManager.aspx.designer.cs">
+      <DependentUpon>ProductManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMenu.aspx.cs">
+      <DependentUpon>ProductMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMenu.aspx.designer.cs">
+      <DependentUpon>ProductMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMIDManager.aspx.cs">
+      <DependentUpon>ProductMIDManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductMIDManager.aspx.designer.cs">
+      <DependentUpon>ProductMIDManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductShipperManager.aspx.cs">
+      <DependentUpon>ProductShipperManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductShipperManager.aspx.designer.cs">
+      <DependentUpon>ProductShipperManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\QueuedTransactions.aspx.cs">
+      <DependentUpon>QueuedTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\QueuedTransactions.aspx.designer.cs">
+      <DependentUpon>QueuedTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlan.aspx.cs">
+      <DependentUpon>RecurringPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlan.aspx.designer.cs">
+      <DependentUpon>RecurringPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanCycleEdit.aspx.cs">
+      <DependentUpon>RecurringPlanCycleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanCycleEdit.aspx.designer.cs">
+      <DependentUpon>RecurringPlanCycleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanDelete.aspx.cs">
+      <DependentUpon>RecurringPlanDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanDelete.aspx.designer.cs">
+      <DependentUpon>RecurringPlanDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanList.aspx.cs">
+      <DependentUpon>RecurringPlanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanList.aspx.designer.cs">
+      <DependentUpon>RecurringPlanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanManager.aspx.cs">
+      <DependentUpon>RecurringPlanManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RecurringPlanManager.aspx.designer.cs">
+      <DependentUpon>RecurringPlanManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\RefererSales.aspx.cs">
+      <DependentUpon>RefererSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\RefererSales.aspx.designer.cs">
+      <DependentUpon>RefererSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleHistory.aspx.cs">
+      <DependentUpon>SaleHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleHistory.aspx.designer.cs">
+      <DependentUpon>SaleHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleInfo.aspx.cs">
+      <DependentUpon>SaleInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleInfo.aspx.designer.cs">
+      <DependentUpon>SaleInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleRefund.aspx.cs">
+      <DependentUpon>SaleRefund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleRefund.aspx.designer.cs">
+      <DependentUpon>SaleRefund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleReturn.aspx.cs">
+      <DependentUpon>SaleReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleReturn.aspx.designer.cs">
+      <DependentUpon>SaleReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleReturnAction.aspx.cs">
+      <DependentUpon>SaleReturnAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleReturnAction.aspx.designer.cs">
+      <DependentUpon>SaleReturnAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SaleShipments.aspx.cs">
+      <DependentUpon>SaleShipments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SaleShipments.aspx.designer.cs">
+      <DependentUpon>SaleShipments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SubscriptionData.aspx.cs">
+      <DependentUpon>SubscriptionData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SubscriptionData.aspx.designer.cs">
+      <DependentUpon>SubscriptionData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SyncCategories.aspx.cs">
+      <DependentUpon>SyncCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SyncCategories.aspx.designer.cs">
+      <DependentUpon>SyncCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\SyncWithWebstore.aspx.cs">
+      <DependentUpon>SyncWithWebstore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\SyncWithWebstore.aspx.designer.cs">
+      <DependentUpon>SyncWithWebstore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\UMG.aspx.cs">
+      <DependentUpon>UMG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\UMG.aspx.designer.cs">
+      <DependentUpon>UMG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\UnsentShipments.aspx.cs">
+      <DependentUpon>UnsentShipments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\UnsentShipments.aspx.designer.cs">
+      <DependentUpon>UnsentShipments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\VipPlan.aspx.cs">
+      <DependentUpon>VipPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\VipPlan.aspx.designer.cs">
+      <DependentUpon>VipPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxService\AjaxFraudService.asmx.cs">
+      <DependentUpon>AjaxFraudService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AjaxService\AjaxTagService.asmx.cs">
+      <DependentUpon>AjaxTagService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="campaigns_referer.aspx.cs">
+      <DependentUpon>campaigns_referer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="campaigns_referer.aspx.designer.cs">
+      <DependentUpon>campaigns_referer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="campaigns_vipplans.aspx.cs">
+      <DependentUpon>campaigns_vipplans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="campaigns_vipplans.aspx.designer.cs">
+      <DependentUpon>campaigns_vipplans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.designer.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BillingTagList.ascx.cs">
+      <DependentUpon>BillingTagList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BillingTagList.ascx.designer.cs">
+      <DependentUpon>BillingTagList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreditCard.ascx.cs">
+      <DependentUpon>CreditCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreditCard.ascx.designer.cs">
+      <DependentUpon>CreditCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateFilter.ascx.cs">
+      <DependentUpon>DateFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DateFilter.ascx.designer.cs">
+      <DependentUpon>DateFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DropDownFreeItem.ascx.cs">
+      <DependentUpon>DropDownFreeItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DropDownFreeItem.ascx.designer.cs">
+      <DependentUpon>DropDownFreeItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DropDownFreeItemOld.ascx.cs">
+      <DependentUpon>DropDownFreeItemOld.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DropDownFreeItemOld.ascx.designer.cs">
+      <DependentUpon>DropDownFreeItemOld.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DropDownUpsell.ascx.cs">
+      <DependentUpon>DropDownUpsell.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DropDownUpsell.ascx.designer.cs">
+      <DependentUpon>DropDownUpsell.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditForms\Subscription.ascx.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EditForms\Subscription.ascx.designer.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FraudDescription.ascx.cs">
+      <DependentUpon>FraudDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FraudDescription.ascx.designer.cs">
+      <DependentUpon>FraudDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Paging.ascx.cs">
+      <DependentUpon>Paging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Paging.ascx.designer.cs">
+      <DependentUpon>Paging.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanBriefView2.ascx.cs">
+      <DependentUpon>RecurringPlanBriefView2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanBriefView2.ascx.designer.cs">
+      <DependentUpon>RecurringPlanBriefView2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanCycle.ascx.cs">
+      <DependentUpon>RecurringPlanCycle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanCycle.ascx.designer.cs">
+      <DependentUpon>RecurringPlanCycle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanCycleList.ascx.cs">
+      <DependentUpon>RecurringPlanCycleList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanCycleList.ascx.designer.cs">
+      <DependentUpon>RecurringPlanCycleList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanBriefView.ascx.cs">
+      <DependentUpon>RecurringPlanBriefView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RecurringPlanBriefView.ascx.designer.cs">
+      <DependentUpon>RecurringPlanBriefView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefererSales.ascx.cs">
+      <DependentUpon>RefererSales.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RefererSales.ascx.designer.cs">
+      <DependentUpon>RefererSales.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SaleHistory.ascx.cs">
+      <DependentUpon>SaleHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SaleHistory.ascx.designer.cs">
+      <DependentUpon>SaleHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\CampaignSubscription.ascx.cs">
+      <DependentUpon>CampaignSubscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\CampaignSubscription.ascx.designer.cs">
+      <DependentUpon>CampaignSubscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\CampaignSubscriptionWithoutTrial.ascx.cs">
+      <DependentUpon>CampaignSubscriptionWithoutTrial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\CampaignSubscriptionWithoutTrial.ascx.designer.cs">
+      <DependentUpon>CampaignSubscriptionWithoutTrial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\NewSubscriptionControl.ascx.cs">
+      <DependentUpon>NewSubscriptionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\NewSubscriptionControl.ascx.designer.cs">
+      <DependentUpon>NewSubscriptionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\Subscription.ascx.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\Subscription.ascx.designer.cs">
+      <DependentUpon>Subscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionAction.ascx.cs">
+      <DependentUpon>SubscriptionAction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionAction.ascx.designer.cs">
+      <DependentUpon>SubscriptionAction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionActionFreeProduct.ascx.cs">
+      <DependentUpon>SubscriptionActionFreeProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionActionFreeProduct.ascx.designer.cs">
+      <DependentUpon>SubscriptionActionFreeProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionActionUpsell.ascx.cs">
+      <DependentUpon>SubscriptionActionUpsell.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionActionUpsell.ascx.designer.cs">
+      <DependentUpon>SubscriptionActionUpsell.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionControl.ascx.cs">
+      <DependentUpon>SubscriptionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionControl.ascx.designer.cs">
+      <DependentUpon>SubscriptionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionDropDown.ascx.cs">
+      <DependentUpon>SubscriptionDropDown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionDropDown.ascx.designer.cs">
+      <DependentUpon>SubscriptionDropDown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionFilter.ascx.cs">
+      <DependentUpon>SubscriptionFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionFilter.ascx.designer.cs">
+      <DependentUpon>SubscriptionFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionList.ascx.cs">
+      <DependentUpon>SubscriptionList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionList.ascx.designer.cs">
+      <DependentUpon>SubscriptionList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionPlanFrequency.ascx.cs">
+      <DependentUpon>SubscriptionPlanFrequency.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionPlanFrequency.ascx.designer.cs">
+      <DependentUpon>SubscriptionPlanFrequency.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionProduct.ascx.cs">
+      <DependentUpon>SubscriptionProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionProduct.ascx.designer.cs">
+      <DependentUpon>SubscriptionProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionProductGroup.ascx.cs">
+      <DependentUpon>SubscriptionProductGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionControl\SubscriptionProductGroup.ascx.designer.cs">
+      <DependentUpon>SubscriptionProductGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscriptionPlanItemControl.ascx.cs">
+      <DependentUpon>SubscriptionPlanItemControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscriptionPlanItemControl.ascx.designer.cs">
+      <DependentUpon>SubscriptionPlanItemControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagList.ascx.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TagList.ascx.designer.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VIPPlan.ascx.cs">
+      <DependentUpon>VIPPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\VIPPlan.ascx.designer.cs">
+      <DependentUpon>VIPPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SaleShipments.ascx.cs">
+      <DependentUpon>SaleShipments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SaleShipments.ascx.designer.cs">
+      <DependentUpon>SaleShipments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\IPRestriction.aspx.cs">
+      <DependentUpon>IPRestriction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\IPRestriction.aspx.designer.cs">
+      <DependentUpon>IPRestriction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_campaigns_advanced.aspx.cs">
+      <DependentUpon>edit_campaigns_advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_campaigns_advanced.aspx.designer.cs">
+      <DependentUpon>edit_campaigns_advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Error.cs" />
+    <Compile Include="Logic\OrderHelper.cs" />
+    <Compile Include="management_campaigns_advanced.aspx.cs">
+      <DependentUpon>management_campaigns_advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_campaigns_advanced.aspx.designer.cs">
+      <DependentUpon>management_campaigns_advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_virtual_terminal_test.aspx.cs">
+      <DependentUpon>management_virtual_terminal_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_virtual_terminal_test.aspx.designer.cs">
+      <DependentUpon>management_virtual_terminal_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="outbound_sales_performance.aspx.cs">
+      <DependentUpon>outbound_sales_performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="outbound_sales_performance.aspx.designer.cs">
+      <DependentUpon>outbound_sales_performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product_manager_test.aspx.cs">
+      <DependentUpon>product_manager_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_manager_test.aspx.designer.cs">
+      <DependentUpon>product_manager_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\CampaignCoupons.aspx.cs">
+      <DependentUpon>CampaignCoupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\CampaignCoupons.aspx.designer.cs">
+      <DependentUpon>CampaignCoupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\Coupon.aspx.cs">
+      <DependentUpon>Coupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\Coupon.aspx.designer.cs">
+      <DependentUpon>Coupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\ErrorsLog.aspx.cs">
+      <DependentUpon>ErrorsLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\ErrorsLog.aspx.designer.cs">
+      <DependentUpon>ErrorsLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\PromoGift.aspx.cs">
+      <DependentUpon>PromoGift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\PromoGift.aspx.designer.cs">
+      <DependentUpon>PromoGift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\Referer.aspx.cs">
+      <DependentUpon>Referer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\Referer.aspx.designer.cs">
+      <DependentUpon>Referer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForms\SMTP.aspx.cs">
+      <DependentUpon>SMTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForms\SMTP.aspx.designer.cs">
+      <DependentUpon>SMTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_campaigns.aspx.cs">
+      <DependentUpon>edit_campaigns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_campaigns.aspx.designer.cs">
+      <DependentUpon>edit_campaigns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="lead_routing.aspx.cs">
+      <DependentUpon>lead_routing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lead_routing.aspx.designer.cs">
+      <DependentUpon>lead_routing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AdminMembership.cs" />
+    <Compile Include="Logic\BillingAPI\BillingAPI_AuthNET.cs" />
+    <Compile Include="Logic\BillingAPI\BillingAPI_NMI.cs" />
+    <Compile Include="Logic\BillingAPI\BillingAPI_POST.cs" />
+    <Compile Include="Logic\BillingAPI\BillingAPI_WebService.cs" />
+    <Compile Include="Logic\BillingAPI\IBillingAPI.cs" />
+    <Compile Include="Logic\ModelDataControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\PageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\Reports\Apex\SaleChargebackReport.cs" />
+    <Compile Include="Logic\Reports\BillingChargebackReport.cs" />
+    <Compile Include="Logic\Reports\CoAction\SaleChargebackReport.cs" />
+    <Compile Include="Logic\Reports\JMB\JMBUserInfoXML.cs" />
+    <Compile Include="Logic\Reports\JMB\SaleChargebackReport.cs" />
+    <Compile Include="Logic\Reports\JMB\SaleChargebackReport2.cs" />
+    <Compile Include="Logic\Reports\Metabolab\SaleChargebackReport.cs" />
+    <Compile Include="Logic\Reports\SaleChargebackReport.cs" />
+    <Compile Include="Logic\BillingAPI\BillingAPITest.cs">
+    </Compile>
+    <Compile Include="Logic\ViewModeEnum.cs" />
+    <Compile Include="management_campaigns.aspx.cs">
+      <DependentUpon>management_campaigns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_campaigns.aspx.designer.cs">
+      <DependentUpon>management_campaigns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_coupons.aspx.cs">
+      <DependentUpon>management_coupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_coupons.aspx.designer.cs">
+      <DependentUpon>management_coupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_emails.aspx.cs">
+      <DependentUpon>management_emails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_emails.aspx.designer.cs">
+      <DependentUpon>management_emails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_errors.aspx.cs">
+      <DependentUpon>management_errors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_errors.aspx.designer.cs">
+      <DependentUpon>management_errors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_label.aspx.cs">
+      <DependentUpon>management_label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_label.aspx.designer.cs">
+      <DependentUpon>management_label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_recurring_plan.aspx.cs">
+      <DependentUpon>management_recurring_plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_recurring_plan.aspx.designer.cs">
+      <DependentUpon>management_recurring_plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_smtp.aspx.cs">
+      <DependentUpon>management_smtp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_smtp.aspx.designer.cs">
+      <DependentUpon>management_smtp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="management_virtual_terminal.aspx.cs">
+      <DependentUpon>management_virtual_terminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_virtual_terminal.aspx.designer.cs">
+      <DependentUpon>management_virtual_terminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product_manager.aspx.cs">
+      <DependentUpon>product_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_manager.aspx.designer.cs">
+      <DependentUpon>product_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="referer_sales.aspx.cs">
+      <DependentUpon>referer_sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="referer_sales.aspx.designer.cs">
+      <DependentUpon>referer_sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_chargeback.aspx.cs">
+      <DependentUpon>reports_chargeback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_chargeback.aspx.designer.cs">
+      <DependentUpon>reports_chargeback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_chargeback_performance.aspx.cs">
+      <DependentUpon>reports_chargeback_performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_chargeback_performance.aspx.designer.cs">
+      <DependentUpon>reports_chargeback_performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_fulfilment_export.aspx.cs">
+      <DependentUpon>reports_fulfilment_export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_fulfilment_export.aspx.designer.cs">
+      <DependentUpon>reports_fulfilment_export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_recording.aspx.cs">
+      <DependentUpon>reports_recording.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_recording.aspx.designer.cs">
+      <DependentUpon>reports_recording.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_referers_sales.aspx.cs">
+      <DependentUpon>reports_referers_sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_referers_sales.aspx.designer.cs">
+      <DependentUpon>reports_referers_sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports_transactions.aspx.cs">
+      <DependentUpon>reports_transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports_transactions.aspx.designer.cs">
+      <DependentUpon>reports_transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesagent_management.aspx.cs">
+      <DependentUpon>salesagent_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesagent_management.aspx.designer.cs">
+      <DependentUpon>salesagent_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salesagent_management_test.aspx.cs">
+      <DependentUpon>salesagent_management_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salesagent_management_test.aspx.designer.cs">
+      <DependentUpon>salesagent_management_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="screenshot.aspx.cs">
+      <DependentUpon>screenshot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="screenshot.aspx.designer.cs">
+      <DependentUpon>screenshot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\QueuedTransactionsGroup.aspx.cs">
+      <DependentUpon>QueuedTransactionsGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\QueuedTransactionsGroup.aspx.designer.cs">
+      <DependentUpon>QueuedTransactionsGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\UnsentShipmentsGroup.aspx.cs">
+      <DependentUpon>UnsentShipmentsGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\UnsentShipmentsGroup.aspx.designer.cs">
+      <DependentUpon>UnsentShipmentsGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tc.aspx.cs">
+      <DependentUpon>tc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tc.aspx.designer.cs">
+      <DependentUpon>tc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testing_billing_api.aspx.cs">
+      <DependentUpon>testing_billing_api.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testing_billing_api.aspx.designer.cs">
+      <DependentUpon>testing_billing_api.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tpclient_fulfillment.aspx.cs">
+      <DependentUpon>tpclient_fulfillment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tpclient_fulfillment.aspx.designer.cs">
+      <DependentUpon>tpclient_fulfillment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tpclient_report.aspx.cs">
+      <DependentUpon>tpclient_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tpclient_report.aspx.designer.cs">
+      <DependentUpon>tpclient_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="queue_report.aspx.cs">
+      <DependentUpon>queue_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="queue_report.aspx.designer.cs">
+      <DependentUpon>queue_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tpclient_report_test.aspx.cs">
+      <DependentUpon>tpclient_report_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tpclient_report_test.aspx.designer.cs">
+      <DependentUpon>tpclient_report_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Magento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="management_custom_billing_form.aspx.cs">
+      <DependentUpon>management_custom_billing_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="management_custom_billing_form.aspx.designer.cs">
+      <DependentUpon>management_custom_billing_form.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxControls\AdminNews.aspx" />
+    <Content Include="AjaxControls\ApexSound.aspx" />
+    <Content Include="AjaxControls\BillingSignToPlan.aspx" />
+    <Content Include="AjaxControls\CallListen.aspx" />
+    <Content Include="AjaxControls\DynamicEmail.aspx" />
+    <Content Include="AjaxControls\ProductDocumentation.aspx" />
+    <Content Include="AjaxControls\ProductEmailManager.aspx" />
+    <Content Include="AjaxControls\ProductEmailTypeList.aspx" />
+    <Content Include="AjaxControls\ProductEvent.aspx" />
+    <Content Include="AjaxControls\ProductEventsManager.aspx" />
+    <Content Include="AjaxControls\ProductFlowManager.aspx" />
+    <Content Include="AjaxControls\ProductLeadManager.aspx" />
+    <Content Include="AjaxControls\ProductManager.aspx" />
+    <Content Include="AjaxControls\ProductMenu.aspx" />
+    <Content Include="AjaxControls\ProductMIDManager.aspx" />
+    <Content Include="AjaxControls\ProductShipperManager.aspx" />
+    <Content Include="AjaxControls\RecurringPlan.aspx" />
+    <Content Include="AjaxControls\RecurringPlanCycleEdit.aspx" />
+    <Content Include="AjaxControls\RecurringPlanList.aspx" />
+    <Content Include="AjaxControls\RecurringPlanManager.aspx" />
+    <Content Include="AjaxControls\RefererSales.aspx" />
+    <Content Include="AjaxControls\SyncCategories.aspx" />
+    <Content Include="AjaxControls\SyncWithWebstore.aspx" />
+    <Content Include="AjaxControls\VipPlan.aspx" />
+    <Content Include="AjaxService\AjaxFraudService.asmx" />
+    <Content Include="AjaxService\AjaxTagService.asmx" />
+    <Content Include="campaigns_referer.aspx" />
+    <Content Include="campaigns_vipplans.aspx" />
+    <Content Include="Controls\Admin.Master" />
+    <Content Include="Controls\BillingTagList.ascx" />
+    <Content Include="Controls\DateFilter.ascx" />
+    <Content Include="Controls\EditForms\Subscription.ascx" />
+    <Content Include="Controls\FraudDescription.ascx" />
+    <Content Include="Controls\RecurringPlanCycle.ascx" />
+    <Content Include="Controls\RecurringPlanCycleList.ascx" />
+    <Content Include="Controls\RefererSales.ascx" />
+    <Content Include="Controls\SubscriptionAction.ascx" />
+    <Content Include="Controls\SubscriptionActionFreeProduct.ascx" />
+    <Content Include="Controls\SubscriptionActionUpsell.ascx" />
+    <Content Include="Controls\SubscriptionPlanItemControl.ascx" />
+    <Content Include="Controls\TagList.ascx" />
+    <Content Include="Controls\VIPPlan.ascx" />
+    <Content Include="EditForms\CampaignCoupons.aspx" />
+    <Content Include="EditForms\Coupon.aspx" />
+    <Content Include="EditForms\ErrorsLog.aspx" />
+    <Content Include="EditForms\PromoGift.aspx" />
+    <Content Include="EditForms\Referer.aspx" />
+    <Content Include="EditForms\SMTP.aspx" />
+    <Content Include="edit_campaigns.aspx" />
+    <Content Include="Global.asax" />
+    <EmbeddedResource Include="Logic\Reports\JMB\OpenXMLTemplates\bidding_tr.xml" />
+    <Content Include="lead_routing.aspx" />
+    <Content Include="Logic\Reports\JMB\OpenXMLTemplates\bidding_tr_alternate.txt" />
+    <EmbeddedResource Include="Logic\Reports\JMB\OpenXMLTemplates\document.xml" />
+    <EmbeddedResource Include="Logic\Reports\JMB\OpenXMLTemplates\auction_tr.xml" />
+    <EmbeddedResource Include="Logic\Reports\JMB\OpenXMLTemplates\Copy of document.xml" />
+    <Content Include="Logic\Reports\JMB\OpenXMLTemplates\doc_vars.txt" />
+    <EmbeddedResource Include="Logic\Reports\JMB\OpenXMLTemplates\header.xml" />
+    <Content Include="management_campaigns.aspx" />
+    <Content Include="management_coupons.aspx" />
+    <Content Include="management_emails.aspx" />
+    <Content Include="management_errors.aspx" />
+    <Content Include="management_label.aspx" />
+    <Content Include="management_recurring_plan.aspx" />
+    <Content Include="management_smtp.aspx" />
+    <Content Include="management_virtual_terminal.aspx" />
+    <Content Include="MidImages\metabolab.trianglecrm.com\order_form_35.png" />
+    <Content Include="MidImages\metabolab.trianglecrm.com\usps_35.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_10.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_11.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_12.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_13.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_15.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_16.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_17.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_18.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_21.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_22.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_23.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_24.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_25.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_27.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_28.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_29.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_30.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_31.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_33.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_34.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_35.png" />
+    <Content Include="MidImages\trimfuel.localhost\order_form_39.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_10.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_11.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_12.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_13.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_15.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_16.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_17.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_18.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_21.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_22.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_23.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_24.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_25.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_27.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_28.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_29.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_30.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_31.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_33.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_34.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_35.png" />
+    <Content Include="MidImages\trimfuel.localhost\terms_39.png" />
+    <Content Include="product_manager.aspx" />
+    <Content Include="referer_sales.aspx" />
+    <Content Include="reports_chargeback.aspx" />
+    <Content Include="reports_referers_sales.aspx" />
+    <Content Include="screenshot.aspx" />
+    <Content Include="tc.aspx" />
+    <Content Include="testing_billing_api.aspx" />
+    <Content Include="tpclient_report.aspx" />
+    <Content Include="queue_report.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Magento\apiEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\associativeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAssignedProduct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAttributeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogAttributeOptionEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryEntityNoChildren.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogCategoryTree.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogInventoryStockItemEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductAttributeMediaTypeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductAttributeSetEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductImageEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductLinkAttributeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductLinkEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductReturnEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTierPriceEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\catalogProductTypeEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerAddressEntityItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerCustomerEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\customerGroupEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\directoryCountryEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\directoryRegionEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\existsFaltureEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\giftMessageResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\item.xsd" />
+    <None Include="Web References\Magento\Magento.wsdl" />
+    <None Include="Web References\Magento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Magento\salesOrderEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderInvoiceEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderListEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\salesOrderShipmentEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartInfoEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartLicenseEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartPaymentMethodResponseEntityArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartShippingMethodEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Magento\shoppingCartTotalsEntity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://demoshop.trianglecrm.com/api/v2_soap%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Magento\</RelPath>
+      <UpdateFromURL>http://demoshop.trianglecrm.com/api/v2_soap%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrimFuel_Web_Admin_Magento_MagentoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+    <Folder Include="MidImages\client1.localhost\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>42650</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://trimfuel.localhost/dotNet</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+</Project>

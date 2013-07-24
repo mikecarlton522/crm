@@ -1,0 +1,1 @@
+WrongSHWtoCSV.exe > 1.log

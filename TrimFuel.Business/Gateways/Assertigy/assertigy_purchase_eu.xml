@@ -1,0 +1,47 @@
+<ccAuthRequestV1 xmlns="http://www.optimalpayments.com/creditcard/xmlschema/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.optimalpayments.com/creditcard/xmlschema/v1">
+	<merchantAccount>
+		<accountNum>##ACCOUNT_NUMBER##</accountNum>
+		<storeID>##STORE_ID##</storeID>
+		<storePwd>##STORE_PWD##</storePwd>
+	</merchantAccount>	
+	<merchantRefNum>##BILLING_ID##</merchantRefNum>
+	<amount>##AMOUNT##</amount>
+	<card>
+		<cardNum>##CC_NUM##</cardNum>
+		<cardExpiry>
+			<month>##CC_MONTH##</month>
+			<year>##CC_YEAR##</year>
+		</cardExpiry>		
+		<cvdIndicator>##CVD_INDICATOR##</cvdIndicator>
+		<cvd>##CVD##</cvd>
+	</card>
+	<billingDetails>
+		<cardPayMethod>WEB</cardPayMethod>
+		<firstName>##B_F_NAME##</firstName>
+		<lastName>##B_L_NAME##</lastName>
+		<street>##B_ADDRESS##</street>
+		<street2>##B_ADDRESS2##</street2>
+		<city>##B_CITY##</city>
+		<state>##B_STATE##</state>
+		<country>##B_COUNTRY##</country>
+		<zip>##B_ZIP##</zip>
+		<phone>##B_PHONE##</phone>
+		<email>##B_EMAIL##</email>
+	</billingDetails>
+	<shippingDetails>
+		<firstName>##S_F_NAME##</firstName>
+		<lastName>##S_L_NAME##</lastName>
+		<street>##S_ADDRESS##</street>
+		<street2>##S_ADDRESS2##</street2>
+		<city>##S_CITY##</city>
+		<state>##S_STATE##</state>
+		<country>##S_COUNTRY##</country>
+		<zip>##S_ZIP##</zip>
+		<phone>##S_PHONE##</phone>
+		<email>##S_EMAIL##</email>
+	</shippingDetails>
+	<previousCustomer>##PREV##</previousCustomer>		
+	<customerIP>##IP##</customerIP>##ADDENDUM##	
+</ccAuthRequestV1>

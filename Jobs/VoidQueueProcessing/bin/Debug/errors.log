@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------
+2011-05-03 19:16:09,156 [1] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.JobService
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.JobService.SendInvalidProcessVoidQueueEmail(VoidQueue voidQueue, BusinessError`1 error) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\JobService.cs:line 83
+-------------------------------------------------------------------------
+2011-05-03 19:16:09,265 [1] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.JobService
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.JobService.SendInvalidProcessVoidQueueEmail(VoidQueue voidQueue, BusinessError`1 error) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\JobService.cs:line 83
+-------------------------------------------------------------------------
+2011-05-03 19:21:39,609 [10] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.JobService
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.JobService.SendInvalidProcessVoidQueueEmail(VoidQueue voidQueue, BusinessError`1 error) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\JobService.cs:line 83
+-------------------------------------------------------------------------
+2011-05-03 19:21:54,718 [10] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.JobService
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TrimFuel.Business.JobService.SendInvalidProcessVoidQueueEmail(VoidQueue voidQueue, BusinessError`1 error) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\JobService.cs:line 83

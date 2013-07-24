@@ -1,0 +1,32 @@
+2010-09-03 19:03:33,453 [5] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.SaleService
+System.Xml.XmlException: Data at the root level is invalid. Line 2, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.LoadXml(String xml)
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGatewayReponseParams.GetParam(String paramName) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGatewayReponseParams.cs:line 28
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ExtractResponseParam(String response, String paramName) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 75
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ProcessResult(BusinessError`1 result) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 22
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ValidateCustomer(Billing billing) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 45
+   at TrimFuel.Business.SaleService.ValidateCustomer(Billing billing) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\SaleService.cs:line 260
+2010-09-03 19:08:13,234 [5] ERROR TrimFuel.Business.BaseService [(null)] - TrimFuel.Business.SaleService
+System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 2, position 7.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParsePI(BufferBuilder piInDtdStringBuilder)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   at System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   at System.Xml.XmlDocument.Load(XmlReader reader)
+   at System.Xml.XmlDocument.LoadXml(String xml)
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGatewayReponseParams.GetParam(String paramName) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGatewayReponseParams.cs:line 28
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ExtractResponseParam(String response, String paramName) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 75
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ProcessResult(BusinessError`1 result) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 22
+   at TrimFuel.Business.Gateways.BadCustomer.BadCustomerGateway.ValidateCustomer(Billing billing) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\Gateways\BadCustomer\BadCustomerGateway.cs:line 45
+   at TrimFuel.Business.SaleService.ValidateCustomer(Billing billing) in D:\Projects\TrimFuel\TrimFuel\TrimFuel.Business\SaleService.cs:line 260

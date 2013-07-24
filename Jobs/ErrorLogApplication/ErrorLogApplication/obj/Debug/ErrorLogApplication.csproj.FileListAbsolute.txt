@@ -1,0 +1,12 @@
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.exe.config
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\obj\Debug\ResolveAssemblyReference.cache
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.exe
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.pdb
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\obj\Debug\ErrorLogApplication.exe
+c:\Projects\Triangle\ErrorLogApplication\ErrorLogApplication\obj\Debug\ErrorLogApplication.pdb
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.exe.config
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\obj\Debug\ErrorLogApplication.exe
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\obj\Debug\ErrorLogApplication.pdb
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\obj\Debug\ResolveAssemblyReference.cache
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.exe
+c:\Projects\Triangle\TrimFuel\Jobs\ErrorLogApplication\ErrorLogApplication\bin\Debug\ErrorLogApplication.pdb

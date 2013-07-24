@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<Charge xmlns="http://trianglecrm.com/">
+<username>directaction</username>
+<password>dew9JKq2az</password>
+<amount>14.95</amount>
+<firstName>Test</firstName>
+<lastName>Test</lastName>
+<address1>Test</address1>
+<address2></address2>
+<city>Test</city>
+<state>FL</state>
+<zip>00000</zip>
+<phone>00000000</phone>
+<email>dtcoder@gmail.com</email>
+<ip>127.0.0.1</ip>
+<affiliate></affiliate>
+<subAffiliate></subAffiliate>
+<internalID>testinternalID001</internalID>
+<paymentType>2</paymentType>
+<creditCard>4111111111111111</creditCard>
+<cvv>000</cvv>
+<expMonth>03</expMonth>
+<expYear>2015</expYear>
+</Charge>
+</soap:Body>
+</soap:Envelope>

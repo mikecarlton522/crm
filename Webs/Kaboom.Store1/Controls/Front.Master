@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Front.master.cs" Inherits="Kaboom.Store1.Controls.Front" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder></title>
+<link rel="stylesheet" type="text/css" href="~/css/style.css" runat="server" />
+<link rel="stylesheet" type="text/css" href="~/css/validationEngine.jquery.css" runat="server" />
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/jquery.cookie.js") %>"></script>
+<script type="text/javascript" language="javascript" src="<%# ResolveClientUrl("../js/shoppingcart.js") %>"></script>
+<asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="wrapper">
+  <img src="images/header.jpg" width="950" height="510" /><br />
+  <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+  <div id="footer">
+    * Product is not affiliated or endorsed in any way with HBO or Entourage and their logo and content are registered trademarks of their respective owners. Statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials and testimonial images are actor portrayals.<br />
+    <br />
+    <a href="javascript: void(0)" onclick="window.open('http://www.securetrialoffers.com/dynamic/documents/terms-and-conditions-vgm-as.asp?ph=1-800-958-7356&domain=KaboomForMen.com','buttonwin','height=400,width=400,scrollbars=yes,toolbar=no,location=no,screenX=100,screenY=20,top=20,left=100','fullscreen=no'); 
+		return false;">Terms &amp; Conditions and Refund Policy</a> | <a href="javascript: void(0)" onclick="window.open('http://www.securetrialoffers.com/dynamic/documents/privacy-policy-vgm.asp?ph=1-800-958-7356&domain=KaboomForMen.com','buttonwin','height=400,width=400,scrollbars=yes,toolbar=no,location=no,screenX=100,screenY=20,top=20,left=100','fullscreen=no'); 
+		return false;">Privacy Policy</a> | <a href="javascript: void(0)" onclick="window.open('http://www.securetrialoffers.com/dynamic/documents/contact-vgm.asp?ph=1-800-958-7356&domain=KaboomForMen.com','buttonwin','height=400,width=400,scrollbars=yes,toolbar=no,location=no,screenX=100,screenY=20,top=20,left=100','fullscreen=no'); 
+		return false;">Contact Us</a>
+  </div>
+</div>
+</body>
+</html>

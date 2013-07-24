@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83C59AC2-600D-4091-8FBF-30040C766E7B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrimFuel.Web.RapidApp</RootNamespace>
+    <AssemblyName>TrimFuel.Web.RapidApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxControls\AddClientService.aspx.cs">
+      <DependentUpon>AddClientService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\AddClientService.aspx.designer.cs">
+      <DependentUpon>AddClientService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\AssertigyMIDForm.aspx.cs">
+      <DependentUpon>AssertigyMIDForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\AssertigyMIDForm.aspx.designer.cs">
+      <DependentUpon>AssertigyMIDForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientFulfillment.aspx.cs">
+      <DependentUpon>ClientFulfillment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientFulfillment.aspx.designer.cs">
+      <DependentUpon>ClientFulfillment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientGateway.aspx.cs">
+      <DependentUpon>ClientGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientGateway.aspx.designer.cs">
+      <DependentUpon>ClientGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientGatewayService.aspx.cs">
+      <DependentUpon>ClientGatewayService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientGatewayService.aspx.designer.cs">
+      <DependentUpon>ClientGatewayService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientInventoryEdit.aspx.cs">
+      <DependentUpon>ClientInventoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientInventoryEdit.aspx.designer.cs">
+      <DependentUpon>ClientInventoryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientOutbound.aspx.cs">
+      <DependentUpon>ClientOutbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientOutbound.aspx.designer.cs">
+      <DependentUpon>ClientOutbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientOutboundService.aspx.cs">
+      <DependentUpon>ClientOutboundService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientOutboundService.aspx.designer.cs">
+      <DependentUpon>ClientOutboundService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductCodeEdit.aspx.cs">
+      <DependentUpon>ClientProductCodeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductCodeEdit.aspx.designer.cs">
+      <DependentUpon>ClientProductCodeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductEdit.aspx.cs">
+      <DependentUpon>ClientProductEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductEdit.aspx.designer.cs">
+      <DependentUpon>ClientProductEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductGroups.aspx.cs">
+      <DependentUpon>ClientProductGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductGroups.aspx.designer.cs">
+      <DependentUpon>ClientProductGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductMerchantAccountEdit.aspx.cs">
+      <DependentUpon>ClientProductMerchantAccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProductMerchantAccountEdit.aspx.designer.cs">
+      <DependentUpon>ClientProductMerchantAccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProfileItem.aspx.cs">
+      <DependentUpon>ClientProfileItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientProfileItem.aspx.designer.cs">
+      <DependentUpon>ClientProfileItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ClientFulfillmentService.aspx.cs">
+      <DependentUpon>ClientFulfillmentService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ClientFulfillmentService.aspx.designer.cs">
+      <DependentUpon>ClientFulfillmentService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\Empty.aspx.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\Empty.aspx.designer.cs">
+      <DependentUpon>Empty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\LeftMenu.aspx.cs">
+      <DependentUpon>LeftMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\LeftMenu.aspx.designer.cs">
+      <DependentUpon>LeftMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ProductLeadManager.aspx.cs">
+      <DependentUpon>ProductLeadManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ProductLeadManager.aspx.designer.cs">
+      <DependentUpon>ProductLeadManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ServiceDefaultSettings.aspx.cs">
+      <DependentUpon>ServiceDefaultSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ServiceDefaultSettings.aspx.designer.cs">
+      <DependentUpon>ServiceDefaultSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxControls\ViewMessage.aspx.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxControls\ViewMessage.aspx.designer.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientServiceItem.ascx.cs">
+      <DependentUpon>ClientServiceItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientServiceItem.ascx.designer.cs">
+      <DependentUpon>ClientServiceItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientsMenuItem.ascx.cs">
+      <DependentUpon>ClientsMenuItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientsMenuItem.ascx.designer.cs">
+      <DependentUpon>ClientsMenuItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\BaseControlPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\Items.cs" />
+    <Compile Include="Logic\AdminMembership.cs" />
+    <Compile Include="Logic\PageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\ServicesManager.cs" />
+    <Compile Include="TPclient_manager.aspx.cs">
+      <DependentUpon>TPclient_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TPclient_manager.aspx.designer.cs">
+      <DependentUpon>TPclient_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TPclient_manager.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrimFuel.Business\TrimFuel.Business.csproj">
+      <Project>{C5815D73-3CA3-4888-9E55-331A527B3DD6}</Project>
+      <Name>TrimFuel.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrimFuel.Model\TrimFuel.Model.csproj">
+      <Project>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</Project>
+      <Name>TrimFuel.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrimFuel.Web.UI\TrimFuel.Web.UI.csproj">
+      <Project>{326A9544-9CFB-4A4E-966B-7D122DDC0738}</Project>
+      <Name>TrimFuel.Web.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxControls\AddClientService.aspx" />
+    <Content Include="AjaxControls\AssertigyMIDForm.aspx" />
+    <Content Include="AjaxControls\ClientFulfillment.aspx" />
+    <Content Include="AjaxControls\ClientGateway.aspx" />
+    <Content Include="AjaxControls\ClientGatewayService.aspx" />
+    <Content Include="AjaxControls\ClientInventoryEdit.aspx" />
+    <Content Include="AjaxControls\ClientOutbound.aspx" />
+    <Content Include="AjaxControls\ClientOutboundService.aspx" />
+    <Content Include="AjaxControls\ClientProductCodeEdit.aspx" />
+    <Content Include="AjaxControls\ClientProductEdit.aspx" />
+    <Content Include="AjaxControls\ClientProductGroups.aspx" />
+    <Content Include="AjaxControls\ClientProductMerchantAccountEdit.aspx" />
+    <Content Include="AjaxControls\ClientProfileItem.aspx" />
+    <Content Include="AjaxControls\ClientFulfillmentService.aspx" />
+    <Content Include="AjaxControls\Empty.aspx" />
+    <Content Include="AjaxControls\LeftMenu.aspx" />
+    <Content Include="AjaxControls\ProductLeadManager.aspx" />
+    <Content Include="AjaxControls\ServiceDefaultSettings.aspx" />
+    <Content Include="AjaxControls\ViewMessage.aspx" />
+    <Content Include="Controls\Admin.Master" />
+    <Content Include="Controls\ClientServiceItem.ascx" />
+    <Content Include="Controls\ClientsMenuItem.ascx" />
+    <Content Include="Data\Services.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="js\scripts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17409</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

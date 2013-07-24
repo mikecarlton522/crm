@@ -1,0 +1,2 @@
+                <MSC URL="https://gateway.sslapplications.net/ynMklop/"/>
+                <MSC URL="http://localhost/gateways/msc.aspx"/>

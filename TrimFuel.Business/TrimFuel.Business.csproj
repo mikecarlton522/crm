@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5815D73-3CA3-4888-9E55-331A527B3DD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrimFuel.Business</RootNamespace>
+    <AssemblyName>TrimFuel.Business</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABFService.cs" />
+    <Compile Include="AtLastFulfillmentService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="BillingService.cs" />
+    <Compile Include="BusinessError.cs" />
+    <Compile Include="CampaignService.cs" />
+    <Compile Include="CCBillService.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Configuration\TrimFuelSection.cs" />
+    <Compile Include="Controls\DDLCountry.cs" />
+    <Compile Include="Controls\DDLMonth.cs" />
+    <Compile Include="Controls\DDLPaymentType.cs" />
+    <Compile Include="Controls\DDLStateFullName.cs" />
+    <Compile Include="Controls\DDLYear.cs" />
+    <Compile Include="ConversionService.cs" />
+    <Compile Include="CustomSaleService.cs" />
+    <Compile Include="CustomShipperService.cs" />
+    <Compile Include="CouponService.cs" />
+    <Compile Include="Dao\DB.cs" />
+    <Compile Include="Dao\DBContext.cs" />
+    <Compile Include="Dao\EntityDataProviders\ABFRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AdminDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AffiliateDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AggShipperSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AggUnsentShipmentsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AgrMIDProjectedRevenueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ALFRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AragonLeadDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AssertigyMIDDailyCapDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AssertigyMIDDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AssertigyMIDGroupDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AssertigyMIDPaymentTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AssertigyMIDSettingsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AuthOnlyChargeDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\AuthOnlyFailedChargeDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingAPIRequestDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingBadCustomerDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingBatchEmailDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingBatchEmailTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingCancelCodeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingExternalInfoDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingLinkedDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingReferredDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingStopChargeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSubscriptionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSubscriptionDiscountDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSubscriptionPlanDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSubscriptionRebillDiscountDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BillingSubscriptionStatusHistoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\BlockedEmailDomainDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CallDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignAffiliateDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignControlDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignLeadRoutingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignPageDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignRecurringPlanDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignReferralDiscountDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignTrialProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CampaignUpsellDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargebackReasonCodeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargebackStatusTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeHistoryCardDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeHistoryExCurrencyDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeHistoryExDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeHistoryExSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ChargeHistoryInvoiceDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ClosedMIDQueueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ClosedMIDRoutingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ConversionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CustomShipperRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CustomShipperRecordToSendDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\IgnoreUnbilledTransactionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderQueueNoteDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderRecurringPlanStatusHistoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductDomainDataProvider.cs.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductDomainRoutingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductRoutingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RebillDiscountTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductProductCodeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\DailyBillingResultsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\EmailQueueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ErrorsLogDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CountryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CouponDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\CurrencyDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\DeclineUpselldataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\DynamicEmailDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\DynamicEmailTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\EmailDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\EmergencyQueueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\EntityDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ExtraTrialShipDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ExtraTrialShipSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ExtraTrialShipTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\FaildChargeHistoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\FailedChargeHistoryCurrencyDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\FailedChargeHistoryDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\FraudScoreDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\GeoDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\GFRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\GiftCertificateDynamicEmailDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\InventoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\InventorySKUDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\InvoiceDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\IPRestrictionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\JobDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\KeymailRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\KeymailRecordToSendDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadPartnerConfigValueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadPartnerDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadPartnerSettingsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadPostDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadRoutingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\LeadTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\MagentoConfigDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\MagentoProductCategoryDataProveder.cs" />
+    <Compile Include="Dao\EntityDataProviders\MBRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\MerchantAccountDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\MerchantAccountProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\MIDCategoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NMICompanyMIDDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderAutoProcessingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderRecurringPlanDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderRecurringPlanQueueNoteDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\OrderProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductCategoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductCodeInfoDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductEventDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductInventoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductSKUDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductWikiDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\QueueRebillDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RecurringPlanConstraintDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RecurringPlanCycleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RecurringPlanDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RecurringPlanShipmentDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RecurringSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleReturnProcessingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleShippingOptionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipmentDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipmentShipperRequestDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipmentShippingNoteDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipperRequestDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShippingNoteDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SMTPSettingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SubscriptionPlanDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SubscriptionPlanItemActionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SubscriptionPlanItemDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TFRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientNewsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NMICompanyDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NMIMerchantAccountProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NotesDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NPFRecordDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\NPFRecordToSendDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PageTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PartnerClickDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PaygeaDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PaymentTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PixelDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductCodeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductCodeInventoryDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductCurrencyDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PromoGiftDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\PromoGiftSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RefererBillingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RefererCommissionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RefererCommissionSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RefererDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RegistrationInfoDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RestrictLevelDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ReturnedSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipperConfigDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipperDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipperProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\ShipperSettingsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientEmailDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientNewsReadDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientNoteDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientSettingDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\AssertigyMIDAmountViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\AssertigyMIDBriefViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\AssertigyMIDCapView2DataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\AssertigyMIDCapViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\CampaignDetailsViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\CampaignEmailTypeViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\CampaignLeadRoutingViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ChargeHistoryViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\BillingCallViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\CustomShipperToSendViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\LeadPartnerAffiliateViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\OrderSaleBillingViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\OutboundSalesViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ProspectViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ShippingEventViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ShippmentNotSendedToSendViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SubscriptionRecurringPlanViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\UnsentUnpayedExViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\GroupProductSKUViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\LeadRoutingViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\MagentoProductCategoryViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ProductCategoryViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\RecurringPlanViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ReturnedSaleViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleChargebackDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleChargeDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleCouponCodeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleDetailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleRefererDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SaleRefundDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SalesAgentDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SalesAgentTPClientDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SHWProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SHWRegistrationDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\StoreDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TagBillingLinkDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TagDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TagGroupDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TagGroupTagLinkDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TempConversationDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\UpsellDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\UpsellSaleDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\UpsellTypeDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\USStateDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\VeriSectPostDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\CampaignRoutingViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\EntityViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\RegistrationDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\SubscriptionDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\InventorySaleViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\InventoryViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\PagePixelViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ProductEmailTypeViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\RefererViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ReturnsReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SaleBillingViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SalesAgrByReasonReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SaleRecordViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SalesAgrBaseReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SalesAgrByAffReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SalesAgrByTypeReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SalesAgrReportViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SaleShipperViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ShipperProductViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ShippmentsToSendViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ShortShipmentViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\StringViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\TPClientDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\SubscriptionPlanItemActionViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\TermViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\TPClientEmailViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\TPClientNoteViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\UnpayedRebillsViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\UnsentUnpayedViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\Views\ViewDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\VoidQueueDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\WebStoreDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\WebStoreEmailsDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\WebStoreProductDataProvider.cs" />
+    <Compile Include="Dao\EntityDataProviders\WebStoreProductReviewDataProvider.cs" />
+    <Compile Include="Dao\IDao.cs" />
+    <Compile Include="Dao\IMySqlCommandCreater.cs" />
+    <Compile Include="Dao\MySqlDao.cs" />
+    <Compile Include="Dao\MySqlDaoFactory.cs" />
+    <Compile Include="DashboardService.cs" />
+    <Compile Include="EmailService.cs" />
+    <Compile Include="ErrorsLogService.cs" />
+    <Compile Include="EventService.cs" />
+    <Compile Include="Flow\JobProcess.cs" />
+    <Compile Include="Flow\OrderBuilder.cs" />
+    <Compile Include="Flow\OrderFlow.cs" />
+    <Compile Include="Flow\PaymentFlow.cs" />
+    <Compile Include="Flow\PlanFlow.cs" />
+    <Compile Include="Flow\RebillOrderFlow.cs" />
+    <Compile Include="Flow\RebillPaymentFlow.cs" />
+    <Compile Include="Flow\SaleFlow.cs" />
+    <Compile Include="Flow\ShipmentFlow.cs" />
+    <Compile Include="Flow\UserBuilder.cs" />
+    <Compile Include="Gateways\ABF\FoundOrder.cs" />
+    <Compile Include="Gateways\ABF\FoundOrderList.cs" />
+    <Compile Include="Gateways\ABF\TriangleFulfillmentGateway.cs" />
+    <Compile Include="Gateways\AragonWhiteLabels\AragonWhiteLabelGateway.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\AtLastFulfillmentGateway.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\AtLastFulfillmentGateway2.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\CustomerInfo.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\DropShipInfo.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\Order.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\OrderItem.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\OrderItems.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\Orders.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\OrdersResponse.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\ResponseShipment.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\ResponseShipments.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\Shipment.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\Shipments.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\ShipmentStatusEnum.cs" />
+    <Compile Include="Gateways\AtLastFulfillment\ShipMethodEnum.cs" />
+    <Compile Include="Gateways\BPagGateway\BPagRedecardGateway.cs" />
+    <Compile Include="Gateways\CBG\CBGGateway.cs" />
+    <Compile Include="Gateways\CBG\CBGGatewayResponseParams.cs" />
+    <Compile Include="Gateways\CBG\TransactionType.cs" />
+    <Compile Include="Gateways\BPagGateway\BPagGateway.cs" />
+    <Compile Include="Gateways\BPagGateway\BPagGatewayResponseParams.cs" />
+    <Compile Include="Gateways\BPagGateway\BPagMembers.cs" />
+    <Compile Include="Gateways\BPagGateway\Requests\ProbeRequest.cs" />
+    <Compile Include="Gateways\CustomShipperGateways\CoActionCanadaFulfillmentGateway.cs" />
+    <Compile Include="Gateways\ExtendedPaymentParams.cs" />
+    <Compile Include="Gateways\GoFulfillmentGateway\GoFulfillmentGateway2.cs" />
+    <Compile Include="Gateways\ILeadGateway.cs" />
+    <Compile Include="Gateways\IPG\IPGGateway.cs" />
+    <Compile Include="Gateways\IPG\IPGGatewayResponseParams.cs" />
+    <Compile Include="Gateways\IShipmentGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\AragonGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\BaseLeadGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\CPAResponseGateway.cs" />
+    <Compile Include="Gateways\DelimitedResponseParams.cs" />
+    <Compile Include="Gateways\BadCustomer\BadCustomerGateway.cs" />
+    <Compile Include="Gateways\BadCustomer\BadCustomerGatewayReponseParams.cs" />
+    <Compile Include="Gateways\DefaultEmail\DefaultEmailGateway.cs" />
+    <Compile Include="Gateways\GatewayAddress.cs" />
+    <Compile Include="Gateways\GoFulfillmentGateway\GoFulfillmentGateway.cs" />
+    <Compile Include="Gateways\IBadCustomerGateway.cs" />
+    <Compile Include="Gateways\IEmailGateway.cs" />
+    <Compile Include="Gateways\IGatewayResponseParams.cs" />
+    <Compile Include="Gateways\ISHWGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\FiveNineGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\FocusGateway.cs" />
+    <Compile Include="Gateways\LeadGateways\REGGateway.cs" />
+    <Compile Include="Gateways\MaxMind\MaxMindGateway.cs" />
+    <Compile Include="Gateways\MoldingBox\MoldingBoxGateway.cs" />
+    <Compile Include="Gateways\MoldingBox\MoldingBoxGateway2.cs" />
+    <Compile Include="Gateways\MoldingBox\ShipMethodEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gateways\MPS\MPSGateway.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gateways\MPS\MPSGatewayResponseParams.cs" />
+    <Compile Include="Gateways\MPS\TransactionTypes.cs" />
+    <Compile Include="Gateways\MSC\MSCGateway.cs" />
+    <Compile Include="Gateways\MSC\MSCGatewayResponseParams.cs" />
+    <Compile Include="Gateways\NetworkMerchants\NetworkMerchantsGateway.cs" />
+    <Compile Include="Gateways\NetworkMerchants\NetworkMerchantsGatewayResponseParams.cs" />
+    <Compile Include="Gateways\NPFGateway\NPFGateway.cs" />
+    <Compile Include="Gateways\NPFGateway\NPFGateway2.cs" />
+    <Compile Include="Gateways\Pagador\PagadorGateway.cs" />
+    <Compile Include="Gateways\Pagador\PagadorGatewayResponseParams.cs" />
+    <Compile Include="Gateways\Pagador\PaymentTypes.cs" />
+    <Compile Include="Gateways\ShipmentGatewayBase.cs" />
+    <Compile Include="Gateways\ShipmentGatewayOneByOne.cs" />
+    <Compile Include="Gateways\POSTGETRequest.cs" />
+    <Compile Include="Gateways\PrismPay\PrismPayGateway.cs" />
+    <Compile Include="Gateways\PrismPay\PrismPayGatewayResponseParams.cs" />
+    <Compile Include="Gateways\LeadGateways\RECGateway.cs" />
+    <Compile Include="Gateways\SelfHelpWorks\SelfHelpWorksGateway.cs" />
+    <Compile Include="Gateways\SelfHelpWorks\SelfHelpWorksGatewayResponseParams.cs" />
+    <Compile Include="Gateways\ShipmentGatewayResult.cs" />
+    <Compile Include="Gateways\ABF\ABFGateway.cs" />
+    <Compile Include="Gateways\StaticResponseParams.cs" />
+    <Compile Include="Gateways\TSN\TSNGateway.cs" />
+    <Compile Include="Gateways\Usps\UspsGateway.cs" />
+    <Compile Include="GeneralShipperService.cs" />
+    <Compile Include="GeoService.cs" />
+    <Compile Include="GoFulfillmentService.cs" />
+    <Compile Include="InventoryService.cs" />
+    <Compile Include="JobService.cs" />
+    <Compile Include="KeymailService.cs" />
+    <Compile Include="LeadService.cs" />
+    <Compile Include="MagentoLocalService.cs" />
+    <Compile Include="MerchantService.cs" />
+    <Compile Include="Flow\MIDBalancing.cs" />
+    <Compile Include="MoldingBoxService.cs" />
+    <Compile Include="NPFService.cs" />
+    <Compile Include="NPFService_old.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="OrderShipmentService.cs" />
+    <Compile Include="PageService.cs" />
+    <Compile Include="Gateways\Assertigy\AssertigyGatewayResponseParams.cs" />
+    <Compile Include="Gateways\Assertigy\AssertigyGateway.cs" />
+    <Compile Include="Gateways\IFraudGateway.cs" />
+    <Compile Include="Gateways\IPaymentGateway.cs" />
+    <Compile Include="Gateways\Iq2solutions\Iq2solutionsGateway.cs" />
+    <Compile Include="Gateways\GatewayResult.cs" />
+    <Compile Include="Gateways\Iq2solutions\Iq2solutionsGatewayResponseParams.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RebillService.cs" />
+    <Compile Include="RefererService.cs" />
+    <Compile Include="RegistrationService.cs" />
+    <Compile Include="ReportService.cs" />
+    <Compile Include="ReturnSaleService.cs" />
+    <Compile Include="SalePolicy.cs" />
+    <Compile Include="SalesAgentService.cs" />
+    <Compile Include="SaleService.cs" />
+    <Compile Include="ShipperConfigService.cs" />
+    <Compile Include="ShipperService.cs" />
+    <Compile Include="SubscriptionNewService.cs" />
+    <Compile Include="SMTPSettingService.cs" />
+    <Compile Include="SubscriptionPlanService.cs" />
+    <Compile Include="SubscriptionService.cs" />
+    <Compile Include="SupportService.cs" />
+    <Compile Include="TagService.cs" />
+    <Compile Include="TPClientService.cs" />
+    <Compile Include="TriangleFulfillmentService.cs" />
+    <Compile Include="TsnService.cs" />
+    <Compile Include="Utils\Counter.cs" />
+    <Compile Include="Utils\HtmlHelper.cs" />
+    <Compile Include="Utils\StringCompressor.cs" />
+    <Compile Include="Utils\Utility.cs" />
+    <Compile Include="Web References\ABFApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BPag\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FiveNineApi\Reference.cs" />
+    <Compile Include="Web References\MBApi\Reference.cs" />
+    <Compile Include="Web References\PagadorWService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebStoreService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrimFuel.Model\TrimFuel.Model.csproj">
+      <Project>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</Project>
+      <Name>TrimFuel.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\Assertigy\assertigy_purchase_eu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\Iq2solutions\fraud.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\SelfHelpWorks\shw.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\Assertigy\assertigy_refund.xml" />
+    <EmbeddedResource Include="Gateways\Assertigy\assertigy_void.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_purchase_eu.xml" />
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_refund.xml" />
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_void.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_credit_eu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\BadCustomer\badcustomer.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\MaxMind\fraud.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://app02.3plcentral.com/WebServiceExternal/Contracts.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ABFApi\</RelPath>
+      <UpdateFromURL>https://app02.3plcentral.com/WebServiceExternal/Contracts.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrimFuel_Business_ABFApi_ServiceExternal</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PagadorWService\</RelPath>
+      <UpdateFromURL>https://transaction.pagador.com.br/webservices/pagador/Pagador.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrimFuel_Business_Pagador_Pagador</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://bpag.uol.com.br/bpag2/services/BPagWS%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BPag\</RelPath>
+      <UpdateFromURL>https://bpag.uol.com.br/bpag2/services/BPagWS%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrimFuel_Business_BPag_BPagWSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Gateways\Keymail\SKUTemplate.tpl" />
+    <EmbeddedResource Include="Gateways\NPFGateway\LineTemplate.tpl" />
+    <EmbeddedResource Include="Gateways\NPFGateway\HeaderTemplate.tpl" />
+    <EmbeddedResource Include="Gateways\TSN\tsn.txt" />
+    <EmbeddedResource Include="Gateways\CustomShipperGateways\LineTemplate.tpl" />
+    <EmbeddedResource Include="Gateways\CustomShipperGateways\HeaderTemplate.tpl" />
+    <EmbeddedResource Include="Gateways\CustomShipperGateways\TwoBoxHeaderTemplate.tpl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ABFApi\Contracts.disco" />
+    <None Include="Web References\ABFApi\Contracts.wsdl" />
+    <None Include="Web References\ABFApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ABFApi\Retailer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BPag\BPagWS.wsdl" />
+    <None Include="Web References\BPag\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FiveNineApi\addDispositionsToCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addDNISToCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addListsToCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addNumbersToDncResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addPromptTTSResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addPromptWavInlineResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addPromptWavResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addRecordToListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addSkillsToCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addToListCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addToListFtpResponse.datasource" />
+    <None Include="Web References\FiveNineApi\addToListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\agentGroup.datasource" />
+    <None Include="Web References\FiveNineApi\asyncAddRecordsToListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\asyncDeleteRecordsFromListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\asyncUpdateCrmRecordsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\callVariable.datasource" />
+    <None Include="Web References\FiveNineApi\callVariablesGroup.datasource" />
+    <None Include="Web References\FiveNineApi\campaignProfileInfo.datasource" />
+    <None Include="Web References\FiveNineApi\contactField.datasource" />
+    <None Include="Web References\FiveNineApi\createAgentGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createAutodialCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createCallVariableResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createCallVariablesGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createCampaignProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createContactFieldResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createDispositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createInboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createIVRScriptResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createOutboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createReasonCodeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createSkillResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createUserProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createUserResponse.datasource" />
+    <None Include="Web References\FiveNineApi\createWebConnectorResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteAgentGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteAllFromListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteCallVariableResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteCallVariablesGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteCampaignProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteContactFieldResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromContactsCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromContactsFtpResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromContactsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromListCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromListFtpResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteFromListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteIVRScriptResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deletePromptResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteReasonCodeByTypeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteReasonCodeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteRecordFromListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteSkillResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteUserProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteUserResponse.datasource" />
+    <None Include="Web References\FiveNineApi\deleteWebConnectorResponse.datasource" />
+    <None Include="Web References\FiveNineApi\dialingRule.datasource" />
+    <None Include="Web References\FiveNineApi\disposition.datasource" />
+    <None Include="Web References\FiveNineApi\dispositionCount.datasource" />
+    <None Include="Web References\FiveNineApi\forceStopCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getAgentAuditReportCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getAgentAuditReportResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getAgentGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getAutodialCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getCallLogReportCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getCallLogReportResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getCampaignProfileFilterResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getCampaignStateResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getContactRecordsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getCrmImportResultResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getDispositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getDispositionsImportResultResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getInboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getListImportResultResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getOutboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getPromptResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getReasonCodeByTypeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getReasonCodeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getReportResultCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getReportResultResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getSkillInfoResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getSkillResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getUserGeneralInfoResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getUserInfoResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getUserProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\getVCCConfigurationResponse.datasource" />
+    <None Include="Web References\FiveNineApi\isImportRunningResponse.datasource" />
+    <None Include="Web References\FiveNineApi\isReportRunningResponse.datasource" />
+    <None Include="Web References\FiveNineApi\ivrScriptDef.datasource" />
+    <None Include="Web References\FiveNineApi\limitTimeoutState.datasource" />
+    <None Include="Web References\FiveNineApi\listInfo.datasource" />
+    <None Include="Web References\FiveNineApi\listState.datasource" />
+    <None Include="Web References\FiveNineApi\modifyAgentGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyAutodialCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCallVariableResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCallVariablesGroupResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCampaignListsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCampaignProfileCrmCriteriaResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCampaignProfileDispositionsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCampaignProfileFilterOrderResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyCampaignProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyContactFieldResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyDispositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyInboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyIVRScriptResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyOutboundCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyPromptTTSResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyPromptWavInlineResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyPromptWavResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyReasonCodeResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifySkillResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyUserProfileResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyUserProfileSkillsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyUserProfileUserListResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyUserResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyVCCConfigurationResponse.datasource" />
+    <None Include="Web References\FiveNineApi\modifyWebConnectorResponse.datasource" />
+    <None Include="Web References\FiveNineApi\Reference.map" />
+    <None Include="Web References\FiveNineApi\removeDispositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\removeDispositionsFromCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\removeDNISFromCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\removeListsFromCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\removeNumbersFromDncResponse.datasource" />
+    <None Include="Web References\FiveNineApi\removeSkillsFromCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\renameCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\renameDispositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\resetCampaignDispositionsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\resetCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\resetListPositionResponse.datasource" />
+    <None Include="Web References\FiveNineApi\runReportResponse.datasource" />
+    <None Include="Web References\FiveNineApi\setDefaultIVRScheduleResponse.datasource" />
+    <None Include="Web References\FiveNineApi\setDialingRulesResponse.datasource" />
+    <None Include="Web References\FiveNineApi\skill.datasource" />
+    <None Include="Web References\FiveNineApi\skillInfo.datasource" />
+    <None Include="Web References\FiveNineApi\startCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\stopCampaignResponse.datasource" />
+    <None Include="Web References\FiveNineApi\swaref.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\FiveNineApi\updateContactsCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateContactsFtpResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateContactsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateCrmRecordResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateDispositionsCsvResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateDispositionsFtpResponse.datasource" />
+    <None Include="Web References\FiveNineApi\updateDispositionsResponse.datasource" />
+    <None Include="Web References\FiveNineApi\userGeneralInfo.datasource" />
+    <None Include="Web References\FiveNineApi\userInfo.datasource" />
+    <None Include="Web References\FiveNineApi\userSkillAddResponse.datasource" />
+    <None Include="Web References\FiveNineApi\userSkillModifyResponse.datasource" />
+    <None Include="Web References\FiveNineApi\userSkillRemoveResponse.datasource" />
+    <None Include="Web References\FiveNineApi\webConnector.datasource" />
+    <None Include="Web References\FiveNineApi\WsAdminService.wsdl" />
+    <None Include="Web References\MBApi\api.wsdl" />
+    <None Include="Web References\MBApi\Reference.map" />
+    <None Include="Web References\MBApi\Response.datasource" />
+    <None Include="Web References\MBApi\ShippingMethod.datasource" />
+    <None Include="Web References\MBApi\Status.datasource" />
+    <None Include="Web References\MBApi\StatusResponse.datasource" />
+    <None Include="Web References\PagadorWService\Pagador.wsdl" />
+    <None Include="Web References\PagadorWService\PagadorAvsReturn1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagadorWService\PagadorOneDollarAuthResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagadorWService\PagadorReturn1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagadorWService\PagadorReturnWithService1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagadorWService\PagadorVoidReturn1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagadorWService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gateways\Keymail\LineTemplate.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\Samples\dashboard.xml" />
+    <Content Include="Configuration\Samples\localhost.xml" />
+    <Content Include="Configuration\Samples\sto.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\PagadorWService\Pagador.disco" />
+    <EmbeddedResource Include="Gateways\TSN\tsnsku.txt" />
+    <EmbeddedResource Include="Gateways\TSN\tsnstatus.txt" />
+    <EmbeddedResource Include="Gateways\BPagGateway\PayOrder.xml" />
+    <EmbeddedResource Include="Gateways\BPagGateway\Cancel.xml" />
+    <EmbeddedResource Include="Gateways\BPagGateway\Capture.xml" />
+    <Content Include="Web References\MBApi\api.disco" />
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_capture.xml" />
+    <EmbeddedResource Include="Gateways\PrismPay\prism_pay_refund.txt" />
+    <EmbeddedResource Include="Gateways\PrismPay\prism_pay_sale.txt" />
+    <EmbeddedResource Include="Gateways\PrismPay\prism_pay_void.txt" />
+    <EmbeddedResource Include="Gateways\NetworkMerchants\nmi_auth_only.xml" />
+    <EmbeddedResource Include="Gateways\MSC\msc_refund.txt" />
+    <EmbeddedResource Include="Gateways\MSC\msc_sale.txt" />
+    <EmbeddedResource Include="Gateways\MSC\msc_void.txt" />
+    <EmbeddedResource Include="Gateways\IPG\ipg_sale.xml" />
+    <EmbeddedResource Include="Gateways\IPG\ipg_refund.xml" />
+    <EmbeddedResource Include="Gateways\IPG\ipg_void.xml" />
+    <EmbeddedResource Include="Gateways\IPG\ipg_auth.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gateways\ShipmentGateways\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

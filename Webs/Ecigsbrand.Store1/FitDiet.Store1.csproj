@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02140B68-9FB1-40C0-87F8-B36A3C7EE668}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ecigsbrand.Store1</RootNamespace>
+    <AssemblyName>Ecigsbrand.Store1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Intelligencia.UrlRewriter, Version=1.8.0.6, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account\cp-account.aspx.cs">
+      <DependentUpon>cp-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-account.aspx.designer.cs">
+      <DependentUpon>cp-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-commission.aspx.cs">
+      <DependentUpon>cp-commission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-commission.aspx.designer.cs">
+      <DependentUpon>cp-commission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-home.aspx.cs">
+      <DependentUpon>cp-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-home.aspx.designer.cs">
+      <DependentUpon>cp-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-orders.aspx.cs">
+      <DependentUpon>cp-orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-orders.aspx.designer.cs">
+      <DependentUpon>cp-orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account\cp-referrals.aspx.cs">
+      <DependentUpon>cp-referrals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account\cp-referrals.aspx.designer.cs">
+      <DependentUpon>cp-referrals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accessories.ascx.cs">
+      <DependentUpon>Accessories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Accessories.ascx.designer.cs">
+      <DependentUpon>Accessories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BillingInfo.ascx.cs">
+      <DependentUpon>BillingInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BillingInfo.ascx.designer.cs">
+      <DependentUpon>BillingInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EcigBucksEventArgs.cs" />
+    <Compile Include="Controls\Features.ascx.cs">
+      <DependentUpon>Features.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Features.ascx.designer.cs">
+      <DependentUpon>Features.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Front.Master.cs">
+      <DependentUpon>Front.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Front.Master.designer.cs">
+      <DependentUpon>Front.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GiftCertificateEventArgs.cs" />
+    <Compile Include="Controls\LoginToken.ascx.cs">
+      <DependentUpon>LoginToken.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginToken.ascx.designer.cs">
+      <DependentUpon>LoginToken.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuControlPanel.ascx.cs">
+      <DependentUpon>MenuControlPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuControlPanel.ascx.designer.cs">
+      <DependentUpon>MenuControlPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductDescription.ascx.cs">
+      <DependentUpon>ProductDescription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductDescription.ascx.designer.cs">
+      <DependentUpon>ProductDescription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductImg.ascx.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductImg.ascx.designer.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RefillCartridges.ascx.cs">
+      <DependentUpon>RefillCartridges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RefillCartridges.ascx.designer.cs">
+      <DependentUpon>RefillCartridges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShoppingCart.ascx.cs">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShoppingCart.ascx.designer.cs">
+      <DependentUpon>ShoppingCart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShoppingCartView.ascx.cs">
+      <DependentUpon>ShoppingCartView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ShoppingCartView.ascx.designer.cs">
+      <DependentUpon>ShoppingCartView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-login.aspx.cs">
+      <DependentUpon>cp-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-login.aspx.designer.cs">
+      <DependentUpon>cp-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-logout.aspx.cs">
+      <DependentUpon>cp-logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-logout.aspx.designer.cs">
+      <DependentUpon>cp-logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cp-lost-password.aspx.cs">
+      <DependentUpon>cp-lost-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cp-lost-password.aspx.designer.cs">
+      <DependentUpon>cp-lost-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-accessories.aspx.cs">
+      <DependentUpon>e-cigarette-accessories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-accessories.aspx.designer.cs">
+      <DependentUpon>e-cigarette-accessories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-customer-service.aspx.cs">
+      <DependentUpon>e-cigarette-customer-service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-customer-service.aspx.designer.cs">
+      <DependentUpon>e-cigarette-customer-service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-how-it-works.aspx.cs">
+      <DependentUpon>e-cigarette-how-it-works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-how-it-works.aspx.designer.cs">
+      <DependentUpon>e-cigarette-how-it-works.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-referral-program.aspx.cs">
+      <DependentUpon>e-cigarette-referral-program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-referral-program.aspx.designer.cs">
+      <DependentUpon>e-cigarette-referral-program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-refill-cartridges.aspx.cs">
+      <DependentUpon>e-cigarette-refill-cartridges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-refill-cartridges.aspx.designer.cs">
+      <DependentUpon>e-cigarette-refill-cartridges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-starter-kits.aspx.cs">
+      <DependentUpon>e-cigarette-starter-kits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-starter-kits.aspx.designer.cs">
+      <DependentUpon>e-cigarette-starter-kits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-cigarette-testimonials.aspx.cs">
+      <DependentUpon>e-cigarette-testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-cigarette-testimonials.aspx.designer.cs">
+      <DependentUpon>e-cigarette-testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AccountPageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\Membership.cs" />
+    <Compile Include="Logic\OrderResult.cs" />
+    <Compile Include="Logic\PageX.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logic\ShoppingCart.cs" />
+    <Compile Include="Logic\ShoppingCartProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="order-confirmation.aspx.cs">
+      <DependentUpon>order-confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order-confirmation.aspx.designer.cs">
+      <DependentUpon>order-confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referer-code.aspx.cs">
+      <DependentUpon>referer-code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="referer-code.aspx.designer.cs">
+      <DependentUpon>referer-code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="service\login.asmx.cs">
+      <DependentUpon>login.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="account\cp-account.aspx" />
+    <Content Include="account\cp-commission.aspx" />
+    <Content Include="account\cp-home.aspx" />
+    <Content Include="account\cp-orders.aspx" />
+    <Content Include="account\cp-referrals.aspx" />
+    <Content Include="cart.aspx" />
+    <Content Include="Controls\Accessories.ascx" />
+    <Content Include="Controls\BillingInfo.ascx" />
+    <Content Include="Controls\Features.ascx" />
+    <Content Include="Controls\Front.Master" />
+    <Content Include="Controls\LoginToken.ascx" />
+    <Content Include="Controls\Menu.ascx" />
+    <Content Include="Controls\MenuControlPanel.ascx" />
+    <Content Include="Controls\ProductDescription.ascx" />
+    <Content Include="Controls\ProductImg.ascx" />
+    <Content Include="Controls\RefillCartridges.ascx" />
+    <Content Include="Controls\ShoppingCart.ascx" />
+    <Content Include="Controls\ShoppingCartView.ascx" />
+    <Content Include="cp-login.aspx" />
+    <Content Include="cp-logout.aspx" />
+    <Content Include="cp-lost-password.aspx" />
+    <Content Include="css\control-panel.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\validationEngine.jquery.css" />
+    <Content Include="default.aspx" />
+    <Content Include="e-cigarette-accessories.aspx" />
+    <Content Include="e-cigarette-customer-service.aspx" />
+    <Content Include="e-cigarette-how-it-works.aspx" />
+    <Content Include="e-cigarette-referral-program.aspx" />
+    <Content Include="e-cigarette-refill-cartridges.aspx" />
+    <Content Include="e-cigarette-starter-kits.aspx" />
+    <Content Include="e-cigarette-testimonials.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\box-car-charger.png" />
+    <Content Include="images\box-cartridge-menthol.png" />
+    <Content Include="images\box-cartridge-tobacco.png" />
+    <Content Include="images\box-starter-kit.png" />
+    <Content Include="images\box-wall-charger.png" />
+    <Content Include="images\bullet.png" />
+    <Content Include="images\button-add-to-cart.png" />
+    <Content Include="images\button-learn-more.png" />
+    <Content Include="images\cart-car-charger.png" />
+    <Content Include="images\cart-cartridge-menthol.png" />
+    <Content Include="images\cart-cartridge-tobacco.png" />
+    <Content Include="images\cart-cvv.png" />
+    <Content Include="images\cart-godaddy.png" />
+    <Content Include="images\cart-starter-kit.png" />
+    <Content Include="images\cart-visa-mc.png" />
+    <Content Include="images\cart-wall-charger.png" />
+    <Content Include="images\customer-service-faq.jpg" />
+    <Content Include="images\customer-service-girl.jpg" />
+    <Content Include="images\customer-service-start.jpg" />
+    <Content Include="images\diagonal-stripes.png" />
+    <Content Include="images\free-shipping.png" />
+    <Content Include="images\front-ecigs-package-multi.png" />
+    <Content Include="images\front-ecigs-package-refills.png" />
+    <Content Include="images\front-heart.png" />
+    <Content Include="images\front-money-tree.jpg" />
+    <Content Include="images\front-zero-worry.png" />
+    <Content Include="images\godaddy.png" />
+    <Content Include="images\how-exploded-view.png" />
+    <Content Include="images\how-kit-1.jpg" />
+    <Content Include="images\how-kit-2.jpg" />
+    <Content Include="images\how-kit-3.jpg" />
+    <Content Include="images\how-kit-4.jpg" />
+    <Content Include="images\how-kit-5.jpg" />
+    <Content Include="images\how-kit-6.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\nav\nav-01.png" />
+    <Content Include="images\nav\nav-02.png" />
+    <Content Include="images\nav\nav-03.png" />
+    <Content Include="images\nav\nav-04.png" />
+    <Content Include="images\nav\nav-05.png" />
+    <Content Include="images\nav\nav-06.png" />
+    <Content Include="images\nav\nav-07.png" />
+    <Content Include="images\nav\nav-08.png" />
+    <Content Include="images\nav\nav-hl-01.png" />
+    <Content Include="images\nav\nav-hl-02.png" />
+    <Content Include="images\nav\nav-hl-03.png" />
+    <Content Include="images\nav\nav-hl-04.png" />
+    <Content Include="images\nav\nav-hl-05.png" />
+    <Content Include="images\nav\nav-hl-06.png" />
+    <Content Include="images\nav\nav-hl-07.png" />
+    <Content Include="images\nav\nav-hl-08.png" />
+    <Content Include="images\nav\nav-sel-01.png" />
+    <Content Include="images\nav\nav-sel-02.png" />
+    <Content Include="images\nav\nav-sel-03.png" />
+    <Content Include="images\nav\nav-sel-04.png" />
+    <Content Include="images\nav\nav-sel-05.png" />
+    <Content Include="images\nav\nav-sel-06.png" />
+    <Content Include="images\nav\nav-sel-07.png" />
+    <Content Include="images\nav\nav-sel-08.png" />
+    <Content Include="images\referral-cash.jpg" />
+    <Content Include="images\referral-secret.jpg" />
+    <Content Include="images\right-car-charger.png" />
+    <Content Include="images\right-cartridge-menthol.png" />
+    <Content Include="images\right-cartridge-tobacco.png" />
+    <Content Include="images\right-wall-charger.png" />
+    <Content Include="images\testimonial-1.jpg" />
+    <Content Include="images\testimonial-2.jpg" />
+    <Content Include="images\testimonial-3.jpg" />
+    <Content Include="images\topfade-red.gif" />
+    <Content Include="images\topfade.gif" />
+    <Content Include="images\_box-car-charger.png" />
+    <Content Include="images\_box-cartridge-menthol.png" />
+    <Content Include="images\_box-cartridge-tobacco.png" />
+    <Content Include="images\_box-starter-kit.png" />
+    <Content Include="images\_box-wall-charger.png" />
+    <Content Include="images\_front-ecigs-package-multi.png" />
+    <Content Include="images\_front-ecigs-package-refills.png" />
+    <Content Include="images\_logo.png" />
+    <Content Include="js\ajax.login.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.validationEngine.js" />
+    <Content Include="js\jquery.validationEngine.validationRules.js" />
+    <Content Include="js\mod10.js" />
+    <Content Include="js\rollover.js" />
+    <Content Include="js\shoppingcart.js" />
+    <Content Include="order-confirmation.aspx" />
+    <Content Include="referer-code.aspx" />
+    <Content Include="service\login.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TrimFuel.Business\TrimFuel.Business.csproj">
+      <Project>{C5815D73-3CA3-4888-9E55-331A527B3DD6}</Project>
+      <Name>TrimFuel.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Model\TrimFuel.Model.csproj">
+      <Project>{4ACFDE23-A749-4967-9E9A-AA08AFADE555}</Project>
+      <Name>TrimFuel.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrimFuel.Web.Module\TrimFuel.Web.Module.csproj">
+      <Project>{A372D709-5DA9-4635-8DD4-14FC8E99AA8C}</Project>
+      <Name>TrimFuel.Web.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4159</DevelopmentServerPort>
+          <DevelopmentServerVPath>/webstore</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Ecigsbrand/Store1</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

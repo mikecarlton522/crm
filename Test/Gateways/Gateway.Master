@@ -1,0 +1,2 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Gateway.master.cs" Inherits="Gateways.Gateway" %>
+<% if (IsSuccess) { %><asp:ContentPlaceHolder ID="cphSuccess" runat="server"></asp:ContentPlaceHolder><% } else { %><asp:ContentPlaceHolder ID="cphError" runat="server"></asp:ContentPlaceHolder><% } %>
